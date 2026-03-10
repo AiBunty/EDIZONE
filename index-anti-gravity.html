@@ -1,0 +1,1275 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Edizone Careers - Transforming Potential into Professional Roadmaps. Expert guidance for Career Strategy, Global Study Abroad, and Student Mentorship.">
+    <meta name="keywords" content="Career Counselling, Study Abroad, GIDE.AI Assessment, Global Education, Career Guidance">
+    <title>Edizone Careers - Transform Your Future</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=Source+Sans+Pro:wght@400;600;700&family=Outfit:wght@400;600;700;900&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --color-burgundy: #800000;
+            --color-gold: #D4AF37;
+            --color-parchment: #FDF5E6;
+            --color-dark: #1a1a1a;
+            --color-light-gray: #f5f5f5;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Source Sans Pro', sans-serif;
+            color: var(--color-dark);
+            background-color: #ffffff;
+            line-height: 1.6;
+        }
+
+        /* ===== TYPOGRAPHY ===== */
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Playfair Display', serif;
+            color: var(--color-burgundy);
+        }
+
+        h1 {
+            font-size: 3.5rem;
+            line-height: 1.2;
+            font-weight: 700;
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            line-height: 1.3;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        h3 {
+            font-size: 1.75rem;
+            font-weight: 600;
+            margin-bottom: 0.75rem;
+        }
+
+        /* ===== GLASSMORPHISM ===== */
+        .glass-card {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(212, 175, 55, 0.2);
+            border-radius: 16px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+        }
+
+        .glass-card-dark {
+            background: rgba(128, 0, 0, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(212, 175, 55, 0.3);
+            border-radius: 16px;
+            box-shadow: 0 8px 32px rgba(128, 0, 0, 0.05);
+        }
+
+        /* ===== BUTTONS ===== */
+        .btn-primary {
+            background-color: var(--color-burgundy);
+            color: white;
+            padding: 14px 32px;
+            border-radius: 12px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: 2px solid var(--color-burgundy);
+            text-decoration: none;
+            display: inline-block;
+            cursor: pointer;
+        }
+
+        .btn-primary:hover {
+            background-color: #600000;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(128, 0, 0, 0.3);
+        }
+
+        .btn-secondary {
+            background-color: transparent;
+            color: var(--color-burgundy);
+            padding: 14px 32px;
+            border-radius: 12px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: 2px solid var(--color-burgundy);
+            text-decoration: none;
+            display: inline-block;
+            cursor: pointer;
+        }
+
+        .btn-secondary:hover {
+            background-color: var(--color-burgundy);
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        /* ===== ACCENT ELEMENTS ===== */
+        .accent-gold {
+            color: var(--color-gold);
+        }
+
+        .border-gold {
+            border-color: var(--color-gold);
+        }
+
+        .shield-icon::before {
+            content: '';
+            display: inline-block;
+            width: 4px;
+            height: 4px;
+            background: var(--color-gold);
+            border-radius: 50%;
+            margin-right: 8px;
+        }
+
+        /* ===== HERO SECTION ===== */
+        .hero {
+            background: linear-gradient(135deg, #1a1a1a 0%, #333333 100%);
+            position: relative;
+            overflow: hidden;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .hero-bg-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><defs><pattern id="pattern" x="0" y="0" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="50" cy="50" r="2" fill="%23D4AF37" opacity="0.1"/></pattern></defs><rect width="1200" height="600" fill="url(%23pattern)"/></svg>');
+            opacity: 0.3;
+            z-index: 1;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 1200px;
+            width: 100%;
+            padding: 60px 40px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .hero-text {
+            color: white;
+        }
+
+        .hero-text h1 {
+            color: white;
+            font-size: 3.5rem;
+            line-height: 1.2;
+            margin-bottom: 24px;
+        }
+
+        .hero-subheading {
+            color: #d4d4d4;
+            font-size: 1.25rem;
+            line-height: 1.6;
+            margin-bottom: 32px;
+            font-weight: 400;
+        }
+
+        .cta-group {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-bottom: 40px;
+        }
+
+        .trust-bar {
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(212, 175, 55, 0.3);
+            border-radius: 12px;
+            padding: 20px 30px;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .trust-bar-label {
+            color: var(--color-gold);
+            font-size: 0.9rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            white-space: nowrap;
+        }
+
+        .trust-bar-items {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .trust-badge {
+            background: rgba(255, 255, 255, 0.15);
+            color: white;
+            padding: 8px 16px;
+            border-radius: 8px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            border: 1px solid rgba(212, 175, 55, 0.3);
+        }
+
+        .hero-image {
+            position: relative;
+        }
+
+        .glass-overlay {
+            glass-card;
+            padding: 40px;
+            position: relative;
+            z-index: 3;
+        }
+
+        /* ===== TIMELINE ===== */
+        .timeline {
+            position: relative;
+            padding: 40px 0;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 2px;
+            height: 100%;
+            background: linear-gradient(to bottom, var(--color-gold), transparent);
+        }
+
+        .timeline-item {
+            margin-bottom: 50px;
+            position: relative;
+        }
+
+        .timeline-item:nth-child(odd) .timeline-content {
+            margin-left: 0;
+            margin-right: auto;
+            width: 48%;
+            text-align: right;
+            padding-right: 30px;
+        }
+
+        .timeline-item:nth-child(even) .timeline-content {
+            margin-left: auto;
+            margin-right: 0;
+            width: 48%;
+            text-align: left;
+            padding-left: 30px;
+        }
+
+        .timeline-dot {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 16px;
+            height: 16px;
+            background: var(--color-gold);
+            border: 3px solid white;
+            border-radius: 50%;
+            top: 5px;
+            z-index: 2;
+        }
+
+        .timeline-content {
+            glass-card;
+            padding: 20px;
+            transition: all 0.3s ease;
+        }
+
+        .timeline-content:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 40px rgba(128, 0, 0, 0.15);
+        }
+
+        .timeline-month {
+            color: var(--color-gold);
+            font-weight: 700;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 8px;
+        }
+
+        /* ===== SECTION SPACING ===== */
+        .section {
+            padding: 80px 40px;
+            margin: 0 auto;
+            max-width: 1400px;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-header h2 {
+            margin-bottom: 16px;
+        }
+
+        .section-subheading {
+            font-size: 1.25rem;
+            color: #666;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* ===== CARDS ===== */
+        .feature-card {
+            glass-card;
+            padding: 40px;
+            text-align: center;
+            transition: all 0.3s ease;
+            height: 100%;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--color-gold);
+        }
+
+        .feature-icon {
+            font-size: 3rem;
+            color: var(--color-burgundy);
+            margin-bottom: 20px;
+        }
+
+        .feature-card h3 {
+            color: var(--color-burgundy);
+            margin-bottom: 12px;
+        }
+
+        /* ===== DIRECTOR CARDS ===== */
+        .director-card {
+            position: relative;
+            overflow: hidden;
+            border-radius: 12px;
+        }
+
+        .director-image {
+            width: 100%;
+            height: 350px;
+            background: linear-gradient(135deg, var(--color-burgundy), var(--color-gold));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 5rem;
+            color: white;
+        }
+
+        .director-info {
+            padding: 30px;
+            background: white;
+            border: 2px solid var(--color-gold);
+        }
+
+        .director-name {
+            font-size: 1.5rem;
+            color: var(--color-burgundy);
+            margin-bottom: 8px;
+        }
+
+        .director-title {
+            color: var(--color-gold);
+            font-weight: 700;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 12px;
+        }
+
+        .director-bio {
+            font-size: 0.95rem;
+            color: #555;
+            line-height: 1.6;
+        }
+
+        /* ===== REVIEWS SECTION ===== */
+        .reviews-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+        }
+
+        .review-column h3 {
+            color: var(--color-burgundy);
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .video-testimonial {
+            background: #000;
+            border-radius: 12px;
+            overflow: hidden;
+            margin-bottom: 20px;
+            aspect-ratio: 16 / 9;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: 2px solid var(--color-gold);
+        }
+
+        .video-testimonial:hover {
+            transform: scale(1.05);
+        }
+
+        .video-placeholder {
+            color: var(--color-gold);
+            font-size: 3rem;
+            text-align: center;
+        }
+
+        .testimonial-meta {
+            color: #666;
+            font-size: 0.85rem;
+            margin-top: 12px;
+        }
+
+        /* ===== CERTIFICATION BADGE ===== */
+        .cert-badge {
+            background: linear-gradient(135deg, var(--color-burgundy), var(--color-gold));
+            color: white;
+            padding: 20px 40px;
+            border-radius: 12px;
+            text-align: center;
+            font-weight: 700;
+            margin-bottom: 30px;
+            display: inline-block;
+        }
+
+        /* ===== FOOTER ===== */
+        footer {
+            background-color: var(--color-burgundy);
+            color: white;
+            padding: 60px 40px 30px;
+        }
+
+        .footer-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-section h4 {
+            color: var(--color-gold);
+            margin-bottom: 20px;
+            font-family: 'Playfair Display', serif;
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section ul li {
+            margin-bottom: 12px;
+        }
+
+        .footer-section a {
+            color: #ddd;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-section a:hover {
+            color: var(--color-gold);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(212, 175, 55, 0.3);
+            padding-top: 30px;
+            text-align: center;
+            color: #ccc;
+            font-size: 0.9rem;
+        }
+
+        .trust-verification {
+            color: var(--color-gold);
+            font-weight: 700;
+            margin-top: 10px;
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 1024px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+
+            h2 {
+                font-size: 2rem;
+            }
+
+            .hero-content {
+                grid-template-columns: 1fr;
+                gap: 40px;
+                padding: 40px 20px;
+            }
+
+            .timeline::before {
+                left: 0;
+            }
+
+            .timeline-item:nth-child(odd) .timeline-content,
+            .timeline-item:nth-child(even) .timeline-content {
+                width: 100%;
+                margin: 0;
+                padding-left: 50px;
+                text-align: left;
+            }
+
+            .timeline-dot {
+                left: 0;
+            }
+
+            .reviews-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero {
+                min-height: auto;
+            }
+
+            .hero-text h1 {
+                font-size: 2rem;
+            }
+
+            .cta-group {
+                flex-direction: column;
+            }
+
+            .btn-primary, .btn-secondary {
+                width: 100%;
+                text-align: center;
+            }
+
+            .section {
+                padding: 60px 20px;
+            }
+
+            .trust-bar {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .feature-card {
+                padding: 25px;
+            }
+        }
+
+        /* ===== ANIMATIONS ===== */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animate-fade-in-up {
+            animation: fadeInUp 0.6s ease-out;
+        }
+
+        /* ===== GPATHS FRAMEWORK ===== */
+        .gpaths-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 25px;
+        }
+
+        .gpaths-item {
+            glass-card;
+            padding: 30px 20px;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .gpaths-item:hover {
+            border-color: var(--color-gold);
+            transform: translateY(-10px);
+        }
+
+        .gpaths-icon {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            color: var(--color-burgundy);
+        }
+
+        .gpaths-label {
+            color: var(--color-burgundy);
+            font-weight: 700;
+            font-size: 0.95rem;
+        }
+
+        /* ===== STUDY ABROAD SERVICES ===== */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+        }
+
+        .service-box {
+            glass-card;
+            padding: 35px 25px;
+            text-align: center;
+            transition: all 0.3s ease;
+            border-top: 4px solid var(--color-gold);
+        }
+
+        .service-box:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 40px rgba(128, 0, 0, 0.15);
+        }
+
+        .service-icon {
+            font-size: 2.5rem;
+            color: var(--color-burgundy);
+            margin-bottom: 15px;
+        }
+
+        .service-box h4 {
+            color: var(--color-burgundy);
+            margin-bottom: 10px;
+        }
+
+        .service-box p {
+            font-size: 0.9rem;
+            color: #666;
+        }
+
+        /* ===== NAV ===== */
+        .navbar {
+            background: linear-gradient(to bottom, var(--color-burgundy), transparent);
+            padding: 20px 40px;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .navbar-brand {
+            color: var(--color-gold);
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+
+        .navbar-links {
+            display: flex;
+            gap: 30px;
+            list-style: none;
+        }
+
+        .navbar-links a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s;
+            font-weight: 500;
+        }
+
+        .navbar-links a:hover {
+            color: var(--color-gold);
+        }
+
+        @media (max-width: 768px) {
+            .navbar {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            .navbar-links {
+                flex-direction: column;
+                gap: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- ===== NAVBAR ===== -->
+    <nav class="navbar">
+        <div class="navbar-brand">
+            <i class="fas fa-graduation-cap"></i> Edizone Careers
+        </div>
+        <ul class="navbar-links">
+            <li><a href="#gpaths">Assessment</a></li>
+            <li><a href="#timeline">Study Abroad</a></li>
+            <li><a href="#directors">Our Team</a></li>
+            <li><a href="#reviews">Reviews</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- ===== HERO SECTION ===== -->
+    <section class="hero">
+        <div class="hero-bg-overlay"></div>
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1>Career by Design, Not by Chance</h1>
+                <p class="hero-subheading">
+                    Led by experts with 20+ years of experience, we guide families through Career Strategy, Global Study Abroad, and Student Mentorship.
+                </p>
+                
+                <div class="cta-group">
+                    <a href="https://wa.me/918850651192?text=Hi%20Edizone%20Team%2C%20I%20would%20like%20to%20book%20a%20consultation" class="btn-primary" target="_blank">
+                        <i class="fas fa-calendar-alt"></i> Book a Consultation
+                    </a>
+                    <a href="#timeline" class="btn-secondary">
+                        <i class="fas fa-globe"></i> Explore Study Abroad
+                    </a>
+                </div>
+
+                <div class="trust-bar">
+                    <span class="trust-bar-label">Trusted For:</span>
+                    <div class="trust-bar-items">
+                        <span class="trust-badge">IELTS</span>
+                        <span class="trust-badge">TOEFL</span>
+                        <span class="trust-badge">PTE</span>
+                        <span class="trust-badge">GRE</span>
+                        <span class="trust-badge">GMAT</span>
+                        <span class="trust-badge">SAT</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hero-image">
+                <div class="glass-overlay">
+                    <div style="text-align: center; padding: 60px 40px; color: var(--color-burgundy);">
+                        <i class="fas fa-user-graduate" style="font-size: 4rem; margin-bottom: 20px; display: block;"></i>
+                        <h3 style="color: var(--color-burgundy);">Future-Ready Career Path</h3>
+                        <p style="color: #666; margin-top: 15px;">Backed by the GPaths Assessment & GIDE.AI Technology</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== GPATHS ASSESSMENT SECTION ===== -->
+    <section class="section" id="gpaths">
+        <div class="section-header">
+            <h2>Is Your Career Choice Backed by Science?</h2>
+            <p class="section-subheading">
+                Discover the GPaths Assessment, powered by GIDE.AI – a comprehensive framework for scientifically assessing career alignment.
+            </p>
+        </div>
+
+        <div class="gpaths-grid">
+            <div class="gpaths-item">
+                <div class="gpaths-icon">
+                    <i class="fas fa-lightbulb"></i>
+                </div>
+                <div class="gpaths-label">Aptitudes</div>
+                <p style="font-size: 0.85rem; color: #666; margin-top: 10px;">Your unique strengths</p>
+            </div>
+
+            <div class="gpaths-item">
+                <div class="gpaths-icon">
+                    <i class="fas fa-compass"></i>
+                </div>
+                <div class="gpaths-label">Interests</div>
+                <p style="font-size: 0.85rem; color: #666; margin-top: 10px;">What drives you</p>
+            </div>
+
+            <div class="gpaths-item">
+                <div class="gpaths-icon">
+                    <i class="fas fa-brain"></i>
+                </div>
+                <div class="gpaths-label">Personality</div>
+                <p style="font-size: 0.85rem; color: #666; margin-top: 10px;">Your core traits</p>
+            </div>
+
+            <div class="gpaths-item">
+                <div class="gpaths-icon">
+                    <i class="fas fa-book"></i>
+                </div>
+                <div class="gpaths-label">Learning Preferences</div>
+                <p style="font-size: 0.85rem; color: #666; margin-top: 10px;">Your optimal style</p>
+            </div>
+
+            <div class="gpaths-item">
+                <div class="gpaths-icon">
+                    <i class="fas fa-rocket"></i>
+                </div>
+                <div class="gpaths-label">Career Motivators</div>
+                <p style="font-size: 0.85rem; color: #666; margin-top: 10px;">What fuels success</p>
+            </div>
+        </div>
+
+        <div style="text-align: center; margin-top: 60px;">
+            <div class="cert-badge">
+                <i class="fas fa-certificate"></i> INACE Certified Assessment Framework
+            </div>
+            <p style="color: #666; font-size: 1.1rem; margin-top: 30px;">
+                Each student receives a <strong>Future-Ready Career Report</strong> covering traditional and emerging fields.
+            </p>
+        </div>
+    </section>
+
+    <!-- ===== STUDY ABROAD SERVICES ===== -->
+    <section class="section" style="background-color: var(--color-parchment);">
+        <div class="section-header">
+            <h2>Your Complete Study Abroad Solution</h2>
+            <p class="section-subheading">
+                From university selection to visa processing, we handle every step of your global education journey.
+            </p>
+        </div>
+
+        <div class="services-grid">
+            <div class="service-box">
+                <div class="service-icon">
+                    <i class="fas fa-globe-americas"></i>
+                </div>
+                <h4>Country & Course Selection</h4>
+                <p>Find the perfect destination matching your goals and aspirations</p>
+            </div>
+
+            <div class="service-box">
+                <div class="service-icon">
+                    <i class="fas fa-university"></i>
+                </div>
+                <h4>University Applications</h4>
+                <p>Expert guidance through applications and scholarship opportunities</p>
+            </div>
+
+            <div class="service-box">
+                <div class="service-icon">
+                    <i class="fas fa-book-open"></i>
+                </div>
+                <h4>Entrance Exam Prep</h4>
+                <p>IELTS, TOEFL, SAT, GRE, GMAT – master the tests that matter</p>
+            </div>
+
+            <div class="service-box">
+                <div class="service-icon">
+                    <i class="fas fa-dollar-sign"></i>
+                </div>
+                <h4>Financial Planning</h4>
+                <p>Loan assistance and financial planning for your education</p>
+            </div>
+
+            <div class="service-box">
+                <div class="service-icon">
+                    <i class="fas fa-passport"></i>
+                </div>
+                <h4>Visa Processing</h4>
+                <p>Seamless visa application support and travel planning</p>
+            </div>
+
+            <div class="service-box">
+                <div class="service-icon">
+                    <i class="fas fa-handshake"></i>
+                </div>
+                <h4>Student Mentorship</h4>
+                <p>Ongoing support from acceptance to graduation abroad</p>
+            </div>
+
+            <div class="service-box">
+                <div class="service-icon">
+                    <i class="fas fa-star"></i>
+                </div>
+                <h4>Networking & Alumni</h4>
+                <p>Connect with our global network of successful alumni</p>
+            </div>
+
+            <div class="service-box">
+                <div class="service-icon">
+                    <i class="fas fa-briefcase"></i>
+                </div>
+                <h4>Career Placement</h4>
+                <p>Post-graduation job placements and career guidance</p>
+            </div>
+
+            <div class="service-box">
+                <div class="service-icon">
+                    <i class="fas fa-chart-line"></i>
+                </div>
+                <h4>Test Score Enhancement</h4>
+                <p>Achieve your target scores through personalized programs</p>
+            </div>
+
+            <div class="service-box">
+                <div class="service-icon">
+                    <i class="fas fa-laptop"></i>
+                </div>
+                <h4>Virtual Counseling</h4>
+                <p>Flexible online consultations with our expert team</p>
+            </div>
+
+            <div class="service-box">
+                <div class="service-icon">
+                    <i class="fas fa-calendar-check"></i>
+                </div>
+                <h4>Timeline Planning</h4>
+                <p>16-month roadmap ensuring no step is missed</p>
+            </div>
+
+            <div class="service-box">
+                <div class="service-icon">
+                    <i class="fas fa-shield-alt"></i>
+                </div>
+                <h4>Ensure Success</h4>
+                <p>360-degree support for peace of mind and confidence</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== 16 MONTHS TIMELINE ===== -->
+    <section class="section" id="timeline">
+        <div class="section-header">
+            <h2>16 Months Before You Fly</h2>
+            <p class="section-subheading">
+                Your step-by-step roadmap to studying abroad – from research to arrival at your dream university.
+            </p>
+        </div>
+
+        <div class="timeline">
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <div class="timeline-month">Months 16-15</div>
+                    <h4 style="color: var(--color-burgundy);">Research & Self-Assessment</h4>
+                    <p>Identify goals, take GPaths Assessment, research universities</p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <div class="timeline-month">Months 14-12</div>
+                    <h4 style="color: var(--color-burgundy);">Exam Preparation</h4>
+                    <p>Begin IELTS/TOEFL/SAT training with focused study schedules</p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <div class="timeline-month">Months 11-10</div>
+                    <h4 style="color: var(--color-burgundy);">Exam Attempts</h4>
+                    <p>Take entrance exams, aim for target scores in first or second attempts</p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <div class="timeline-month">Months 9-8</div>
+                    <h4 style="color: var(--color-burgundy);">Application Preparation</h4>
+                    <p>Craft compelling essays, prepare documents, shortlist universities</p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <div class="timeline-month">Months 7-6</div>
+                    <h4 style="color: var(--color-burgundy);">Submit Applications</h4>
+                    <p>Submit applications to target universities with strong SOP & LOR</p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <div class="timeline-month">Months 5-4</div>
+                    <h4 style="color: var(--color-burgundy);">Admission & Financial Planning</h4>
+                    <p>Receive acceptances, apply for scholarships, secure education loans</p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <div class="timeline-month">Months 3-2</div>
+                    <h4 style="color: var(--color-burgundy);">Visa Application</h4>
+                    <p>Gather documents, apply for student visa, attend interviews</p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <div class="timeline-month">Month 1</div>
+                    <h4 style="color: var(--color-burgundy);">Final Preparations</h4>
+                    <p>Arrange accommodation, book flights, prepare for the journey ahead</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== DIRECTORS SECTION ===== -->
+    <section class="section" id="directors" style="background-color: var(--color-parchment);">
+        <div class="section-header">
+            <h2>Meet Our Visionary Leaders</h2>
+            <p class="section-subheading">
+                Decades of expertise dedicated to transforming young lives and empowering families.
+            </p>
+        </div>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 40px;">
+            <div class="director-card">
+                <div class="director-image">
+                    <i class="fas fa-user-circle"></i>
+                </div>
+                <div class="director-info">
+                    <div class="director-name">Shahla Z.S.</div>
+                    <div class="director-title">Founder & Director</div>
+                    <div style="margin: 12px 0; padding: 12px 0; border-top: 1px solid #eee; border-bottom: 1px solid #eee;">
+                        <span style="color: var(--color-gold); font-weight: 700;">24 Years Experience</span>
+                    </div>
+                    <div class="director-bio">
+                        Visionary founder of Edizone Academy with a proven track record of transforming educational pathways for thousands of families.
+                    </div>
+                </div>
+            </div>
+
+            <div class="director-card">
+                <div class="director-image">
+                    <i class="fas fa-user-circle"></i>
+                </div>
+                <div class="director-info">
+                    <div class="director-name">Junaid K.</div>
+                    <div class="director-title">Co-Founder & Advisor</div>
+                    <div style="margin: 12px 0; padding: 12px 0; border-top: 1px solid #eee; border-bottom: 1px solid #eee;">
+                        <span style="color: var(--color-gold); font-weight: 700;">21 Years Experience</span>
+                    </div>
+                    <div class="director-bio">
+                        M.E. Computer Engineering expert bringing technological innovation and strategic guidance to global education initiatives.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== REVIEWS & TESTIMONIALS ===== -->
+    <section class="section" id="reviews">
+        <div class="section-header">
+            <h2>Hear From Our Families</h2>
+            <p class="section-subheading">
+                Real stories of transformation from students and parents who chose Edizone Careers.
+            </p>
+        </div>
+
+        <div class="reviews-grid">
+            <div class="review-column">
+                <h3>The Student Perspective</h3>
+                <p style="color: #666; margin-bottom: 20px; text-align: center;">Discover how our guidance restored confidence and clarity</p>
+
+                <div class="video-testimonial">
+                    <div class="video-placeholder">
+                        <i class="fas fa-play-circle"></i>
+                    </div>
+                </div>
+                <div class="testimonial-meta">
+                    <strong>Aisha Khan</strong> | Student at University of Cambridge
+                </div>
+
+                <div class="video-testimonial">
+                    <div class="video-placeholder">
+                        <i class="fas fa-play-circle"></i>
+                    </div>
+                </div>
+                <div class="testimonial-meta">
+                    <strong>Arjun Patel</strong> | Student at MIT
+                </div>
+
+                <div class="video-testimonial">
+                    <div class="video-placeholder">
+                        <i class="fas fa-play-circle"></i>
+                    </div>
+                </div>
+                <div class="testimonial-meta">
+                    <strong>Maya Desai</strong> | Student at Stanford University
+                </div>
+            </div>
+
+            <div class="review-column">
+                <h3>The Parent Perspective</h3>
+                <p style="color: #666; margin-bottom: 20px; text-align: center;">Learn how we reduced stress and increased confidence</p>
+
+                <div class="video-testimonial">
+                    <div class="video-placeholder">
+                        <i class="fas fa-play-circle"></i>
+                    </div>
+                </div>
+                <div class="testimonial-meta">
+                    <strong>Mrs. Verma</strong> | Parent of Ivy League Admit
+                </div>
+
+                <div class="video-testimonial">
+                    <div class="video-placeholder">
+                        <i class="fas fa-play-circle"></i>
+                    </div>
+                </div>
+                <div class="testimonial-meta">
+                    <strong>Mr. & Mrs. Sharma</strong> | Parents of Cambridge Scholar
+                </div>
+
+                <div class="video-testimonial">
+                    <div class="video-placeholder">
+                        <i class="fas fa-play-circle"></i>
+                    </div>
+                </div>
+                <div class="testimonial-meta">
+                    <strong>Parents United</strong> | Oxford & Harvard Admits
+                </div>
+            </div>
+        </div>
+
+        <div style="text-align: center; margin-top: 60px; padding: 40px; background: linear-gradient(135deg, rgba(128, 0, 0, 0.05), rgba(212, 175, 55, 0.05)); border-radius: 12px; border: 1px solid var(--color-gold);">
+            <h3 style="color: var(--color-burgundy); margin-bottom: 15px;">Scientific Assessment Badge</h3>
+            <p style="color: #666; margin-bottom: 15px;">Our GPaths Assessment is INACE Certified, ensuring world-class standards in career assessment and guidance.</p>
+            <span style="background: var(--color-burgundy); color: white; padding: 10px 20px; border-radius: 8px; display: inline-block; font-weight: 700;">✓ INACE Certified</span>
+        </div>
+    </section>
+
+    <!-- ===== CTA SECTION ===== -->
+    <section class="section" style="background: linear-gradient(135deg, var(--color-burgundy), #600000); color: white; text-align: center;">
+        <h2 style="color: white; margin-bottom: 20px;">Ready to Transform Your Future?</h2>
+        <p style="font-size: 1.2rem; margin-bottom: 40px; color: #ddd;">
+            Take the first step toward your dream career and global education journey today.
+        </p>
+        <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
+            <a href="https://wa.me/918850651192?text=Hi%2C%20I%20would%20like%20to%20book%20a%20consultation%20for%20career%20guidance" class="btn-primary" target="_blank">
+                <i class="fas fa-phone"></i> WhatsApp Me
+            </a>
+            <a href="mailto:info@edizonecareers.com" class="btn-secondary">
+                <i class="fas fa-envelope"></i> Send an Email
+            </a>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer id="contact">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#gpaths">GPaths Assessment</a></li>
+                    <li><a href="#timeline">Study Abroad Timeline</a></li>
+                    <li><a href="#directors">Our Team</a></li>
+                    <li><a href="#reviews">Reviews</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h4>Services</h4>
+                <ul>
+                    <li><a href="#">Career Counselling</a></li>
+                    <li><a href="#">Exam Preparation</a></li>
+                    <li><a href="#">University Applications</a></li>
+                    <li><a href="#">Visa Assistance</a></li>
+                    <li><a href="#">Student Mentorship</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h4>Contact Us</h4>
+                <ul>
+                    <li><i class="fas fa-map-marker-alt"></i> 13, Shreeji Pride, Ashoka Marg, Nashik 422011</li>
+                    <li><i class="fas fa-phone"></i> <a href="tel:+918850651192">+91 8850651192</a></li>
+                    <li><i class="fas fa-envelope"></i> <a href="mailto:info@edizonecareers.com">info@edizonecareers.com</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h4>Follow Us</h4>
+                <ul style="display: flex; gap: 15px;">
+                    <li><a href="#" style="font-size: 1.5rem;"><i class="fab fa-facebook"></i></a></li>
+                    <li><a href="#" style="font-size: 1.5rem;"><i class="fab fa-instagram"></i></a></li>
+                    <li><a href="#" style="font-size: 1.5rem;"><i class="fab fa-linkedin"></i></a></li>
+                    <li><a href="#" style="font-size: 1.5rem;"><i class="fab fa-youtube"></i></a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p style="margin-bottom: 10px;">
+                <strong>Powered by DCore Systems LLP</strong> | LLPIN: ACT-9625 | PAN: AAZFD2232J
+            </p>
+            <p>
+                <a href="#" style="color: var(--color-gold);">GST Verification</a> | 
+                <a href="#" style="color: var(--color-gold);">PAN Verification</a> | 
+                <a href="#" style="color: var(--color-gold);">Privacy Policy</a>
+            </p>
+            <p style="margin-top: 20px; font-size: 0.85rem; color: #999;">
+                © 2026 Edizone Careers. All rights reserved. Transforming Potential into Professional Roadmaps.
+            </p>
+            <div class="trust-verification">
+                <i class="fas fa-shield-alt"></i> INACE Certified Assessment Framework
+            </div>
+        </div>
+    </footer>
+
+    <!-- OPTIONAL: Smooth Scroll & Interactive Elements -->
+    <script>
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                const href = this.getAttribute('href');
+                if (href !== '#' && document.querySelector(href)) {
+                    e.preventDefault();
+                    document.querySelector(href).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Intersection Observer for animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -100px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-fade-in-up');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.feature-card, .service-box, .timeline-content, .director-card').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Video testimonial play functionality (placeholder)
+        document.querySelectorAll('.video-testimonial').forEach(video => {
+            video.addEventListener('click', function() {
+                alert('Video testimonial would play here. Replace with actual video embed.');
+            });
+        });
+    </script>
+</body>
+</html>

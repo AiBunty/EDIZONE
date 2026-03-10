@@ -1,0 +1,339 @@
+{
+  "project": {
+    "name": "Edizone Careers Website",
+    "version": "1.0.0",
+    "description": "Multi-page responsive website for Edizone Careers - Educational Consultancy",
+    "theme": "Elite Academy Theme",
+    "status": "Production Ready"
+  },
+  "branding": {
+    "client_identification": {
+      "name": "Edizone Careers",
+      "parent_company": "DCore Systems LLP",
+      "llpin": "ACT-9625",
+      "pan": "AAZFD2232J",
+      "address": "13, Shreeji Pride, Ashoka Marg, Nashik 422011",
+      "country": "India"
+    },
+    "contact": {
+      "phone": "+91 8850651192",
+      "email": "info@edizonecareers.com",
+      "whatsapp": "https://wa.me/918850651192"
+    }
+  },
+  "color_palette": {
+    "primary": "#800000",
+    "primary_name": "Deep Burgundy",
+    "accent": "#D4AF37",
+    "accent_name": "Gold/Brass",
+    "light": "#FDF5E6",
+    "light_name": "Parchment White",
+    "dark": "#1a1a1a",
+    "dark_name": "Charcoal",
+    "gray": "#666666"
+  },
+  "typography": {
+    "headings": {
+      "family": "Playfair Display",
+      "type": "serif",
+      "weight": [400, 600, 700, 900],
+      "use": "h1, h2, h3, h4, h5, h6, .section-header"
+    },
+    "body": {
+      "family": "Source Sans Pro",
+      "type": "sans-serif",
+      "weight": [400, 600, 700],
+      "use": "body text, paragraphs, list items"
+    }
+  },
+  "pages_structure": {
+    "index": {
+      "filename": "index.html",
+      "title": "Edizone Careers - Transform Your Future",
+      "sections": [
+        "navbar",
+        "hero",
+        "gpaths_assessment",
+        "study_abroad_services",
+        "timeline",
+        "directors",
+        "reviews",
+        "cta",
+        "footer"
+      ]
+    },
+    "future_pages": [
+      {
+        "name": "Services",
+        "filename": "services.html",
+        "description": "Detailed service pages"
+      },
+      {
+        "name": "About Us",
+        "filename": "about.html",
+        "description": "Team & company history"
+      },
+      {
+        "name": "Contact",
+        "filename": "contact.html",
+        "description": "Contact form & inquiry"
+      },
+      {
+        "name": "Blog",
+        "filename": "blog.html",
+        "description": "Career tips & study abroad guides"
+      }
+    ]
+  },
+  "sections_detailed": {
+    "navbar": {
+      "sticky": true,
+      "background": "linear-gradient(to bottom, burgundy, transparent)",
+      "navigation_items": [
+        "Assessment",
+        "Study Abroad",
+        "Our Team",
+        "Reviews",
+        "Contact"
+      ]
+    },
+    "hero": {
+      "type": "full_width",
+      "height": "100vh",
+      "background": "dark_gradient",
+      "layout": "two_column_grid",
+      "elements": {
+        "text_column": [
+          "h1: Career by Design, Not by Chance",
+          "subheading",
+          "cta_group",
+          "trust_bar"
+        ],
+        "image_column": [
+          "glass_card_overlay",
+          "icon_placeholder"
+        ]
+      }
+    },
+    "gpaths_assessment": {
+      "type": "feature_showcase",
+      "background": "white",
+      "heading": "Is Your Career Choice Backed by Science?",
+      "framework": "CPAS",
+      "components": [
+        "Aptitudes (lightbulb icon)",
+        "Interests (compass icon)",
+        "Personality (brain icon)",
+        "Learning Preferences (book icon)",
+        "Career Motivators (rocket icon)"
+      ],
+      "certification": "INACE Certified"
+    },
+    "study_abroad_services": {
+      "type": "12_service_grid",
+      "background": "parchment_light",
+      "services": [
+        "Country & Course Selection",
+        "University Applications",
+        "Entrance Exam Prep",
+        "Financial Planning",
+        "Visa Processing",
+        "Student Mentorship",
+        "Networking & Alumni",
+        "Career Placement",
+        "Test Score Enhancement",
+        "Virtual Counseling",
+        "Timeline Planning",
+        "Ensure Success"
+      ]
+    },
+    "timeline": {
+      "type": "vertical_timeline",
+      "duration": "16 Months",
+      "items": 8,
+      "layout": "alternating_left_right",
+      "phases": [
+        "Months 16-15: Research & Self-Assessment",
+        "Months 14-12: Exam Preparation",
+        "Months 11-10: Exam Attempts",
+        "Months 9-8: Application Preparation",
+        "Months 7-6: Submit Applications",
+        "Months 5-4: Admission & Financial Planning",
+        "Months 3-2: Visa Application",
+        "Month 1: Final Preparations"
+      ]
+    },
+    "directors": {
+      "type": "team_showcase",
+      "background": "parchment_light",
+      "members": [
+        {
+          "name": "Shahla Z.S.",
+          "title": "Founder & Director",
+          "experience": "24 Years",
+          "achievement": "Founder of Edizone Academy"
+        },
+        {
+          "name": "Junaid K.",
+          "title": "Co-Founder & Advisor",
+          "experience": "21 Years",
+          "achievement": "M.E. Computer Engineering"
+        }
+      ]
+    },
+    "reviews": {
+      "type": "testimonial_grid",
+      "layout": "two_column",
+      "left_column": {
+        "title": "The Student Perspective",
+        "focus": "Confidence & Clarity",
+        "testimonials": 3
+      },
+      "right_column": {
+        "title": "The Parent Perspective",
+        "focus": "Reduced Pressure & Support",
+        "testimonials": 3
+      },
+      "certification": "INACE Certified Badge"
+    },
+    "cta": {
+      "type": "banner",
+      "background": "burgundy_gradient",
+      "heading": "Ready to Transform Your Future?",
+      "buttons": [
+        "WhatsApp Me",
+        "Send an Email"
+      ]
+    },
+    "footer": {
+      "background": "burgundy_dark",
+      "sections": [
+        "Quick Links",
+        "Services",
+        "Contact Us",
+        "Follow Us"
+      ],
+      "bottom": {
+        "company": "DCore Systems LLP",
+        "credentials": "LLPIN, PAN, Verification Links",
+        "trust_badge": "INACE Certified"
+      }
+    }
+  },
+  "cta_buttons": {
+    "style": {
+      "border_radius": "12px",
+      "padding": "14px 32px",
+      "font_weight": 600,
+      "transition": "all 0.3s ease"
+    },
+    "primary": {
+      "background": "#800000",
+      "color": "white",
+      "hover_bg": "#600000",
+      "action": "https://wa.me/918850651192"
+    },
+    "secondary": {
+      "background": "transparent",
+      "color": "#800000",
+      "border": "2px solid #800000",
+      "hover_bg": "#800000",
+      "hover_color": "white"
+    }
+  },
+  "global_components": {
+    "hero_section": "Background video placeholder for student success stories",
+    "review_section": "Custom video player grid for Parent/Student testimonials",
+    "trust_bar": "Exam certification badges (IELTS, TOEFL, PTE, GRE, GMAT, SAT)",
+    "certification_badge": "INACE Certified assessment framework",
+    "director_cards": "Gold-bordered premium profile cards"
+  },
+  "assets_structure": {
+    "images": {
+      "hero_bg": "High-resolution student & parent image",
+      "director_images": "Professional photos of Shahla Z.S. & Junaid K.",
+      "icons": "Font Awesome icons (CDN integrated)",
+      "logos": "DCore Systems logo"
+    },
+    "videos": {
+      "hero_bg_video": "Student success story or counseling session (muted, looping)",
+      "testimonials": {
+        "student_videos": 3,
+        "parent_videos": 3
+      }
+    }
+  },
+  "seo_metadata": {
+    "title": "Edizone Careers - Transform Your Future",
+    "description": "Transforming Potential into Professional Roadmaps. Led by experts with 20+ years of experience in Career Strategy, Global Study Abroad, and Student Mentorship.",
+    "keywords": "Career Counselling, Study Abroad, GIDE.AI Assessment, Global Education, Career Guidance, IELTS, TOEFL, GRE, GMAT, SAT",
+    "og_image": "/assets/hero-og-image.jpg",
+    "og_title": "Edizone Careers - Career by Design",
+    "og_description": "Expert career counselling and study abroad guidance for Indian families"
+  },
+  "analytics": {
+    "google_analytics": "Recommended: Add GA4 tag in <head>",
+    "conversions_to_track": [
+      "Book Consultation Click",
+      "WhatsApp Engagement",
+      "Email Inquiry",
+      "Form Submission",
+      "Video Testimonial Click"
+    ]
+  },
+  "form_integration": {
+    "contact_form_handler": "Integrate with Nodemailer / SendGrid / AWS SES",
+    "email_template": "Professional DCore Systems branded template",
+    "crm_integration": "HubSpot / Salesforce / Zoho recommended"
+  },
+  "deployment": {
+    "recommended_platforms": [
+      "Netlify (Easy, Free tier available)",
+      "Vercel (Optimized for frontend)",
+      "GitHub Pages (Free hosting)",
+      "AWS S3 + CloudFront (Scalable)"
+    ],
+    "domain": "edizonecareers.com (or similar)",
+    "ssl_certificate": "Auto-included with Netlify/Vercel"
+  },
+  "browser_support": {
+    "chrome": "90+",
+    "firefox": "88+",
+    "safari": "14+",
+    "edge": "90+",
+    "mobile_safari": "iOS 14+",
+    "android_chrome": "Latest"
+  },
+  "performance_targets": {
+    "load_time_seconds": "< 2",
+    "lighthouse_score": "85+",
+    "mobile_friendly": "100%",
+    "first_contentful_paint": "< 1.5s"
+  },
+  "responsive_breakpoints": {
+    "desktop": "1200px+",
+    "tablet": "768px - 1024px",
+    "mobile": "< 768px"
+  },
+  "future_enhancements": {
+    "phase_1_week1": [
+      "Add actual director photos",
+      "Embed real video testimonials",
+      "Update all placeholder content",
+      "Connect WhatsApp/Email CTAs to CRM"
+    ],
+    "phase_2_week2_3": [
+      "Add contact form with backend",
+      "Implement Google Analytics",
+      "Create separate services page",
+      "Add blog section"
+    ],
+    "phase_3_month1_plus": [
+      "GPaths Assessment interactive quiz",
+      "Student portal/dashboard",
+      "Payment integration",
+      "Multi-language support",
+      "Chat support widget"
+    ]
+  }
+}

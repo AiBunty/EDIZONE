@@ -1,0 +1,1948 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Edizone Careers - Transforming Potential into Professional Roadmaps. Expert guidance for Career Strategy, Global Study Abroad, and Student Mentorship.">
+    <meta name="keywords" content="Career Counselling, Study Abroad, GIDE.AI Assessment, Global Education, Career Guidance">
+    <title>Edizone Careers - Transform Your Future</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <link href="edizone-rebuild.css" rel="stylesheet">
+</head>
+<body class="preloading">
+    <div class="page-preloader" id="pagePreloader" role="status" aria-live="polite" aria-label="Loading website">
+        <div class="preloader-inner">
+            <div class="preloader-spinner" aria-hidden="true"></div>
+            <div class="preloader-title">Edizone Careers</div>
+            <div class="preloader-subtitle">Your Global Education Partner</div>
+            <div class="preloader-message" id="preloaderMessage">Preparing personalized guidance for your study abroad journey...</div>
+            <div class="preloader-highlights" aria-hidden="true">
+                <div class="preloader-highlight"><i class="fas fa-user-graduate"></i><span>Career Mentors</span></div>
+                <div class="preloader-highlight"><i class="fas fa-university"></i><span>University Matchmaking</span></div>
+                <div class="preloader-highlight"><i class="fas fa-passport"></i><span>Visa Support</span></div>
+            </div>
+            <div class="preloader-progress" aria-hidden="true"></div>
+            <button class="preloader-skip" id="preloaderSkipBtn" type="button" aria-label="Skip intro and open website">Skip Intro</button>
+        </div>
+    </div>
+
+    <!-- ===== NAVBAR ===== -->
+    <nav class="navbar">
+        <div class="navbar-brand">
+            <span class="logo-badge"><i class="fas fa-shield-alt"></i></span>
+            <span class="navbar-brand-text">
+                <span class="navbar-brand-title">EDIZONE CAREERS</span>
+                <span class="navbar-brand-tagline">Careers By Design</span>
+            </span>
+        </div>
+        <button class="nav-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false" aria-controls="site-nav">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <ul class="navbar-links" id="site-nav">
+            <li><a href="#">Home</a></li>
+            <li><a href="#directors">About</a></li>
+            <li><a href="#offers">What We Offer</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#timeline">Timeline</a></li>
+            <li><a href="#universities">Universities</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="nav-cta-group">
+            <button class="btn-nav btn-counselling nav-cta" id="openCounsellingModal"><i class="fas fa-calendar-check"></i> Free Counselling</button>
+        </div>
+    </nav>
+
+    <!-- ===== HERO SECTION ===== -->
+    <section class="hero brochure-hero">
+        <div class="hero-bg-overlay"></div>
+        <div class="hero-content brochure-hero-content">
+            <div class="brochure-lockup" aria-label="Edizone Careers brand">
+                <span class="brochure-lockup-mark"><i class="fas fa-shield-alt"></i></span>
+                <span class="brochure-lockup-text">Edizone Careers<small>Careers By Design</small></span>
+            </div>
+            <div class="hero-text brochure-hero-text">
+                <div class="hero-pill">
+                    <i class="fas fa-compass"></i>
+                    <span>Careers By Design</span>
+                </div>
+                <h1>We are a one-stop solution for all your Education Needs!</h1>
+                <p class="hero-subheading">
+                    Career Counselling, Study Abroad, and Parenting & Student Coaching under one roof, led by experts with 20+ years of experience.
+                </p>
+                
+                <div class="cta-group">
+                    <button class="btn-primary" onclick="document.getElementById('counsellingModal').classList.add('is-open');document.body.style.overflow='hidden';">
+                        <i class="fas fa-calendar-check"></i> Free Counselling
+                    </button>
+                    <a href="#offers" class="btn-secondary">
+                        <i class="fas fa-layer-group"></i> Explore Services
+                    </a>
+                </div>
+
+                <div class="trust-bar">
+                    <ul class="hero-highlights">
+                        <li><span class="highlight-check"><i class="fas fa-check"></i></span>Global Study Abroad Strategy</li>
+                        <li><span class="highlight-check"><i class="fas fa-check"></i></span>Career Assessment with GPaths</li>
+                        <li><span class="highlight-check"><i class="fas fa-check"></i></span>Parenting & Student Coaching</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="brochure-hero-grid" aria-label="Core focus areas">
+                <div class="brochure-hero-card">
+                    <div class="brochure-hero-label">Career Counselling</div>
+                    <div class="brochure-hero-photo career" role="img" aria-label="Career counselling"></div>
+                </div>
+                <div class="brochure-hero-card">
+                    <div class="brochure-hero-label">Study Abroad</div>
+                    <div class="brochure-hero-photo abroad" role="img" aria-label="Study abroad"></div>
+                </div>
+                <div class="brochure-hero-card">
+                    <div class="brochure-hero-label">Parenting & Student Coaching</div>
+                    <div class="brochure-hero-photo parenting" role="img" aria-label="Parenting and student coaching"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== UNIVERSITIES CAROUSEL ===== -->
+    <section class="section universities-section" id="universities">
+        <div class="section-header">
+            <h2>Explore Universities by Country</h2>
+            <p class="section-subheading">
+                Compare destination options, top universities, and best-fit outcomes in one guided carousel.
+            </p>
+        </div>
+
+        <div class="country-tabs" id="countryTabs">
+            <button class="country-tab is-active" type="button" data-slide="0"><span class="country-tab-flag" aria-hidden="true">🇺🇸</span><span class="country-tab-label">USA</span></button>
+            <button class="country-tab" type="button" data-slide="1"><span class="country-tab-flag" aria-hidden="true">🇬🇧</span><span class="country-tab-label">UK</span></button>
+            <button class="country-tab" type="button" data-slide="2"><span class="country-tab-flag" aria-hidden="true">🇦🇺</span><span class="country-tab-label">Australia</span></button>
+            <button class="country-tab" type="button" data-slide="3"><span class="country-tab-flag" aria-hidden="true">🇨🇦</span><span class="country-tab-label">Canada</span></button>
+            <button class="country-tab" type="button" data-slide="4"><span class="country-tab-flag" aria-hidden="true">🇩🇪</span><span class="country-tab-label">Germany</span></button>
+            <button class="country-tab" type="button" data-slide="5"><span class="country-tab-flag" aria-hidden="true">🇫🇷</span><span class="country-tab-label">France</span></button>
+            <button class="country-tab" type="button" data-slide="6"><span class="country-tab-flag" aria-hidden="true">🇸🇬</span><span class="country-tab-label">Singapore</span></button>
+            <button class="country-tab" type="button" data-slide="7"><span class="country-tab-flag" aria-hidden="true">🇳🇱</span><span class="country-tab-label">Netherlands</span></button>
+        </div>
+
+        <div class="universities-carousel-shell" id="universitiesCarousel" aria-label="University carousel by country">
+            <div class="universities-viewport">
+                <div class="universities-track" id="universitiesTrack">
+                    <article class="country-slide" data-country="USA">
+                        <div class="country-slide-media country-usa">
+                            <span class="country-slide-kicker">🇺🇸 United States</span>
+                            <div class="country-logo-stack" aria-hidden="true">
+                                <span class="uni-logo-chip is-wide">HARV</span>
+                                <span class="uni-logo-chip">MIT</span>
+                                <span class="uni-logo-chip">SU</span>
+                                <span class="uni-logo-chip">YU</span>
+                            </div>
+                            <div class="country-slide-media-inner">
+                                <h3>Study In The USA</h3>
+                                <p>Prestige, research intensity, and high-impact career pathways across Ivy League and innovation-led campuses.</p>
+                            </div>
+                        </div>
+                        <div class="country-slide-content">
+                            <div class="country-slide-stats">
+                                <span class="country-stat">Top picks: 4 universities</span>
+                                <span class="country-stat">Best for: STEM, business, law</span>
+                            </div>
+                            <p class="country-slide-copy">The US slide groups the institutions students most frequently ask about, so the country is the main entry point and the universities sit inside it.</p>
+                            <div class="country-university-grid">
+                                <div class="country-university-card"><div class="country-university-head"><span class="uni-logo-chip" aria-hidden="true">HU</span><h4>Harvard University</h4></div><p>Medicine, law, policy, global leadership.</p><span class="ranking-badge">#1 QS</span></div>
+                                <div class="country-university-card"><div class="country-university-head"><span class="uni-logo-chip" aria-hidden="true">MIT</span><h4>MIT</h4></div><p>Engineering, AI, robotics, entrepreneurship.</p><span class="ranking-badge">#2 QS</span></div>
+                                <div class="country-university-card"><div class="country-university-head"><span class="uni-logo-chip" aria-hidden="true">SU</span><h4>Stanford University</h4></div><p>Innovation, business, computing, biotech.</p><span class="ranking-badge">#3 QS</span></div>
+                                <div class="country-university-card"><div class="country-university-head"><span class="uni-logo-chip" aria-hidden="true">YU</span><h4>Yale University</h4></div><p>Law, humanities, medicine, economics.</p><span class="ranking-badge">#8 QS</span></div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="country-slide" data-country="UK">
+                        <div class="country-slide-media country-uk">
+                            <span class="country-slide-kicker">🇬🇧 United Kingdom</span>
+                            <div class="country-logo-stack" aria-hidden="true">
+                                <span class="uni-logo-chip">OX</span>
+                                <span class="uni-logo-chip">CAM</span>
+                                <span class="uni-logo-chip">ICL</span>
+                                <span class="uni-logo-chip">LSE</span>
+                            </div>
+                            <div class="country-slide-media-inner">
+                                <h3>Study In The UK</h3>
+                                <p>Historic campuses, shorter degrees, and globally recognized academic reputation with strong post-study pathways.</p>
+                            </div>
+                        </div>
+                        <div class="country-slide-content">
+                            <div class="country-slide-stats">
+                                <span class="country-stat">Top picks: 4 universities</span>
+                                <span class="country-stat">Best for: law, finance, medicine</span>
+                            </div>
+                            <p class="country-slide-copy">This slide clusters the UK’s most recognizable universities into one destination-first view, so users can browse by country instead of scanning a long list.</p>
+                            <div class="country-university-grid">
+                                <div class="country-university-card"><div class="country-university-head"><span class="uni-logo-chip" aria-hidden="true">OX</span><h4>University of Oxford</h4></div><p>Law, medicine, PPE, engineering.</p><span class="ranking-badge">#4 QS</span></div>
+                                <div class="country-university-card"><div class="country-university-head"><span class="uni-logo-chip" aria-hidden="true">CAM</span><h4>University of Cambridge</h4></div><p>Natural sciences, engineering, medicine.</p><span class="ranking-badge">#5 QS</span></div>
+                                <div class="country-university-card"><div class="country-university-head"><span class="uni-logo-chip" aria-hidden="true">ICL</span><h4>Imperial College London</h4></div><p>Engineering, medicine, data science.</p><span class="ranking-badge">#6 QS</span></div>
+                                <div class="country-university-card"><div class="country-university-head"><span class="uni-logo-chip" aria-hidden="true">LSE</span><h4>LSE</h4></div><p>Economics, policy, business, law.</p><span class="ranking-badge">#45 QS</span></div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="country-slide" data-country="Australia">
+                        <div class="country-slide-media country-australia">
+                            <span class="country-slide-kicker">🇦🇺 Australia</span>
+                            <div class="country-logo-stack" aria-hidden="true">
+                                <span class="uni-logo-chip">UM</span>
+                                <span class="uni-logo-chip">ANU</span>
+                                <span class="uni-logo-chip">UNSW</span>
+                                <span class="uni-logo-chip">MON</span>
+                            </div>
+                            <div class="country-slide-media-inner">
+                                <h3>Study In Australia</h3>
+                                <p>Research universities, employability-focused degrees, and strong student support in globally connected cities.</p>
+                            </div>
+                        </div>
+                        <div class="country-slide-content">
+                            <div class="country-slide-stats">
+                                <span class="country-stat">Top picks: 4 universities</span>
+                                <span class="country-stat">Best for: health, engineering, business</span>
+                            </div>
+                            <p class="country-slide-copy">Australia works well in a carousel because each destination has a distinct academic identity and lifestyle appeal, which is easier to understand slide by slide.</p>
+                            <div class="country-university-grid">
+                                <div class="country-university-card"><div class="country-university-head"><span class="uni-logo-chip" aria-hidden="true">UM</span><h4>University of Melbourne</h4></div><p>Medicine, engineering, law, business.</p><span class="ranking-badge">#37 QS</span></div>
+                                <div class="country-university-card"><div class="country-university-head"><span class="uni-logo-chip" aria-hidden="true">ANU</span><h4>ANU</h4></div><p>Policy, science, economics, analytics.</p><span class="ranking-badge">#70 QS</span></div>
+                                <div class="country-university-card"><div class="country-university-head"><span class="uni-logo-chip" aria-hidden="true">UNSW</span><h4>UNSW Sydney</h4></div><p>Engineering, finance, health, law.</p><span class="ranking-badge">#84 QS</span></div>
+                                <div class="country-university-card"><div class="country-university-head"><span class="uni-logo-chip" aria-hidden="true">MON</span><h4>Monash University</h4></div><p>Pharmacy, engineering, design, medicine.</p><span class="ranking-badge">#54 QS</span></div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="country-slide" data-country="Canada">
+                        <div class="country-slide-media country-canada">
+                            <span class="country-slide-kicker">🇨🇦 Canada</span>
+                            <div class="country-logo-stack" aria-hidden="true">
+                                <span class="uni-logo-chip">UofT</span>
+                                <span class="uni-logo-chip">UBC</span>
+                                <span class="uni-logo-chip">MG</span>
+                                <span class="uni-logo-chip">MAC</span>
+                            </div>
+                            <div class="country-slide-media-inner">
+                                <h3>Study In Canada</h3>
+                                <p>High-quality public universities, excellent immigration pathways, and strong outcomes in health, science, and applied research.</p>
+                            </div>
+                        </div>
+                        <div class="country-slide-content">
+                            <div class="country-slide-stats">
+                                <span class="country-stat">Top picks: 4 universities</span>
+                                <span class="country-stat">Best for: research, co-op, healthcare</span>
+                            </div>
+                            <p class="country-slide-copy">Canada is often shortlisted by families early, so giving it a dedicated slide reduces cognitive load and makes the university choices easier to compare.</p>
+                            <div class="country-university-grid">
+                                <div class="country-university-card"><div class="country-university-head"><span class="uni-logo-chip" aria-hidden="true">UofT</span><h4>University of Toronto</h4></div><p>Medicine, engineering, business, AI.</p><span class="ranking-badge">#26 QS</span></div>
+                                <div class="country-university-card"><div class="country-university-head"><span class="uni-logo-chip" aria-hidden="true">UBC</span><h4>UBC</h4></div><p>Science, sustainability, commerce, medicine.</p><span class="ranking-badge">#34 QS</span></div>
+                                <div class="country-university-card"><div class="country-university-head"><span class="uni-logo-chip" aria-hidden="true">MG</span><h4>McGill University</h4></div><p>Medicine, law, engineering, management.</p><span class="ranking-badge">#32 QS</span></div>
+                                <div class="country-university-card"><div class="country-university-head"><span class="uni-logo-chip" aria-hidden="true">MAC</span><h4>McMaster University</h4></div><p>Health sciences, engineering, business.</p><span class="ranking-badge">#146 QS</span></div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="country-slide" data-country="Germany">
+                        <div class="country-slide-media country-germany">
+                            <span class="country-slide-kicker">🇩🇪 Germany</span>
+                            <div class="country-logo-stack" aria-hidden="true">
+                                <span class="uni-logo-chip">TUM</span>
+                                <span class="uni-logo-chip">HD</span>
+                                <span class="uni-logo-chip">HB</span>
+                                <span class="uni-logo-chip">BONN</span>
+                            </div>
+                            <div class="country-slide-media-inner">
+                                <h3>Study In Germany</h3>
+                                <p>Strong engineering tradition, research depth, and value-driven degrees with growing English-taught options.</p>
+                            </div>
+                        </div>
+                        <div class="country-slide-content">
+                            <div class="country-slide-stats">
+                                <span class="country-stat">Top picks: 4 universities</span>
+                                <span class="country-stat">Best for: engineering, physics, research</span>
+                            </div>
+                            <p class="country-slide-copy">Germany benefits from destination-level storytelling because affordability and technical reputation are part of the country decision, not just the university decision.</p>
+                            <div class="country-university-grid">
+                                <div class="country-university-card"><div class="country-university-head"><span class="uni-logo-chip" aria-hidden="true">TUM</span><h4>TU Munich</h4></div><p>Engineering, AI, robotics, data science.</p><span class="ranking-badge">#50 QS</span></div>
+                                <div class="country-university-card"><div class="country-university-head"><span class="uni-logo-chip" aria-hidden="true">HD</span><h4>Heidelberg University</h4></div><p>Medicine, chemistry, philosophy, physics.</p><span class="ranking-badge">#87 QS</span></div>
+                                <div class="country-university-card"><div class="country-university-head"><span class="uni-logo-chip" aria-hidden="true">HB</span><h4>Humboldt Berlin</h4></div><p>Biology, economics, law, social sciences.</p><span class="ranking-badge">#94 QS</span></div>
+                                <div class="country-university-card"><div class="country-university-head"><span class="uni-logo-chip" aria-hidden="true">BONN</span><h4>University of Bonn</h4></div><p>Math, economics, medicine, life sciences.</p><span class="ranking-badge">#116 QS</span></div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="country-slide" data-country="France">
+                        <div class="country-slide-media country-france">
+                            <span class="country-slide-kicker">🇫🇷 France</span>
+                            <div class="country-logo-stack" aria-hidden="true">
+                                <span class="uni-logo-chip">PS</span>
+                                <span class="uni-logo-chip">SOR</span>
+                                <span class="uni-logo-chip">PSL</span>
+                                <span class="uni-logo-chip">HEC</span>
+                            </div>
+                            <div class="country-slide-media-inner">
+                                <h3>Study In France</h3>
+                                <p>Elite research ecosystems, strong business schools, and a compelling blend of academic prestige and cultural access.</p>
+                            </div>
+                        </div>
+                        <div class="country-slide-content">
+                            <div class="country-slide-stats">
+                                <span class="country-stat">Top picks: 4 universities</span>
+                                <span class="country-stat">Best for: business, maths, science</span>
+                            </div>
+                            <p class="country-slide-copy">France deserves a dedicated slide because students often compare grandes écoles and research universities differently from other markets.</p>
+                            <div class="country-university-grid">
+                                <div class="country-university-card"><div class="country-university-head"><span class="uni-logo-chip" aria-hidden="true">PS</span><h4>Paris-Saclay University</h4></div><p>Physics, mathematics, engineering, chemistry.</p><span class="ranking-badge">#77 QS</span></div>
+                                <div class="country-university-card"><div class="country-university-head"><span class="uni-logo-chip" aria-hidden="true">SOR</span><h4>Sorbonne University</h4></div><p>Medicine, science, engineering, humanities.</p><span class="ranking-badge">#78 QS</span></div>
+                                <div class="country-university-card"><div class="country-university-head"><span class="uni-logo-chip" aria-hidden="true">PSL</span><h4>PSL Research University</h4></div><p>Physics, biology, chemistry, analytics.</p><span class="ranking-badge">#85 QS</span></div>
+                                <div class="country-university-card"><div class="country-university-head"><span class="uni-logo-chip" aria-hidden="true">HEC</span><h4>HEC Paris</h4></div><p>Management, finance, marketing, strategy.</p><span class="ranking-badge">#47 QS</span></div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="country-slide" data-country="Singapore">
+                        <div class="country-slide-media country-singapore">
+                            <span class="country-slide-kicker">🇸🇬 Singapore</span>
+                            <div class="country-logo-stack" aria-hidden="true">
+                                <span class="uni-logo-chip">NUS</span>
+                                <span class="uni-logo-chip">NTU</span>
+                                <span class="uni-logo-chip">SMU</span>
+                                <span class="uni-logo-chip">SUSS</span>
+                            </div>
+                            <div class="country-slide-media-inner">
+                                <h3>Study In Singapore</h3>
+                                <p>Compact, high-performing universities with strong industry integration and a major advantage for students targeting Asia-Pacific careers.</p>
+                            </div>
+                        </div>
+                        <div class="country-slide-content">
+                            <div class="country-slide-stats">
+                                <span class="country-stat">Top picks: 4 universities</span>
+                                <span class="country-stat">Best for: business, computing, engineering</span>
+                            </div>
+                            <p class="country-slide-copy">Singapore works well as a single destination slide because the country itself is a premium higher-education hub with a clear positioning.</p>
+                            <div class="country-university-grid">
+                                <div class="country-university-card"><div class="country-university-head"><span class="uni-logo-chip" aria-hidden="true">NUS</span><h4>NUS</h4></div><p>Engineering, medicine, business, science.</p><span class="ranking-badge">#8 QS</span></div>
+                                <div class="country-university-card"><div class="country-university-head"><span class="uni-logo-chip" aria-hidden="true">NTU</span><h4>NTU</h4></div><p>Engineering, design, business, analytics.</p><span class="ranking-badge">#84 QS</span></div>
+                                <div class="country-university-card"><div class="country-university-head"><span class="uni-logo-chip" aria-hidden="true">SMU</span><h4>SMU</h4></div><p>Business, law, accountancy, economics.</p><span class="ranking-badge">#618 QS</span></div>
+                                <div class="country-university-card"><div class="country-university-head"><span class="uni-logo-chip" aria-hidden="true">SUSS</span><h4>SUSS</h4></div><p>Technology, business, law, applied learning.</p><span class="ranking-badge">#701-750 QS</span></div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="country-slide" data-country="Netherlands">
+                        <div class="country-slide-media country-netherlands">
+                            <span class="country-slide-kicker">🇳🇱 Netherlands</span>
+                            <div class="country-logo-stack" aria-hidden="true">
+                                <span class="uni-logo-chip">UvA</span>
+                                <span class="uni-logo-chip">UU</span>
+                                <span class="uni-logo-chip">EUR</span>
+                                <span class="uni-logo-chip">RUG</span>
+                            </div>
+                            <div class="country-slide-media-inner">
+                                <h3>Study In The Netherlands</h3>
+                                <p>English-taught degrees, research-led universities, and a strong fit for students seeking Europe with a modern academic environment.</p>
+                            </div>
+                        </div>
+                        <div class="country-slide-content">
+                            <div class="country-slide-stats">
+                                <span class="country-stat">Top picks: 4 universities</span>
+                                <span class="country-stat">Best for: business, sustainability, science</span>
+                            </div>
+                            <p class="country-slide-copy">The Netherlands slide helps users understand the country as a study destination first, then compare universities inside that context.</p>
+                            <div class="country-university-grid">
+                                <div class="country-university-card"><div class="country-university-head"><span class="uni-logo-chip" aria-hidden="true">UvA</span><h4>University of Amsterdam</h4></div><p>Media, business, science, social sciences.</p><span class="ranking-badge">#61 QS</span></div>
+                                <div class="country-university-card"><div class="country-university-head"><span class="uni-logo-chip" aria-hidden="true">UU</span><h4>Utrecht University</h4></div><p>Life sciences, medicine, law, sustainability.</p><span class="ranking-badge">#110 QS</span></div>
+                                <div class="country-university-card"><div class="country-university-head"><span class="uni-logo-chip" aria-hidden="true">EUR</span><h4>Erasmus Rotterdam</h4></div><p>Business, economics, medicine, policy.</p><span class="ranking-badge">#176 QS</span></div>
+                                <div class="country-university-card"><div class="country-university-head"><span class="uni-logo-chip" aria-hidden="true">RUG</span><h4>University of Groningen</h4></div><p>Astronomy, engineering, medicine, science.</p><span class="ranking-badge">#114 QS</span></div>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+
+            <div class="carousel-controls">
+                <div class="carousel-nav-group">
+                    <button class="carousel-btn" id="prevBtn" type="button" aria-label="Show previous country">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <button class="carousel-btn" id="nextBtn" type="button" aria-label="Show next country">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+                <div class="carousel-progress" aria-hidden="true">
+                    <div class="carousel-progress-bar" id="carouselProgressBar"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== WHAT WE OFFER ===== -->
+    <section class="section" id="offers" style="background-color: var(--color-parchment);">
+        <div class="section-header">
+            <h2>What We Offer?</h2>
+            <p class="section-subheading">
+                Personalized, practical, and research-backed support for students and families.
+            </p>
+        </div>
+
+        <div class="services-grid mobile-deck">
+            <article class="feature-card mobile-deck-card">
+                <div class="feature-icon"><i class="fas fa-clipboard-check"></i></div>
+                <h3>Career Assessments</h3>
+                <p>Scientific assessment through GPaths, a groundbreaking and globally recognized tool.</p>
+            </article>
+            <article class="feature-card mobile-deck-card">
+                <div class="feature-icon"><i class="fas fa-globe"></i></div>
+                <h3>Study Abroad Counselling</h3>
+                <p>All services under one roof with expert guidance at every stage.</p>
+            </article>
+            <article class="feature-card mobile-deck-card">
+                <div class="feature-icon"><i class="fas fa-users"></i></div>
+                <h3>Parent Orientation Sessions</h3>
+                <p>Understand your child’s journey, break career myths, and build healthy support systems.</p>
+            </article>
+            <article class="feature-card mobile-deck-card">
+                <div class="feature-icon"><i class="fas fa-comments"></i></div>
+                <h3>Skill Building & Coaching</h3>
+                <p>Communication, emotional intelligence workshops, and goal setting with time management.</p>
+            </article>
+        </div>
+    </section>
+
+    <!-- ===== GPATHS ASSESSMENT SECTION ===== -->
+    <section class="section" id="gpaths">
+        <div class="section-header">
+            <h2>Career Counselling</h2>
+            <p class="section-subheading">
+                What is GPaths? A globally recognized career assessment by High School Moms (HSM), powered by GIDE.AI and certified by INACE.
+            </p>
+        </div>
+
+        <div class="glass-card-dark" style="padding: 24px 26px; margin-bottom: 28px;">
+            <p class="mission-lead" style="margin-bottom: 8px;">
+                Fun, structured, and insight-driven assessment for students.
+            </p>
+            <p class="who-we-are-impact" style="margin-top: 0;">
+                What GPaths Measures (CPAS Framework)
+            </p>
+        </div>
+
+        <div class="gpaths-grid mobile-deck">
+            <div class="gpaths-item mobile-deck-card">
+                <div class="gpaths-icon">
+                    <i class="fas fa-brain"></i>
+                </div>
+                <div class="gpaths-label">Aptitudes & Skills</div>
+                <p style="font-size: 0.85rem; color: #666; margin-top: 10px;">Core strengths and natural abilities</p>
+            </div>
+
+            <div class="gpaths-item mobile-deck-card">
+                <div class="gpaths-icon">
+                    <i class="fas fa-lightbulb"></i>
+                </div>
+                <div class="gpaths-label">Interests & Inclinations</div>
+                <p style="font-size: 0.85rem; color: #666; margin-top: 10px;">What genuinely engages and motivates you</p>
+            </div>
+
+            <div class="gpaths-item mobile-deck-card">
+                <div class="gpaths-icon">
+                    <i class="fas fa-user-check"></i>
+                </div>
+                <div class="gpaths-label">Personality Traits</div>
+                <p style="font-size: 0.85rem; color: #666; margin-top: 10px;">Behavior style and personal orientation</p>
+            </div>
+
+            <div class="gpaths-item mobile-deck-card">
+                <div class="gpaths-icon">
+                    <i class="fas fa-book"></i>
+                </div>
+                <div class="gpaths-label">Learning Preferences</div>
+                <p style="font-size: 0.85rem; color: #666; margin-top: 10px;">How you absorb and apply knowledge best</p>
+            </div>
+
+            <div class="gpaths-item mobile-deck-card">
+                <div class="gpaths-icon">
+                    <i class="fas fa-rocket"></i>
+                </div>
+                <div class="gpaths-label">Career Motivators</div>
+                <p style="font-size: 0.85rem; color: #666; margin-top: 10px;">Drivers that sustain long-term success</p>
+            </div>
+        </div>
+
+        <div class="glass-card student-benefits-carousel">
+            <div class="student-benefits-header">
+                <h3>What Students Get</h3>
+                <div class="student-benefits-badge"><i class="fas fa-layer-group"></i> Auto Highlights</div>
+            </div>
+            <div class="student-benefits-shell" id="studentBenefitsCarousel" aria-label="What students get highlights">
+                <div class="student-benefits-viewport">
+                    <div class="student-benefits-track" id="studentBenefitsTrack">
+                        <article class="student-benefit-card">
+                            <div class="student-benefit-meta">
+                                <span class="student-benefit-step">Benefit 01</span>
+                                <span class="student-benefit-icon"><i class="fas fa-file-alt"></i></span>
+                            </div>
+                            <h4>Career Report</h4>
+                            <p>Personalized, easy-to-understand career report that turns assessment insights into clear next moves.</p>
+                        </article>
+                        <article class="student-benefit-card">
+                            <div class="student-benefit-meta">
+                                <span class="student-benefit-step">Benefit 02</span>
+                                <span class="student-benefit-icon"><i class="fas fa-compass"></i></span>
+                            </div>
+                            <h4>Future-Ready Options</h4>
+                            <p>Future-ready career options covering traditional, emerging, and interdisciplinary pathways.</p>
+                        </article>
+                        <article class="student-benefit-card">
+                            <div class="student-benefit-meta">
+                                <span class="student-benefit-step">Benefit 03</span>
+                                <span class="student-benefit-icon"><i class="fas fa-route"></i></span>
+                            </div>
+                            <h4>Academic Pathways</h4>
+                            <p>Customized academic pathways aligned to strengths, interests, and long-term ambitions.</p>
+                        </article>
+                        <article class="student-benefit-card">
+                            <div class="student-benefit-meta">
+                                <span class="student-benefit-step">Benefit 04</span>
+                                <span class="student-benefit-icon"><i class="fas fa-university"></i></span>
+                            </div>
+                            <h4>Global Recommendations</h4>
+                            <p>Global university recommendations that connect the right profile with the right destinations.</p>
+                        </article>
+                        <article class="student-benefit-card">
+                            <div class="student-benefit-meta">
+                                <span class="student-benefit-step">Benefit 05</span>
+                                <span class="student-benefit-icon"><i class="fas fa-check-circle"></i></span>
+                            </div>
+                            <h4>Action Plan</h4>
+                            <p>Clear action plan covering subjects, skills, and next steps so students can move forward confidently.</p>
+                        </article>
+                    </div>
+                </div>
+                <div class="student-benefits-progress" id="studentBenefitsProgress" aria-hidden="true">
+                    <span class="student-benefits-progress-dot is-active"></span>
+                    <span class="student-benefits-progress-dot"></span>
+                    <span class="student-benefits-progress-dot"></span>
+                    <span class="student-benefits-progress-dot"></span>
+                    <span class="student-benefits-progress-dot"></span>
+                </div>
+            </div>
+            <p class="who-we-are-impact student-benefits-summary">
+                Ideal for students seeking clarity, confidence, and direction.
+            </p>
+        </div>
+
+        <div class="glass-card-dark approach-section" style="margin-top: 26px; padding: 28px 32px;">
+            <h3 style="margin-bottom: 0; margin-top: 0; font-size: clamp(1.4rem, 2.5vw, 1.75rem); color: var(--color-gold); text-transform: uppercase; letter-spacing: 0.06em; font-weight: 800; padding-bottom: 16px; border-bottom: 2px solid rgba(212, 175, 55, 0.36);">Our Approach</h3>
+            <ul class="mission-list">
+                <li>Emotional Intelligence-based</li>
+                <li>Child-centric, parent-inclusive</li>
+                <li>Practical, real-life strategies</li>
+                <li>Empathetic, non-judgmental guidance</li>
+                <li>Focused on long-term growth</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- ===== STUDY ABROAD SERVICES ===== -->
+    <section class="section" id="services" style="background-color: var(--bg-soft);">
+        <div class="section-header">
+            <h2>Our Services</h2>
+            <p class="section-subheading">
+                All services under one roof for a complete and stress-free study abroad journey.
+            </p>
+        </div>
+
+        <div class="services-grid mobile-deck">
+            <div class="service-box mobile-deck-card">
+                <div class="service-icon">
+                    <i class="fas fa-globe-americas"></i>
+                </div>
+                <h4>Country Selection</h4>
+                <p>Choose the right destination based on goals, profile, and budget</p>
+            </div>
+
+            <div class="service-box mobile-deck-card">
+                <div class="service-icon">
+                    <i class="fas fa-university"></i>
+                </div>
+                <h4>Course Selection</h4>
+                <p>Pick a future-ready program aligned to strengths and interests</p>
+            </div>
+
+            <div class="service-box mobile-deck-card">
+                <div class="service-icon">
+                    <i class="fas fa-book-open"></i>
+                </div>
+                <h4>University Applications</h4>
+                <p>Strong application strategy, SOP, and document support</p>
+            </div>
+
+            <div class="service-box mobile-deck-card">
+                <div class="service-icon">
+                    <i class="fas fa-dollar-sign"></i>
+                </div>
+                <h4>Securing Admissions</h4>
+                <p>Focused guidance to maximize admit chances in target universities</p>
+            </div>
+
+            <div class="service-box mobile-deck-card">
+                <div class="service-icon">
+                    <i class="fas fa-passport"></i>
+                </div>
+                <h4>Exam Counselling</h4>
+                <p>Expert roadmap for IELTS, TOEFL, PTE, GRE, GMAT, SAT, and ACT</p>
+            </div>
+
+            <div class="service-box mobile-deck-card">
+                <div class="service-icon">
+                    <i class="fas fa-handshake"></i>
+                </div>
+                <h4>Securing Scholarships</h4>
+                <p>Identify and apply to scholarships for reduced education cost</p>
+            </div>
+
+            <div class="service-box mobile-deck-card">
+                <div class="service-icon">
+                    <i class="fas fa-star"></i>
+                </div>
+                <h4>Financial Planning</h4>
+                <p>Build an education funding plan that works for your family</p>
+            </div>
+
+            <div class="service-box mobile-deck-card">
+                <div class="service-icon">
+                    <i class="fas fa-briefcase"></i>
+                </div>
+                <h4>Loan Assistance</h4>
+                <p>End-to-end support for education loan applications</p>
+            </div>
+
+            <div class="service-box mobile-deck-card">
+                <div class="service-icon">
+                    <i class="fas fa-chart-line"></i>
+                </div>
+                <h4>Stay Arrangements</h4>
+                <p>Guidance for safe and practical accommodation options</p>
+            </div>
+
+            <div class="service-box mobile-deck-card">
+                <div class="service-icon">
+                    <i class="fas fa-laptop"></i>
+                </div>
+                <h4>Flight Bookings</h4>
+                <p>Timely travel support to match intake and university timelines</p>
+            </div>
+
+            <div class="service-box mobile-deck-card">
+                <div class="service-icon">
+                    <i class="fas fa-calendar-check"></i>
+                </div>
+                <h4>Visa Processing</h4>
+                <p>Structured visa documentation, filing, and interview readiness</p>
+            </div>
+
+            <div class="service-box mobile-deck-card">
+                <div class="service-icon">
+                    <i class="fas fa-shield-alt"></i>
+                </div>
+                <h4>Travel Planning</h4>
+                <p>Final departure planning for a smooth transition abroad</p>
+            </div>
+        </div>
+
+        <div class="why-edizone-panel" aria-label="Why Edizone benefits">
+            <div class="why-edizone-title">
+                <h3>Why Edizone?</h3>
+                <p>All services under one roof with practical support from career planning to final departure.</p>
+            </div>
+
+            <div class="why-edizone-grid">
+                <article class="why-edizone-card">
+                    <div class="why-edizone-icon"><i class="fas fa-user-check" aria-hidden="true"></i></div>
+                    <h4><span class="accent">Personalized</span> Roadmaps</h4>
+                    <p>One-to-one counselling to align profile, interests, and long-term career direction.</p>
+                </article>
+
+                <article class="why-edizone-card">
+                    <div class="why-edizone-icon"><i class="fas fa-route" aria-hidden="true"></i></div>
+                    <h4><span class="accent">End-to-End</span> Guidance</h4>
+                    <p>Support for exams, applications, admits, scholarships, visas, and pre-departure planning.</p>
+                </article>
+
+                <article class="why-edizone-card">
+                    <div class="why-edizone-icon"><i class="fas fa-shield-alt" aria-hidden="true"></i></div>
+                    <h4><span class="accent">Trusted</span> Mentorship</h4>
+                    <p>Experienced mentors with a student-first approach, transparent advice, and accountable execution.</p>
+                </article>
+
+                <article class="why-edizone-card">
+                    <div class="why-edizone-icon"><i class="fas fa-coins" aria-hidden="true"></i></div>
+                    <h4><span class="accent">Smart</span> Financial Planning</h4>
+                    <p>Guidance for scholarships, budgeting, and education loan options to reduce financial stress.</p>
+                </article>
+
+                <article class="why-edizone-card">
+                    <div class="why-edizone-icon"><i class="fas fa-passport" aria-hidden="true"></i></div>
+                    <h4><span class="accent">Visa-Ready</span> Execution</h4>
+                    <p>Documentation checks, interview prep, and process tracking for smooth visa outcomes.</p>
+                </article>
+
+                <article class="why-edizone-card">
+                    <div class="why-edizone-icon"><i class="fas fa-users" aria-hidden="true"></i></div>
+                    <h4><span class="accent">Parent-Student</span> Alignment</h4>
+                    <p>Balanced counselling that improves clarity, communication, and confident decision-making.</p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== 16 MONTHS TIMELINE ===== -->
+    <section class="section" id="timeline">
+        <div class="section-header">
+            <h2>General Student Timeline For Study Abroad</h2>
+            <p class="section-subheading">
+                A milestone-based roadmap from first consultation to your departure day.
+            </p>
+            <div class="timeline-toggle-wrap">
+                <button class="timeline-toggle-btn" id="timelineToggleBtn" type="button" aria-expanded="false" aria-controls="timelineCollapsible">
+                    <span>Show Timeline</span>
+                    <i class="fas fa-chevron-down" aria-hidden="true"></i>
+                </button>
+            </div>
+        </div>
+
+        <div class="timeline-collapsible" id="timelineCollapsible">
+        <div class="timeline">
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <div class="timeline-month">Month 16</div>
+                    <h4 style="color: var(--color-burgundy);">Start Consultation with Edizone Careers</h4>
+                    <div style="font-size: 0.85rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--color-gold); margin-top: -4px; margin-bottom: 8px;">Careers by Design</div>
+                    <p>Understand profile, goals, and destination options</p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <div class="timeline-month">Month 15</div>
+                    <h4 style="color: var(--color-burgundy);">Start Preparing for Required Exams</h4>
+                    <p>Structured coaching for score targets and test readiness</p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <div class="timeline-month">Month 13</div>
+                    <h4 style="color: var(--color-burgundy);">Appear for the Exams</h4>
+                    <p>Take the exams strategically to maximize outcomes</p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <div class="timeline-month">Month 12</div>
+                    <h4 style="color: var(--color-burgundy);">Select the Best-Fit Universities</h4>
+                    <p>Shortlist universities by profile, budget, and career pathway</p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <div class="timeline-month">Month 11</div>
+                    <h4 style="color: var(--color-burgundy);">Make Applications / Apply for Loans</h4>
+                    <p>Submit applications and begin funding process if required</p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <div class="timeline-month">Month 10</div>
+                    <h4 style="color: var(--color-burgundy);">Accept Offers from Universities</h4>
+                    <p>Finalize admits and move into visa documentation</p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <div class="timeline-month">Month 03</div>
+                    <h4 style="color: var(--color-burgundy);">Complete the Visa Process</h4>
+                    <p>End-to-end visa support and interview preparation</p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <div class="timeline-month">D-Day</div>
+                    <h4 style="color: var(--color-burgundy);">Fly to Your Dream University</h4>
+                    <p>Travel with confidence using our pre-departure checklist</p>
+                </div>
+            </div>
+        </div>
+        </div>
+
+        <div class="glass-card-dark specialized-training-highlight" style="margin-top: 34px; padding: 28px 30px;">
+            <div class="specialized-training-badge"><i class="fas fa-star"></i> Special Feature</div>
+            <div class="specialized-training-title">
+                <span class="specialized-training-icon"><i class="fas fa-graduation-cap"></i></span>
+                <h3>Specialized Training</h3>
+            </div>
+            <p class="mission-lead" style="margin-bottom: 0;">
+                We provide focused training in IELTS, TOEFL, PTE, GRE, GMAT, SAT, and ACT test preparation with expert faculty support.
+            </p>
+            <div class="training-exam-list" aria-label="Exams covered under specialized training">
+                <span class="training-exam-pill">IELTS</span>
+                <span class="training-exam-pill">TOEFL</span>
+                <span class="training-exam-pill">PTE</span>
+                <span class="training-exam-pill">GRE</span>
+                <span class="training-exam-pill">GMAT</span>
+                <span class="training-exam-pill">SAT</span>
+                <span class="training-exam-pill">ACT</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== PARENT & STUDENT SUPPORT ===== -->
+    <section class="section" id="support">
+        <div class="section-header">
+            <h2>How I Support Parents & Students</h2>
+            <p class="section-subheading">
+                Guidance that bridges parental expectations and student potential with empathy, structure, and practical action.
+            </p>
+        </div>
+
+        <div class="support-layout">
+            <article class="support-box glass-card-dark support-feature-card">
+                <div class="support-feature-badge"><i class="fas fa-users"></i> Parenting Support</div>
+                <span class="support-feature-icon"><i class="fas fa-people-arrows"></i></span>
+                <h3>Parenting Support</h3>
+                <ul class="support-list">
+                    <li>Helping parents raise emotionally secure children</li>
+                    <li>Understand your child’s emotions and behaviour</li>
+                    <li>Strengthen parent-child communication</li>
+                    <li>Manage tantrums, resistance, and teenage challenges</li>
+                    <li>Reduce stress and power struggles at home</li>
+                </ul>
+            </article>
+
+            <article class="support-box glass-card-dark support-feature-card">
+                <div class="support-feature-badge"><i class="fas fa-brain"></i> Students Mentoring</div>
+                <span class="support-feature-icon"><i class="fas fa-user-graduate"></i></span>
+                <h3>Student Mentoring</h3>
+                <ul class="support-list">
+                    <li>Guiding students to become focused and self-driven</li>
+                    <li>Build confidence and emotional intelligence</li>
+                    <li>Improve focus, discipline, and study habits</li>
+                    <li>Manage exam anxiety and self-doubt</li>
+                    <li>Develop responsibility and resilience</li>
+                </ul>
+            </article>
+        </div>
+    </section>
+
+    <!-- ===== DIRECTORS SECTION ===== -->
+    <section class="section" id="directors" style="background-color: var(--color-parchment);">
+        <div class="who-we-are-card glass-card">
+            <h2>Who Are We?</h2>
+            <p class="who-we-are-lead">
+                Led by experts with <strong>20+ years</strong> of experience as teachers, counselors, and coaches, <strong>Edizone Careers</strong> is a holistic success hub for families. We blend decades of educational insights with modern global strategies to guide the next generation.
+            </p>
+            <ul class="who-we-are-list">
+                <li><strong>Career Strategy:</strong> Transforming potential into a professional roadmap.</li>
+                <li><strong>Global Access:</strong> Simplifying the journey to international education.</li>
+                <li><strong>Student Mentorship:</strong> Coaching students for life-long confidence.</li>
+                <li><strong>Parental Partnership:</strong> Equipping parents to be their child&apos;s best guides.</li>
+            </ul>
+            <p class="who-we-are-impact">Two decades of expertise. A lifetime of impact.</p>
+        </div>
+
+        <div class="section-header">
+            <h2>Our Directors</h2>
+            <p class="section-subheading">
+                Decades of expertise dedicated to transforming young lives and empowering families.
+            </p>
+        </div>
+
+            <div class="directors-grid mobile-deck">
+            <div class="director-card founder-card primary-founder mobile-deck-card">
+                <div class="director-image photo-one"></div>
+                <div class="director-info">
+                    <div class="director-name"><span class="founder-name">Shahla Z.S.</span></div>
+                    <div class="director-title">Founder & Director <span class="founder-badge"><i class="fas fa-star"></i> Visionary</span></div>
+                    <div class="founder-degree"><i class="fas fa-graduation-cap"></i> M.Sc., B.Ed., S.E.T., D.J.</div>
+                    <div style="margin: 12px 0; padding: 12px 0; border-top: 1px solid #eee; border-bottom: 1px solid #eee;">
+                        <span class="founder-experience">24 Years Experience</span>
+                    </div>
+                    <div class="director-bio">
+                        Consultant / Teacher / Trainer / Counselor<br>
+                        Founder: Edizone Academy, Discover Me
+                    </div>
+                </div>
+            </div>
+
+            <div class="director-card founder-card primary-founder mobile-deck-card">
+                <div class="director-image photo-two"></div>
+                <div class="director-info">
+                    <div class="director-name"><span class="founder-name">Junaid K.</span></div>
+                    <div class="director-title">Co-Founder & Technical Lead <span class="founder-badge"><i class="fas fa-star"></i> Visionary</span></div>
+                    <div class="founder-degree"><i class="fas fa-graduation-cap"></i> M.E. (Computer Engineering), P.G. Diploma in Journalism</div>
+                    <div style="margin: 12px 0; padding: 12px 0; border-top: 1px solid #eee; border-bottom: 1px solid #eee;">
+                        <span class="founder-experience">21 Years Experience</span>
+                    </div>
+                    <div class="director-bio">
+                        Consultant / Teacher / Trainer / Author / Corporate Trainer<br>
+                        Founder: Khateeb Group of Institutes
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="mission-card glass-card-dark mission-section">
+            <h2>Our Mission</h2>
+            <p class="mission-lead">
+                At <strong>Edizone Careers</strong>, we empower families through a 360-degree approach to success. We turn student potential into global reality by delivering excellence in:
+            </p>
+            <ul class="mission-list">
+                <li><strong>Expert Career Counseling:</strong> Providing strategic roadmaps to navigate the modern professional landscape.</li>
+                <li><strong>Global Study Abroad:</strong> Opening doors to international education and world-class opportunities.</li>
+                <li><strong>Active Student Coaching:</strong> Mentoring students to build skills, confidence, and mindset needed to thrive.</li>
+                <li><strong>Compassionate Parent Coaching:</strong> Supporting parents with tools and strategies for mindful, effective parenting.</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- ===== REVIEWS & TESTIMONIALS ===== -->
+    <section class="section" id="reviews">
+        <div class="section-header">
+            <h2>Hear From Our Families</h2>
+            <p class="section-subheading">
+                Real stories of transformation from students and parents who chose Edizone Careers.
+            </p>
+        </div>
+
+        <div class="reviews-grid">
+            <div class="review-column">
+                <h3>The Student Perspective</h3>
+                <p style="color: #666; margin-bottom: 20px; text-align: center;">Discover how our guidance restored confidence and clarity</p>
+
+                <div class="review-deck mobile-deck">
+                    <div class="review-deck-card mobile-deck-card">
+                        <div class="video-testimonial photo-three">
+                            <div class="video-placeholder">
+                                <i class="fas fa-play-circle"></i>
+                            </div>
+                        </div>
+                        <div class="testimonial-meta">
+                            <strong>Aisha Khan</strong> | Student at University of Cambridge
+                        </div>
+                    </div>
+
+                    <div class="review-deck-card mobile-deck-card">
+                        <div class="video-testimonial photo-two">
+                            <div class="video-placeholder">
+                                <i class="fas fa-play-circle"></i>
+                            </div>
+                        </div>
+                        <div class="testimonial-meta">
+                            <strong>Arjun Patel</strong> | Student at MIT
+                        </div>
+                    </div>
+
+                    <div class="review-deck-card mobile-deck-card">
+                        <div class="video-testimonial photo-one">
+                            <div class="video-placeholder">
+                                <i class="fas fa-play-circle"></i>
+                            </div>
+                        </div>
+                        <div class="testimonial-meta">
+                            <strong>Maya Desai</strong> | Student at Stanford University
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="review-column">
+                <h3>The Parent Perspective</h3>
+                <p style="color: #666; margin-bottom: 20px; text-align: center;">Learn how we reduced stress and increased confidence</p>
+
+                <div class="review-deck mobile-deck">
+                    <div class="review-deck-card mobile-deck-card">
+                        <div class="video-testimonial photo-four">
+                            <div class="video-placeholder">
+                                <i class="fas fa-play-circle"></i>
+                            </div>
+                        </div>
+                        <div class="testimonial-meta">
+                            <strong>Mrs. Verma</strong> | Parent of Ivy League Admit
+                        </div>
+                    </div>
+
+                    <div class="review-deck-card mobile-deck-card">
+                        <div class="video-testimonial photo-five">
+                            <div class="video-placeholder">
+                                <i class="fas fa-play-circle"></i>
+                            </div>
+                        </div>
+                        <div class="testimonial-meta">
+                            <strong>Mr. & Mrs. Sharma</strong> | Parents of Cambridge Scholar
+                        </div>
+                    </div>
+
+                    <div class="review-deck-card mobile-deck-card">
+                        <div class="video-testimonial photo-six">
+                            <div class="video-placeholder">
+                                <i class="fas fa-play-circle"></i>
+                            </div>
+                        </div>
+                        <div class="testimonial-meta">
+                            <strong>Parents United</strong> | Oxford & Harvard Admits
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div style="text-align: center; margin-top: 60px; padding: 40px; background: linear-gradient(135deg, rgba(128, 0, 0, 0.05), rgba(212, 175, 55, 0.05)); border-radius: 12px; border: 1px solid var(--color-gold);">
+            <h3 style="color: var(--color-burgundy); margin-bottom: 15px;">Scientific Assessment Badge</h3>
+            <p style="color: #666; margin-bottom: 15px;">Our GPaths Assessment is INACE Certified, ensuring world-class standards in career assessment and guidance.</p>
+            <span style="background: var(--color-burgundy); color: white; padding: 10px 20px; border-radius: 8px; display: inline-block; font-weight: 700;">✓ INACE Certified</span>
+        </div>
+    </section>
+
+    <!-- ===== FAQ SECTION ===== -->
+    <section class="section" id="faq">
+        <div class="section-header">
+            <h2>Frequently Asked Questions</h2>
+            <p class="section-subheading">
+                Find answers to common questions about study abroad, applications, visas, and career guidance.
+            </p>
+        </div>
+
+        <div class="faq-container">
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span class="faq-question-text">What is the GPaths Assessment and how does it help?</span>
+                    <span class="faq-toggle">+</span>
+                </div>
+                <div class="faq-answer">
+                    <div class="faq-answer-text">
+                        GPaths Assessment is an INACE-certified, scientifically-backed framework that evaluates your aptitudes, interests, personality, learning preferences, and career motivators. It provides a comprehensive Future-Ready Career Report covering both traditional and emerging fields, helping you make informed decisions about your career and study abroad journey.
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span class="faq-question-text">Which countries and universities do you specialize in?</span>
+                    <span class="faq-toggle">+</span>
+                </div>
+                <div class="faq-answer">
+                    <div class="faq-answer-text">
+                        We specialize in top universities across USA, UK, Canada, Australia, Germany, New Zealand, Europe, and Singapore. We have partnerships with 500+ ranked universities globally and can guide you to institutions matching your academic profile, career goals, and budget requirements.
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span class="faq-question-text">How does the application process work?</span>
+                    <span class="faq-toggle">+</span>
+                </div>
+                <div class="faq-answer">
+                    <div class="faq-answer-text">
+                        Our end-to-end process spans 16 months: Research & self-assessment (months 16-15), exam preparation (14-12), exam attempts (11-10), application preparation (9-8), application submission (7-6), admission & financial planning (5-4), visa processing (3-2), and arrival & pre-departure (1-0). We guide you through every step with personalized support.
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span class="faq-question-text">Do you offer scholarship and financial aid assistance?</span>
+                    <span class="faq-toggle">+</span>
+                </div>
+                <div class="faq-answer">
+                    <div class="faq-answer-text">
+                        Yes! We provide comprehensive financial planning including identification of scholarship opportunities with our university partners. We also assist with education loan applications and connect you with financial resources to make quality education affordable. Our goal is to help you find the best financial options for your situation.
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span class="faq-question-text">What visa support do you provide?</span>
+                    <span class="faq-toggle">+</span>
+                </div>
+                <div class="faq-answer">
+                    <div class="faq-answer-text">
+                        We provide complete visa processing support including document preparation, application guidance, interview coaching, and tracking. Our high visa success rate reflects our expertise in handling requirements across USA, UK, Canada, Australia, Germany, and other destinations. We guide you from application submission to approval.
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span class="faq-question-text">How much does consultancy with Edizone cost?</span>
+                    <span class="faq-toggle">+</span>
+                </div>
+                <div class="faq-answer">
+                    <div class="faq-answer-text">
+                        We offer transparent, value-driven pricing with packages tailored to different needs: country-specific guidance, full application support, exam prep coaching, and comprehensive end-to-end services. Book a free consultation to discuss your budget and requirements—we have options for every student.
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span class="faq-question-text">How do I schedule a free consultation?</span>
+                    <span class="faq-toggle">+</span>
+                </div>
+                <div class="faq-answer">
+                    <div class="faq-answer-text">
+                        Easy! Click the "Free Counselling" button at the top of this page, call us at +91 8850651192, or send a WhatsApp message. Our expert counselors will connect with you within 24 hours to understand your goals and create a personalized study abroad roadmap just for you.
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span class="faq-question-text">What makes Edizone different from other consultancies?</span>
+                    <span class="faq-toggle">+</span>
+                </div>
+                <div class="faq-answer">
+                    <div class="faq-answer-text">
+                        Edizone combines personalized career guidance (GPaths Assessment), scientific career matching, 24 years of founder expertise, 10,000+ successful student placements, and genuine care for every student's success. We don't just process applications—we transform potential into professional roadmaps with accountability at every step.
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span class="faq-question-text">What support do you provide after I'm admitted?</span>
+                    <span class="faq-toggle">+</span>
+                </div>
+                <div class="faq-answer">
+                    <div class="faq-answer-text">
+                        Our support continues even after admission! We provide pre-departure orientation, accommodation assistance, visa interview coaching, airport pickup coordination, post-arrival mentorship, networking with alumni, and career placement guidance. We're with you from application to graduation and beyond.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== CTA SECTION ===== -->
+    <section class="section" style="background: linear-gradient(135deg, var(--color-burgundy), #600000); color: white; text-align: center;">
+        <h2 style="color: white; margin-bottom: 20px;">Ready to Transform Your Future?</h2>
+        <p style="font-size: 1.2rem; margin-bottom: 40px; color: #ddd;">
+            Take the first step toward your dream career and global education journey today.
+        </p>
+        <div class="cta-actions">
+            <a href="https://wa.me/918850651192?text=Hi%2C%20I%20would%20like%20to%20book%20a%20consultation%20for%20career%20guidance" class="btn-primary" target="_blank">
+                <i class="fas fa-phone"></i> WhatsApp Me
+            </a>
+            <button class="btn-secondary" id="openEnquiryFromEmail" type="button">
+                <i class="fas fa-envelope"></i> Send an Email
+            </button>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer id="contact">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#offers">What We Offer</a></li>
+                    <li><a href="#gpaths">Career Counselling</a></li>
+                    <li><a href="#timeline">Student Timeline</a></li>
+                    <li><a href="#directors">Our Directors</a></li>
+                    <li><a href="#reviews">Reviews</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h4>Services</h4>
+                <ul>
+                    <li><a href="#">Career Counselling</a></li>
+                    <li><a href="#">Exam Preparation</a></li>
+                    <li><a href="#">University Applications</a></li>
+                    <li><a href="#">Visa Assistance</a></li>
+                    <li><a href="#">Student Mentorship</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h4>Contact Us</h4>
+                <ul>
+                    <li><i class="fas fa-map-marker-alt"></i> 13, Shreeji Pride, Behind Madhur Milan Sweets, Ashoka Marg, Nashik 422011</li>
+                    <li><i class="fas fa-phone"></i> <a href="tel:+918850651192">+91 8850651192</a></li>
+                    <li><i class="fas fa-envelope"></i> <a href="mailto:info@edizonecareers.com">info@edizonecareers.com</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h4>Follow Us</h4>
+                <ul class="social-links">
+                    <li><a href="#" style="font-size: 1.5rem;"><i class="fab fa-facebook"></i></a></li>
+                    <li><a href="#" style="font-size: 1.5rem;"><i class="fab fa-instagram"></i></a></li>
+                    <li><a href="#" style="font-size: 1.5rem;"><i class="fab fa-linkedin"></i></a></li>
+                    <li><a href="#" style="font-size: 1.5rem;"><i class="fab fa-youtube"></i></a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p style="margin-top: 20px; font-size: 0.85rem; color: #999;">
+                © 2026 Edizone Careers. All rights reserved. Transforming Potential into Professional Roadmaps.
+            </p>
+            <div class="trust-verification">
+                <i class="fas fa-shield-alt"></i> INACE Certified Assessment Framework
+            </div>
+            <p style="margin-top: 20px; font-size: 0.8rem; color: #777;">
+                <strong>Powered by DCore Systems LLP</strong> | LLPIN: ACT-9625 | PAN: AAZFD2232J
+            </p>
+        </div>
+    </footer>
+
+    <!-- ===== MOBILE QUICK ACTION RAIL ===== -->
+    <aside class="mobile-quick-actions" id="mobileQuickActions" aria-label="Mobile quick actions">
+        <button class="mobile-quick-toggle" id="mobileQuickToggle" type="button" aria-label="Toggle quick actions" aria-expanded="true">
+            <i class="fas fa-arrow-right"></i>
+            <span class="toggle-hint" aria-hidden="true">&lt;&lt;</span>
+        </button>
+        <div class="mobile-quick-stack">
+            <button class="mobile-quick-btn quick-counselling" id="openCounsellingSide" type="button" aria-label="Open counselling form">
+                <i class="far fa-envelope"></i>
+                <span>Counselling</span>
+            </button>
+            <a class="mobile-quick-btn quick-whatsapp" href="https://wa.me/918850651192?text=Hi%20Edizone%20Team%2C%20I%20need%20study%20abroad%20guidance" target="_blank" aria-label="Chat on WhatsApp">
+                <i class="fab fa-whatsapp"></i>
+            </a>
+            <a class="mobile-quick-btn quick-call" href="tel:+918850651192" aria-label="Call now">
+                <i class="fas fa-phone"></i>
+            </a>
+        </div>
+    </aside>
+
+    <button class="back-to-top" id="backToTop" type="button" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- ===== ENQUIRY FORM MODAL ===== -->
+    <div class="modal-overlay" id="enquiryModal" role="dialog" aria-modal="true" aria-labelledby="enquiryModalTitle">
+        <div class="modal-box">
+            <div class="modal-header">
+                <h3 id="enquiryModalTitle"><i class="fas fa-paper-plane"></i> Apply Now — Enquiry Form</h3>
+                <button class="modal-close" id="closeEnquiryModal" aria-label="Close">&times;</button>
+            </div>
+            <div class="modal-body">
+                <iframe
+                    src="https://admin.aibunty.com/widget/form/69afd0266f597"
+                    style="width:100%;height:600px;border:none;border-radius:0 0 3px 3px"
+                    id="inline-69afd0266f597"
+                    data-form-name="Enquiry Form"
+                    data-layout-iframe-id="inline-69afd0266f597"
+                    data-form-id="69afd0266f597"
+                    data-height="600"
+                    title="Enquiry Form"
+                    loading="eager">
+                </iframe>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== FREE COUNSELLING MODAL ===== -->
+    <div class="modal-overlay" id="counsellingModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+        <div class="modal-box">
+            <div class="modal-header">
+                <h3 id="modalTitle"><i class="fas fa-calendar-check"></i> Book Your Free Counselling Session</h3>
+                <button class="modal-close" id="closeCounsellingModal" aria-label="Close">&times;</button>
+            </div>
+            <div class="modal-body">
+                <iframe id="counsellingCalendarFrame" src="https://admin.aibunty.com/u2/81526/edizone-careers-calendar-booking?isEmbeded=1" style="border:none;width:100%;height:600px" title="Free Counselling Calendar Booking" loading="eager"></iframe>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== HIDDEN EMBED PRELOADERS - Warmup cache on page load ===== -->
+    <div class="embed-preloader">
+        <iframe src="https://admin.aibunty.com/widget/form/69afd0266f597" loading="lazy" title="Preload Enquiry Form"></iframe>
+    </div>
+
+    <!-- OPTIONAL: Smooth Scroll & Interactive Elements -->
+    <script>
+        const pagePreloader = document.getElementById('pagePreloader');
+        const preloaderMessage = document.getElementById('preloaderMessage');
+        const preloaderSkipBtn = document.getElementById('preloaderSkipBtn');
+        const preloaderMessageList = [
+            'Preparing personalized guidance for your study abroad journey...',
+            'Loading expert counselling resources for students and parents...',
+            'Setting up top university options and scholarship pathways...',
+            'Getting application and visa success roadmap ready for you...'
+        ];
+        let preloaderMessageIndex = 0;
+        let preloaderMessageTimer = null;
+        let preloaderSkipTimer = null;
+
+        const rotatePreloaderMessage = () => {
+            if (!preloaderMessage) {
+                return;
+            }
+            preloaderMessage.classList.add('is-fading');
+            preloaderMessageIndex = (preloaderMessageIndex + 1) % preloaderMessageList.length;
+            window.setTimeout(() => {
+                preloaderMessage.textContent = preloaderMessageList[preloaderMessageIndex];
+                preloaderMessage.classList.remove('is-fading');
+            }, 130);
+        };
+
+        if (preloaderMessage && preloaderMessageList.length > 1) {
+            preloaderMessage.textContent = preloaderMessageList[0];
+            preloaderMessageTimer = window.setInterval(rotatePreloaderMessage, 1700);
+        }
+
+        if (preloaderSkipBtn && pagePreloader) {
+            preloaderSkipTimer = window.setTimeout(() => {
+                if (!pagePreloader.classList.contains('is-hidden')) {
+                    preloaderSkipBtn.classList.add('is-visible');
+                }
+            }, 2500);
+        }
+
+        const hidePagePreloader = () => {
+            if (preloaderMessageTimer) {
+                window.clearInterval(preloaderMessageTimer);
+                preloaderMessageTimer = null;
+            }
+            if (preloaderSkipTimer) {
+                window.clearTimeout(preloaderSkipTimer);
+                preloaderSkipTimer = null;
+            }
+            pagePreloader?.classList.add('is-hidden');
+            document.body.classList.remove('preloading');
+            if (pagePreloader) {
+                window.setTimeout(() => {
+                    pagePreloader.style.display = 'none';
+                }, 500);
+            }
+        };
+
+        preloaderSkipBtn?.addEventListener('click', hidePagePreloader);
+
+        window.addEventListener('load', hidePagePreloader);
+
+        const timelineToggleBtn = document.getElementById('timelineToggleBtn');
+        const timelineCollapsible = document.getElementById('timelineCollapsible');
+        const studentBenefitsCarousel = document.getElementById('studentBenefitsCarousel');
+        const studentBenefitsTrack = document.getElementById('studentBenefitsTrack');
+        const studentBenefitsSlides = Array.from(document.querySelectorAll('.student-benefit-card'));
+        const studentBenefitsDots = Array.from(document.querySelectorAll('.student-benefits-progress-dot'));
+
+        if (studentBenefitsCarousel && studentBenefitsTrack && studentBenefitsSlides.length) {
+            let studentBenefitsIndex = 0;
+            let studentBenefitsAutoplayId = null;
+
+            const renderStudentBenefitSlide = (index) => {
+                studentBenefitsIndex = (index + studentBenefitsSlides.length) % studentBenefitsSlides.length;
+                studentBenefitsTrack.style.transform = `translateX(-${studentBenefitsIndex * 100}%)`;
+                studentBenefitsDots.forEach((dot, dotIndex) => {
+                    dot.classList.toggle('is-active', dotIndex === studentBenefitsIndex);
+                });
+            };
+
+            const stopStudentBenefitsAutoplay = () => {
+                if (studentBenefitsAutoplayId) {
+                    window.clearInterval(studentBenefitsAutoplayId);
+                    studentBenefitsAutoplayId = null;
+                }
+            };
+
+            const startStudentBenefitsAutoplay = () => {
+                stopStudentBenefitsAutoplay();
+                studentBenefitsAutoplayId = window.setInterval(() => {
+                    renderStudentBenefitSlide(studentBenefitsIndex + 1);
+                }, 2000);
+            };
+
+            studentBenefitsDots.forEach((dot, dotIndex) => {
+                dot.addEventListener('click', () => {
+                    renderStudentBenefitSlide(dotIndex);
+                    startStudentBenefitsAutoplay();
+                });
+            });
+
+            studentBenefitsCarousel.addEventListener('mouseenter', stopStudentBenefitsAutoplay);
+            studentBenefitsCarousel.addEventListener('mouseleave', startStudentBenefitsAutoplay);
+            studentBenefitsCarousel.addEventListener('focusin', stopStudentBenefitsAutoplay);
+            studentBenefitsCarousel.addEventListener('focusout', startStudentBenefitsAutoplay);
+
+            renderStudentBenefitSlide(0);
+            startStudentBenefitsAutoplay();
+        }
+
+        timelineToggleBtn?.addEventListener('click', () => {
+            if (!timelineCollapsible) {
+                return;
+            }
+
+            const willOpen = !timelineCollapsible.classList.contains('is-open');
+            timelineCollapsible.classList.toggle('is-open', willOpen);
+            timelineToggleBtn.setAttribute('aria-expanded', String(willOpen));
+
+            const label = timelineToggleBtn.querySelector('span');
+            if (label) {
+                label.textContent = willOpen ? 'Hide Timeline' : 'Show Timeline';
+            }
+        });
+
+        const navbar = document.querySelector('.navbar');
+        const navToggle = document.querySelector('.nav-toggle');
+        const navLinks = document.querySelector('.navbar-links');
+        const mobileQuickActions = document.getElementById('mobileQuickActions');
+        const mobileQuickToggle = document.getElementById('mobileQuickToggle');
+        const backToTop = document.getElementById('backToTop');
+        const openCounsellingSideBtn = document.getElementById('openCounsellingSide');
+        const deckMediaQuery = window.matchMedia('(max-width: 768px)');
+        let openModalCount = 0;
+
+        const setModalState = (isOpen) => {
+            if (isOpen) {
+                openModalCount += 1;
+            } else {
+                openModalCount = Math.max(0, openModalCount - 1);
+            }
+
+            const hasOpenModal = openModalCount > 0;
+            document.body.style.overflow = hasOpenModal ? 'hidden' : '';
+
+            if (mobileQuickActions) {
+                mobileQuickActions.style.opacity = hasOpenModal ? '0' : '';
+                mobileQuickActions.style.pointerEvents = hasOpenModal ? 'none' : '';
+            }
+        };
+
+        const updateStickyAndTopButton = () => {
+            const scrolled = window.scrollY > 30;
+            navbar?.classList.toggle('is-sticky-scrolled', scrolled);
+            backToTop?.classList.toggle('is-visible', window.scrollY > 260);
+        };
+
+        window.addEventListener('scroll', updateStickyAndTopButton, { passive: true });
+        updateStickyAndTopButton();
+
+        backToTop?.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        // ===== Counselling Modal =====
+        const counsellingModal = document.getElementById('counsellingModal');
+        const openBtn = document.getElementById('openCounsellingModal');
+        const closeBtn = document.getElementById('closeCounsellingModal');
+
+        const openModal = () => {
+            counsellingModal.classList.add('is-open');
+            setModalState(true);
+        };
+
+        const closeModal = () => {
+            counsellingModal.classList.remove('is-open');
+            setModalState(false);
+        };
+
+        openBtn?.addEventListener('click', openModal);
+        openCounsellingSideBtn?.addEventListener('click', openModal);
+        closeBtn?.addEventListener('click', closeModal);
+        counsellingModal?.addEventListener('click', (e) => {
+            if (e.target === counsellingModal) closeModal();
+        });
+
+        mobileQuickToggle?.addEventListener('click', () => {
+            if (!mobileQuickActions) return;
+            const willCollapse = !mobileQuickActions.classList.contains('is-collapsed');
+            mobileQuickActions.classList.toggle('is-collapsed', willCollapse);
+            mobileQuickToggle.setAttribute('aria-expanded', String(!willCollapse));
+            const icon = mobileQuickToggle.querySelector('i');
+            if (icon) {
+                icon.classList.toggle('fa-arrow-right', !willCollapse);
+                icon.classList.toggle('fa-arrow-left', willCollapse);
+            }
+            mobileQuickToggle.setAttribute('aria-label', willCollapse ? 'Expand quick actions' : 'Collapse quick actions');
+        });
+
+        // ===== Enquiry Form Modal =====
+        const enquiryModal = document.getElementById('enquiryModal');
+        const openEnquiryFromEmailBtn = document.getElementById('openEnquiryFromEmail');
+        const closeEnquiryBtn = document.getElementById('closeEnquiryModal');
+
+        const openEnquiry = () => {
+            enquiryModal.classList.add('is-open');
+            setModalState(true);
+        };
+
+        const closeEnquiry = () => {
+            enquiryModal.classList.remove('is-open');
+            setModalState(false);
+        };
+
+        openEnquiryFromEmailBtn?.addEventListener('click', openEnquiry);
+        closeEnquiryBtn?.addEventListener('click', closeEnquiry);
+        enquiryModal?.addEventListener('click', (e) => {
+            if (e.target === enquiryModal) closeEnquiry();
+        });
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') { closeModal(); closeEnquiry(); }
+        });
+
+        const closeMobileNav = () => {
+            if (!navToggle || !navLinks || window.innerWidth > 900) return;
+            navLinks.classList.remove('is-open');
+            navToggle.classList.remove('is-open');
+            navToggle.setAttribute('aria-expanded', 'false');
+        };
+
+        document.addEventListener('click', (event) => {
+            if (!navToggle || !navLinks || window.innerWidth > 900) return;
+            const target = event.target;
+            if (!(target instanceof Node)) return;
+            if (navLinks.contains(target) || navToggle.contains(target)) return;
+            closeMobileNav();
+        });
+
+        window.addEventListener('scroll', () => {
+            if (window.innerWidth <= 900) {
+                closeMobileNav();
+            }
+        }, { passive: true });
+
+        const setupMobileDeckStack = () => {
+            const isDeckMode = deckMediaQuery.matches;
+            const navHeight = document.querySelector('.navbar')?.offsetHeight || 84;
+            document.documentElement.style.setProperty('--mobile-deck-top', `${navHeight + 12}px`);
+
+            document.querySelectorAll('.mobile-deck').forEach(deck => {
+                const cards = deck.querySelectorAll(':scope > .mobile-deck-card');
+                if (!cards.length) return;
+
+                if (isDeckMode) {
+                    cards.forEach((card, index) => {
+                        card.style.zIndex = String(index + 1);
+                    });
+                    deck.style.paddingBottom = `${Math.max(96, cards.length * 20)}px`;
+                    return;
+                }
+
+                cards.forEach(card => {
+                    card.style.zIndex = '';
+                });
+                deck.style.paddingBottom = '';
+            });
+        };
+
+        if (deckMediaQuery.addEventListener) {
+            deckMediaQuery.addEventListener('change', setupMobileDeckStack);
+        } else if (deckMediaQuery.addListener) {
+            deckMediaQuery.addListener(setupMobileDeckStack);
+        }
+
+        setupMobileDeckStack();
+
+        if (navToggle && navLinks) {
+            navToggle.addEventListener('click', () => {
+                const willOpen = !navLinks.classList.contains('is-open');
+                navLinks.classList.toggle('is-open', willOpen);
+                navToggle.classList.toggle('is-open', willOpen);
+                navToggle.setAttribute('aria-expanded', String(willOpen));
+                setupMobileDeckStack();
+            });
+
+            window.addEventListener('resize', () => {
+                if (window.innerWidth > 900) {
+                    navLinks.classList.remove('is-open');
+                    navToggle.classList.remove('is-open');
+                    navToggle.setAttribute('aria-expanded', 'false');
+                    mobileQuickActions?.classList.remove('is-collapsed');
+                    mobileQuickToggle?.setAttribute('aria-expanded', 'true');
+                }
+            });
+        }
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                const href = this.getAttribute('href');
+                if (href !== '#' && document.querySelector(href)) {
+                    e.preventDefault();
+                    const target = document.querySelector(href);
+                    const navHeight = document.querySelector('.navbar')?.offsetHeight || 0;
+                    const yOffset = target.getBoundingClientRect().top + window.pageYOffset - navHeight - 12;
+                    window.scrollTo({
+                        top: yOffset,
+                        behavior: 'smooth'
+                    });
+                }
+                closeMobileNav();
+            });
+        });
+
+        // Intersection Observer for animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -100px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-fade-in-up');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.feature-card, .service-box, .timeline-content, .director-card').forEach(el => {
+            observer.observe(el);
+        });
+
+        // ===== PRELOAD EMBEDS ON PAGE LOAD =====
+        const preloadEmbeds = () => {
+            // Preload enquiry form
+            const enquiryFrame = document.getElementById('inline-69afd0266f597');
+            if (enquiryFrame && enquiryFrame.src) {
+                console.log('✓ Enquiry form embed cached');
+            }
+            
+            // Preload calendar booking
+            const counsellingFrame = document.getElementById('counsellingCalendarFrame');
+            if (counsellingFrame && counsellingFrame.src) {
+                console.log('✓ Calendar booking embed cached');
+            }
+            
+            console.log('✓ Embeds preloaded for faster modal opening');
+        };
+
+        // Preload embeds on page load or when document is ready
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', preloadEmbeds);
+        } else {
+            preloadEmbeds();
+        }
+
+        // Cache warmup: Create connections to embed servers in the background
+        window.addEventListener('load', () => {
+            const preloaderDiv = document.querySelector('.embed-preloader');
+            if (preloaderDiv) {
+                const frames = preloaderDiv.querySelectorAll('iframe');
+                console.log(`✓ Embed cache warmed up with ${frames.length} preloader frames`);
+            }
+        });
+
+        // Video testimonial play functionality (placeholder)
+        document.querySelectorAll('.video-testimonial').forEach(video => {
+            video.addEventListener('click', function() {
+                alert('Video testimonial would play here. Replace with actual video embed.');
+            });
+        });
+
+        // ===== FAQ ACCORDION FUNCTIONALITY =====
+        document.querySelectorAll('.faq-item').forEach((faqItem) => {
+            const question = faqItem.querySelector('.faq-question');
+            const answer = faqItem.querySelector('.faq-answer');
+            const toggle = faqItem.querySelector('.faq-toggle');
+            if (!question || !answer) return;
+
+            question.setAttribute('role', 'button');
+            question.setAttribute('tabindex', '0');
+            question.setAttribute('aria-expanded', 'false');
+            answer.style.maxHeight = '0px';
+            if (toggle) toggle.textContent = '+';
+
+            const collapse = (item) => {
+                const q = item.querySelector('.faq-question');
+                const a = item.querySelector('.faq-answer');
+                const t = item.querySelector('.faq-toggle');
+                item.classList.remove('active');
+                if (a) a.style.maxHeight = '0px';
+                if (q) q.setAttribute('aria-expanded', 'false');
+                if (t) t.textContent = '+';
+            };
+
+            const expand = (item) => {
+                const q = item.querySelector('.faq-question');
+                const a = item.querySelector('.faq-answer');
+                const t = item.querySelector('.faq-toggle');
+                item.classList.add('active');
+                if (a) a.style.maxHeight = `${a.scrollHeight}px`;
+                if (q) q.setAttribute('aria-expanded', 'true');
+                if (t) t.textContent = '−';
+            };
+
+            const toggleFaq = () => {
+                const isActive = faqItem.classList.contains('active');
+                document.querySelectorAll('.faq-item.active').forEach((item) => {
+                    if (item !== faqItem) collapse(item);
+                });
+                if (isActive) {
+                    collapse(faqItem);
+                } else {
+                    expand(faqItem);
+                }
+            };
+
+            question.addEventListener('click', toggleFaq);
+            question.addEventListener('keydown', (event) => {
+                if (event.key === 'Enter' || event.key === ' ') {
+                    event.preventDefault();
+                    toggleFaq();
+                }
+            });
+        });
+
+        // ===== UNIVERSITY COUNTRY CAROUSEL =====
+        const enableExternalUniversityLogos = false;
+
+        const universityLogoMap = {
+            HARV: 'https://logo.clearbit.com/harvard.edu',
+            MIT: 'https://logo.clearbit.com/mit.edu',
+            SU: 'https://logo.clearbit.com/stanford.edu',
+            YU: 'https://logo.clearbit.com/yale.edu',
+            OX: 'https://logo.clearbit.com/ox.ac.uk',
+            CAM: 'https://logo.clearbit.com/cam.ac.uk',
+            ICL: 'https://logo.clearbit.com/imperial.ac.uk',
+            LSE: 'https://logo.clearbit.com/lse.ac.uk',
+            UM: 'https://logo.clearbit.com/unimelb.edu.au',
+            ANU: 'https://logo.clearbit.com/anu.edu.au',
+            UNSW: 'https://logo.clearbit.com/unsw.edu.au',
+            MON: 'https://logo.clearbit.com/monash.edu',
+            UOFT: 'https://logo.clearbit.com/utoronto.ca',
+            UBC: 'https://logo.clearbit.com/ubc.ca',
+            MG: 'https://logo.clearbit.com/mcgill.ca',
+            MAC: 'https://logo.clearbit.com/mcmaster.ca',
+            TUM: 'https://logo.clearbit.com/tum.de',
+            HD: 'https://logo.clearbit.com/uni-heidelberg.de',
+            HB: 'https://logo.clearbit.com/hu-berlin.de',
+            BONN: 'https://logo.clearbit.com/uni-bonn.de',
+            PS: 'https://logo.clearbit.com/universite-paris-saclay.fr',
+            SOR: 'https://logo.clearbit.com/sorbonne-universite.fr',
+            PSL: 'https://logo.clearbit.com/psl.eu',
+            HEC: 'https://logo.clearbit.com/hec.edu',
+            NUS: 'https://logo.clearbit.com/nus.edu.sg',
+            NTU: 'https://logo.clearbit.com/ntu.edu.sg',
+            SMU: 'https://logo.clearbit.com/smu.edu.sg',
+            SUSS: 'https://logo.clearbit.com/suss.edu.sg',
+            UVA: 'https://logo.clearbit.com/uva.nl',
+            UU: 'https://logo.clearbit.com/uu.nl',
+            EUR: 'https://logo.clearbit.com/eur.nl',
+            RUG: 'https://logo.clearbit.com/rug.nl'
+        };
+
+        const universityDemoImageMap = {
+            HARV: 'https://picsum.photos/seed/harvard-campus/720/420',
+            MIT: 'https://picsum.photos/seed/mit-campus/720/420',
+            SU: 'https://picsum.photos/seed/stanford-campus/720/420',
+            YU: 'https://picsum.photos/seed/yale-campus/720/420',
+            OX: 'https://picsum.photos/seed/oxford-campus/720/420',
+            CAM: 'https://picsum.photos/seed/cambridge-campus/720/420',
+            ICL: 'https://picsum.photos/seed/imperial-campus/720/420',
+            LSE: 'https://picsum.photos/seed/lse-campus/720/420',
+            UM: 'https://picsum.photos/seed/unimelb-campus/720/420',
+            ANU: 'https://picsum.photos/seed/anu-campus/720/420',
+            UNSW: 'https://picsum.photos/seed/unsw-campus/720/420',
+            MON: 'https://picsum.photos/seed/monash-campus/720/420',
+            UOFT: 'https://picsum.photos/seed/uoft-campus/720/420',
+            UBC: 'https://picsum.photos/seed/ubc-campus/720/420',
+            MG: 'https://picsum.photos/seed/mcgill-campus/720/420',
+            MAC: 'https://picsum.photos/seed/mcmaster-campus/720/420',
+            TUM: 'https://picsum.photos/seed/tum-campus/720/420',
+            HD: 'https://picsum.photos/seed/heidelberg-campus/720/420',
+            HB: 'https://picsum.photos/seed/humboldt-campus/720/420',
+            BONN: 'https://picsum.photos/seed/bonn-campus/720/420',
+            PS: 'https://picsum.photos/seed/paris-saclay-campus/720/420',
+            SOR: 'https://picsum.photos/seed/sorbonne-campus/720/420',
+            PSL: 'https://picsum.photos/seed/psl-campus/720/420',
+            HEC: 'https://picsum.photos/seed/hec-campus/720/420',
+            NUS: 'https://picsum.photos/seed/nus-campus/720/420',
+            NTU: 'https://picsum.photos/seed/ntu-campus/720/420',
+            SMU: 'https://picsum.photos/seed/smu-campus/720/420',
+            SUSS: 'https://picsum.photos/seed/suss-campus/720/420',
+            UVA: 'https://picsum.photos/seed/uva-campus/720/420',
+            UU: 'https://picsum.photos/seed/utrecht-campus/720/420',
+            EUR: 'https://picsum.photos/seed/erasmus-campus/720/420',
+            RUG: 'https://picsum.photos/seed/groningen-campus/720/420'
+        };
+
+        const applyUniversityLogos = () => {
+            // External Clearbit DNS is unreliable in some regions/networks.
+            // Keep local text/initial badges unless explicitly enabled.
+            if (!enableExternalUniversityLogos) return;
+
+            document.querySelectorAll('.country-university-head .uni-logo-chip').forEach((chip) => {
+                const label = (chip.textContent || '').trim();
+                if (!label || chip.dataset.logoApplied === 'true') return;
+
+                const logoSrc = universityLogoMap[label.toUpperCase()];
+                if (!logoSrc) return;
+
+                chip.classList.add('has-logo');
+                chip.dataset.logoApplied = 'true';
+                chip.setAttribute('title', label);
+                chip.textContent = '';
+
+                const img = document.createElement('img');
+                img.className = 'uni-logo-image';
+                img.src = logoSrc;
+                img.alt = `${label} logo`;
+                img.loading = 'lazy';
+                img.decoding = 'async';
+                img.referrerPolicy = 'no-referrer';
+                img.onerror = () => {
+                    chip.classList.remove('has-logo');
+                    chip.textContent = label;
+                };
+
+                chip.appendChild(img);
+            });
+        };
+
+        const applyUniversityDemoImages = () => {
+            document.querySelectorAll('.country-university-card').forEach((card) => {
+                if (card.dataset.demoImageApplied === 'true') return;
+
+                const head = card.querySelector('.country-university-head');
+                const chip = head?.querySelector('.uni-logo-chip');
+                const titleEl = card.querySelector('h4');
+                const key = ((chip?.getAttribute('title') || chip?.textContent || '').trim().toUpperCase());
+                const fallbackSeed = ((titleEl?.textContent || 'university').toLowerCase().replace(/[^a-z0-9]+/g, '-'));
+                const src = universityDemoImageMap[key] || `https://picsum.photos/seed/${fallbackSeed}/720/420`;
+
+                const media = document.createElement('div');
+                media.className = 'country-university-media';
+
+                const img = document.createElement('img');
+                img.src = src;
+                img.alt = `${titleEl?.textContent || 'University'} demo campus image`;
+                img.loading = 'lazy';
+                img.decoding = 'async';
+
+                media.appendChild(img);
+
+                const desc = card.querySelector('p');
+                if (desc) {
+                    card.insertBefore(media, desc);
+                } else {
+                    card.appendChild(media);
+                }
+
+                card.dataset.demoImageApplied = 'true';
+            });
+        };
+
+        applyUniversityLogos();
+        applyUniversityDemoImages();
+
+        const universitiesTrack = document.getElementById('universitiesTrack');
+        const countryTabs = Array.from(document.querySelectorAll('.country-tab'));
+        const slides = Array.from(document.querySelectorAll('.country-slide'));
+        const prevBtn = document.getElementById('prevBtn');
+        const nextBtn = document.getElementById('nextBtn');
+        const carouselShell = document.getElementById('universitiesCarousel');
+        const progressBar = document.getElementById('carouselProgressBar');
+
+        if (universitiesTrack && countryTabs.length && slides.length && prevBtn && nextBtn && carouselShell && progressBar) {
+            let activeIndex = 0;
+            let autoplayId = null;
+            let touchStartX = 0;
+            const slideCount = slides.length;
+
+            const renderSlide = (index) => {
+                activeIndex = (index + slideCount) % slideCount;
+                universitiesTrack.style.transform = `translateX(-${activeIndex * 100}%)`;
+                countryTabs.forEach((tab, tabIndex) => {
+                    tab.classList.toggle('is-active', tabIndex === activeIndex);
+                    tab.setAttribute('aria-pressed', tabIndex === activeIndex ? 'true' : 'false');
+                });
+                progressBar.style.transform = `scaleX(${(activeIndex + 1) / slideCount})`;
+            };
+
+            const stopAutoplay = () => {
+                if (autoplayId) {
+                    clearInterval(autoplayId);
+                    autoplayId = null;
+                }
+            };
+
+            const startAutoplay = () => {
+                stopAutoplay();
+                autoplayId = window.setInterval(() => {
+                    renderSlide(activeIndex + 1);
+                }, 4200);
+            };
+
+            prevBtn.addEventListener('click', () => {
+                renderSlide(activeIndex - 1);
+                startAutoplay();
+            });
+
+            nextBtn.addEventListener('click', () => {
+                renderSlide(activeIndex + 1);
+                startAutoplay();
+            });
+
+            countryTabs.forEach((tab, index) => {
+                tab.addEventListener('click', () => {
+                    renderSlide(index);
+                    startAutoplay();
+                });
+            });
+
+            carouselShell.addEventListener('mouseenter', stopAutoplay);
+            carouselShell.addEventListener('mouseleave', startAutoplay);
+            carouselShell.addEventListener('focusin', stopAutoplay);
+            carouselShell.addEventListener('focusout', startAutoplay);
+
+            universitiesTrack.addEventListener('touchstart', (event) => {
+                touchStartX = event.changedTouches[0].screenX;
+            }, { passive: true });
+
+            universitiesTrack.addEventListener('touchend', (event) => {
+                const touchEndX = event.changedTouches[0].screenX;
+                const deltaX = touchStartX - touchEndX;
+                if (Math.abs(deltaX) > 40) {
+                    renderSlide(activeIndex + (deltaX > 0 ? 1 : -1));
+                    startAutoplay();
+                }
+            }, { passive: true });
+
+            renderSlide(0);
+            startAutoplay();
+        }
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+

@@ -129,6 +129,24 @@ Replace video placeholders:
 <iframe width="100%" height="315" src="https://www.youtube.com/embed/VIDEO_ID" frameborder="0"></iframe>
 ```
 
+## Live Google Reviews (Local Testing)
+
+To test live Google reviews locally with your API key:
+
+1. Open `.env` and set:
+  - `GOOGLE_PLACES_API_KEY`
+  - `GOOGLE_PLACE_ID`
+2. Start local server:
+
+```bash
+node local-server.js
+```
+
+3. Open:
+  - `http://localhost:8080`
+
+The page calls `/api/google-reviews` through the local proxy, so your key stays server-side.
+
 ---
 
 ## 📱 Responsive Breakpoints

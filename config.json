@@ -21,6 +21,17 @@
       "whatsapp": "https://wa.me/918850651192"
     }
   },
+  "integrations": {
+    "google_reviews": {
+      "enabled": true,
+      "mode": "api-proxy",
+      "endpoint": "/api/google-reviews",
+      "place_id": "",
+      "place_url": "https://maps.app.goo.gl/o5QxVRtrizTHoHUq5",
+      "limit": 4,
+      "notes": "Configure endpoint and place_id when Google Places API proxy is ready."
+    }
+  },
   "color_palette": {
     "primary": "#800000",
     "primary_name": "Deep Burgundy",

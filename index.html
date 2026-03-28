@@ -95,8 +95,10 @@
         .btn-primary:hover {
             background-color: #600000;
             transform: translateY(-2px);
-            box-shadow: 0 10px 20px rgba(128, 0, 0, 0.3);
         }
+
+        /* ===== SUPPORT TITLE WHITE OVERRIDE ===== */
+        h3.support-title-white { color: #fff !important; }
 
         .btn-secondary {
             background-color: transparent;
@@ -566,6 +568,311 @@
             margin-top: 12px;
         }
 
+        /* ===== GOOGLE REVIEWS WIDGET ===== */
+        .google-reviews-widget {
+            padding: 28px;
+            border-radius: 16px;
+            border: 1px solid rgba(212, 175, 55, 0.24);
+            background: linear-gradient(145deg, rgba(255, 255, 255, 0.96), rgba(252, 246, 237, 0.94));
+            box-shadow: 0 10px 26px rgba(73, 29, 20, 0.12);
+        }
+
+        .google-reviews-summary {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 18px;
+            margin-bottom: 14px;
+            flex-wrap: wrap;
+        }
+
+        .google-reviews-brand {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 6px 10px;
+            border-radius: 999px;
+            border: 1px solid rgba(128, 0, 0, 0.14);
+            background: #fff;
+            box-shadow: 0 4px 10px rgba(73, 29, 20, 0.08);
+        }
+
+        .google-reviews-logo {
+            width: 18px;
+            height: 18px;
+            display: block;
+        }
+
+        .google-reviews-brand-text {
+            color: #4c3a2a;
+            font-size: 0.82rem;
+            font-weight: 700;
+            letter-spacing: 0.02em;
+        }
+
+        .google-reviews-score {
+            display: flex;
+            align-items: baseline;
+            gap: 10px;
+        }
+
+        .google-reviews-rating {
+            font-size: clamp(2rem, 4vw, 2.4rem);
+            font-weight: 800;
+            color: var(--color-burgundy);
+            line-height: 1;
+        }
+
+        .google-reviews-count {
+            font-size: 0.95rem;
+            color: #7a5d3f;
+            font-weight: 600;
+        }
+
+        .google-reviews-stars {
+            display: inline-flex;
+            gap: 5px;
+            color: var(--color-gold);
+            font-size: 1rem;
+            letter-spacing: 0.02em;
+        }
+
+        .google-reviews-stars-chip {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 12px;
+            border-radius: 999px;
+            border: 1px solid rgba(212, 175, 55, 0.45);
+            background: linear-gradient(135deg, rgba(255, 251, 241, 0.95), rgba(255, 244, 220, 0.96));
+            box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.8);
+            color: #9b6c28;
+            font-weight: 700;
+        }
+
+        .google-reviews-stars-value {
+            color: var(--color-burgundy);
+            font-size: 0.9rem;
+            font-weight: 800;
+        }
+
+        .google-reviews-state {
+            font-size: 0.92rem;
+            color: #7a5d3f;
+            margin-bottom: 14px;
+        }
+
+        .google-reviews-list {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 14px;
+        }
+
+        .google-reviews-nav {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            gap: 10px;
+            margin: 10px 0 14px;
+        }
+
+        .google-reviews-nav-btn {
+            width: 38px;
+            height: 38px;
+            border-radius: 50%;
+            border: 1px solid rgba(128, 0, 0, 0.26);
+            background: #fff;
+            color: var(--color-burgundy);
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            transition: transform 0.2s ease, background 0.2s ease;
+        }
+
+        .google-reviews-nav-btn:hover:not(:disabled) {
+            transform: translateY(-1px);
+            background: #fff7ec;
+        }
+
+        .google-reviews-nav-btn:disabled {
+            opacity: 0.45;
+            cursor: not-allowed;
+        }
+
+        .google-reviews-nav-status {
+            font-size: 0.82rem;
+            color: #8b765f;
+            min-width: 68px;
+            text-align: center;
+        }
+
+        .google-review-card {
+            padding: 14px;
+            border-radius: 12px;
+            border: 1px solid rgba(128, 0, 0, 0.12);
+            background: #ffffff;
+            box-shadow: 0 6px 14px rgba(73, 29, 20, 0.08);
+            min-height: 280px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .google-review-head {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 10px;
+            margin-bottom: 8px;
+        }
+
+        .google-review-author-wrap {
+            display: flex;
+            align-items: center;
+            gap: 9px;
+            min-width: 0;
+        }
+
+        .google-review-avatar {
+            width: 34px;
+            height: 34px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 1px solid rgba(128, 0, 0, 0.18);
+            background: #f3e8d7;
+            flex-shrink: 0;
+        }
+
+        .google-review-author {
+            font-size: 0.96rem;
+            font-weight: 700;
+            color: var(--color-burgundy);
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+
+        .google-review-time {
+            font-size: 0.78rem;
+            color: #8b765f;
+            white-space: nowrap;
+        }
+
+        .google-review-stars {
+            display: inline-flex;
+            gap: 3px;
+            color: var(--color-gold);
+            font-size: 0.82rem;
+            margin-bottom: 8px;
+        }
+
+        .google-review-text {
+            margin: 0;
+            color: #5b4a3b;
+            font-size: 0.9rem;
+            line-height: 1.6;
+            min-height: 92px;
+        }
+
+        .google-review-text.is-collapsed {
+            line-clamp: 4;
+            display: -webkit-box;
+            -webkit-line-clamp: 4;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .google-review-more {
+            margin-top: auto;
+            align-self: flex-start;
+            border: none;
+            background: transparent;
+            color: var(--color-burgundy);
+            font-size: 0.82rem;
+            font-weight: 700;
+            padding: 8px 0 0;
+            cursor: pointer;
+        }
+
+        .google-review-more:hover {
+            color: #5f0000;
+        }
+
+        .google-reviews-cta {
+            margin-top: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .google-reviews-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--color-burgundy);
+            text-decoration: none;
+            font-weight: 700;
+        }
+
+        .google-reviews-link:hover {
+            color: #5f0000;
+        }
+
+        .google-reviews-write-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            border: 1px solid rgba(128, 0, 0, 0.28);
+            background: linear-gradient(135deg, #800000, #a11a22);
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 700;
+            padding: 10px 14px;
+            border-radius: 10px;
+            box-shadow: 0 8px 18px rgba(70, 20, 12, 0.18);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .google-reviews-write-btn:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 10px 20px rgba(70, 20, 12, 0.26);
+            color: #ffffff;
+        }
+
+        .google-reviews-more-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            border: 1px solid rgba(128, 0, 0, 0.24);
+            background: #fff;
+            color: var(--color-burgundy);
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 700;
+            padding: 10px 14px;
+            border-radius: 10px;
+            transition: transform 0.2s ease, background 0.2s ease;
+        }
+
+        .google-reviews-more-btn:hover {
+            transform: translateY(-1px);
+            background: #fff7ec;
+            color: #5f0000;
+        }
+
+        @media (max-width: 768px) {
+            .google-reviews-widget {
+                padding: 20px;
+            }
+
+            .google-reviews-list {
+                grid-template-columns: 1fr;
+            }
+        }
+
         /* ===== CERTIFICATION BADGE ===== */
         .cert-badge {
             background: linear-gradient(135deg, var(--color-burgundy), var(--color-gold));
@@ -842,6 +1149,33 @@
             border: 1px solid rgba(212, 175, 55, 0.28);
             box-shadow: inset 0 1px 0 rgba(255, 240, 214, 0.16), 0 18px 34px rgba(60, 8, 8, 0.24);
             color: #ffffff;
+            transition: background 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease, transform 0.35s ease;
+        }
+
+        .student-benefit-card:nth-child(1) {
+            background: linear-gradient(145deg, rgba(128, 0, 0, 0.96), rgba(92, 0, 0, 0.94));
+        }
+
+        .student-benefit-card:nth-child(2) {
+            background: linear-gradient(145deg, rgba(17, 76, 121, 0.96), rgba(8, 58, 103, 0.94));
+        }
+
+        .student-benefit-card:nth-child(3) {
+            background: linear-gradient(145deg, rgba(27, 108, 58, 0.96), rgba(18, 86, 45, 0.94));
+        }
+
+        .student-benefit-card:nth-child(4) {
+            background: linear-gradient(145deg, rgba(111, 64, 9, 0.96), rgba(86, 46, 4, 0.94));
+        }
+
+        .student-benefit-card:nth-child(5) {
+            background: linear-gradient(145deg, rgba(94, 30, 122, 0.96), rgba(68, 16, 95, 0.94));
+        }
+
+        .student-benefit-card.is-active {
+            border-color: rgba(255, 229, 170, 0.95);
+            box-shadow: inset 0 1px 0 rgba(255, 248, 230, 0.22), 0 22px 40px rgba(12, 10, 17, 0.36);
+            transform: translateY(-2px);
         }
 
         .student-benefit-meta {
@@ -1020,6 +1354,14 @@
             font-size: 1.7rem;
             font-weight: 800;
             letter-spacing: 0.03em;
+        }
+
+        .navbar-brand-logo {
+            display: block;
+            height: 52px;
+            width: auto;
+            max-width: min(280px, 62vw);
+            object-fit: contain;
         }
 
         .navbar-brand-text {
@@ -2137,10 +2479,10 @@
         }
 
         .founder-degree {
-            margin: 12px 0 8px;
+            margin: 12px 0; 
             padding: 8px 12px;
             border-radius: 10px;
-            background: linear-gradient(135deg, rgba(145, 23, 29, 0.26), rgba(207, 168, 78, 0.24));
+            background: linear-gradient(135deg, rgba(49, 34, 0, 0.26), rgba(82, 57, 1, 0.24));
             border: 1px solid rgba(207, 168, 78, 0.44);
             color: #f8eedf;
             font-size: 0.93rem;
@@ -2724,6 +3066,22 @@
                 padding-bottom: 0;
             }
 
+            .directors-grid.mobile-deck {
+                align-items: stretch;
+            }
+
+            .directors-grid.mobile-deck > .mobile-deck-card {
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+            }
+
+            .directors-grid.mobile-deck .director-info {
+                flex: 1;
+                display: flex;
+                flex-direction: column;
+            }
+
             .mobile-deck > .mobile-deck-card {
                 position: static;
                 top: auto;
@@ -2770,16 +3128,18 @@
 
             .navbar-brand {
                 font-size: 1.15rem;
+                margin-right: auto;
             }
 
             .nav-toggle {
                 display: inline-flex;
                 margin-left: auto;
+                order: 2;
             }
 
             .navbar-links {
                 display: none;
-                order: 10;
+                order: 3;
                 width: 100%;
                 flex-direction: column;
                 gap: 0;
@@ -2791,6 +3151,10 @@
 
             .navbar-links.is-open {
                 display: flex;
+            }
+
+            .navbar-links.is-open a {
+                color: #ffffff;
             }
 
             .navbar-links li {
@@ -2810,7 +3174,7 @@
 
             .btn-nav {
                 display: none;
-                order: 11;
+                order: 4;
                 width: 100%;
                 text-align: center;
                 justify-content: center;
@@ -4225,12 +4589,15 @@
         .trust-verification,
         .hero-stat i,
         .support-group strong,
-        .mission-list strong,
-        .who-we-are-list strong,
         .highlight-check i,
         .specialized-training-icon i,
         .why-edizone-icon i {
             color: var(--accent) !important;
+        }
+
+        .who-we-are-list strong,
+        .mission-list strong {
+            color: var(--primary) !important;
         }
 
         .highlight-check {
@@ -4352,7 +4719,7 @@
             }
 
             .nav-cta-group {
-                margin-left: auto;
+                display: none;
             }
 
             .nav-cta-group .btn-nav {
@@ -4375,6 +4742,10 @@
 
             .navbar-links a {
                 padding: 13px 14px;
+            }
+
+            .navbar-links.is-open a {
+                color: #ffffff;
             }
 
             .hero-content {
@@ -5443,11 +5814,7 @@
     <!-- ===== NAVBAR ===== -->
     <nav class="navbar">
         <div class="navbar-brand">
-            <span class="logo-badge"><i class="fas fa-shield-alt"></i></span>
-            <span class="navbar-brand-text">
-                <span class="navbar-brand-title">EDIZONE CAREERS</span>
-                <span class="navbar-brand-tagline">Careers By Design</span>
-            </span>
+            <img class="navbar-brand-logo" src="https://storagev2.files-vault.com/uploads/blacklabel-765/sub-account-81526/1773645589-zpwUXrDedx.png" alt="Edizone Careers logo" loading="eager" decoding="async">
         </div>
         <button class="nav-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false" aria-controls="site-nav">
             <span></span>
@@ -5464,7 +5831,7 @@
             <li><a href="#contact">Contact</a></li>
         </ul>
         <div class="nav-cta-group">
-            <button class="btn-nav btn-counselling nav-cta" id="openCounsellingModal"><i class="fas fa-calendar-check"></i> Free Counselling</button>
+            <button class="btn-nav btn-counselling nav-cta" id="openCounsellingModal"><i class="fas fa-calendar-check"></i> Free Clarity Session</button>
         </div>
     </nav>
 
@@ -5488,7 +5855,7 @@
                 
                 <div class="cta-group">
                     <button class="btn-primary" onclick="document.getElementById('counsellingModal').classList.add('is-open');document.body.style.overflow='hidden';">
-                        <i class="fas fa-calendar-check"></i> Free Counselling
+                        <i class="fas fa-calendar-check"></i> Free Clarity Session
                     </button>
                     <a href="#offers" class="btn-secondary">
                         <i class="fas fa-layer-group"></i> Explore Services
@@ -5497,8 +5864,8 @@
 
                 <div class="trust-bar">
                     <ul class="hero-highlights">
+                        <li><span class="highlight-check"><i class="fas fa-check"></i></span>Career Assessment with GPaths</li>                       
                         <li><span class="highlight-check"><i class="fas fa-check"></i></span>Global Study Abroad Strategy</li>
-                        <li><span class="highlight-check"><i class="fas fa-check"></i></span>Career Assessment with GPaths</li>
                         <li><span class="highlight-check"><i class="fas fa-check"></i></span>Parenting & Student Coaching</li>
                     </ul>
                 </div>
@@ -6231,7 +6598,7 @@
     <!-- ===== PARENT & STUDENT SUPPORT ===== -->
     <section class="section" id="support">
         <div class="section-header">
-            <h2>How I Support Parents & Students</h2>
+            <h2>How We Support Parents & Students</h2>
             <p class="section-subheading">
                 Guidance that bridges parental expectations and student potential with empathy, structure, and practical action.
             </p>
@@ -6239,9 +6606,8 @@
 
         <div class="support-layout">
             <article class="support-box glass-card-dark support-feature-card">
-                <div class="support-feature-badge"><i class="fas fa-users"></i> Parenting Support</div>
                 <span class="support-feature-icon"><i class="fas fa-people-arrows"></i></span>
-                <h3>Parenting Support</h3>
+                <h3 style="color:#fff !important;">Parenting Support</h3>
                 <ul class="support-list">
                     <li>Helping parents raise emotionally secure children</li>
                     <li>Understand your child’s emotions and behaviour</li>
@@ -6252,9 +6618,8 @@
             </article>
 
             <article class="support-box glass-card-dark support-feature-card">
-                <div class="support-feature-badge"><i class="fas fa-brain"></i> Students Mentoring</div>
                 <span class="support-feature-icon"><i class="fas fa-user-graduate"></i></span>
-                <h3>Student Mentoring</h3>
+                <h3 style="color:#fff !important;">Student Mentoring</h3>
                 <ul class="support-list">
                     <li>Guiding students to become focused and self-driven</li>
                     <li>Build confidence and emotional intelligence</li>
@@ -6340,7 +6705,7 @@
     <!-- ===== REVIEWS & TESTIMONIALS ===== -->
     <section class="section" id="reviews">
         <div class="section-header">
-            <h2>Hear From Our Families</h2>
+            <h2>Testimonials</h2>
             <p class="section-subheading">
                 Real stories of transformation from students and parents who chose Edizone Careers.
             </p>
@@ -6428,12 +6793,64 @@
             </div>
         </div>
 
-        <div style="text-align: center; margin-top: 60px; padding: 40px; background: linear-gradient(135deg, rgba(128, 0, 0, 0.05), rgba(212, 175, 55, 0.05)); border-radius: 12px; border: 1px solid var(--color-gold);">
-            <h3 style="color: var(--color-burgundy); margin-bottom: 15px;">Scientific Assessment Badge</h3>
-            <p style="color: #666; margin-bottom: 15px;">Our GPaths Assessment is INACE Certified, ensuring world-class standards in career assessment and guidance.</p>
-            <span style="background: var(--color-burgundy); color: white; padding: 10px 20px; border-radius: 8px; display: inline-block; font-weight: 700;">✓ INACE Certified</span>
-        </div>
+      
     </section>
+
+        <!-- ===== GOOGLE REVIEWS ===== -->
+        <section class="section" id="google-reviews">
+            <div class="section-header">
+                <h2>Live Google Reviews</h2>
+                <p class="section-subheading">
+                    Fresh feedback from families and students directly from our Google Business Profile.
+                </p>
+            </div>
+
+            <div class="google-reviews-widget glass-card" role="region" aria-label="Google reviews widget">
+                <div class="google-reviews-summary">
+                    <div class="google-reviews-brand" aria-label="Google Reviews source">
+                        <img class="google-reviews-logo" src="https://www.gstatic.com/images/branding/product/1x/googleg_32dp.png" alt="Google logo" loading="lazy" decoding="async">
+                        <span class="google-reviews-brand-text">Google Reviews</span>
+                    </div>
+                    <div class="google-reviews-score">
+                        <span class="google-reviews-rating" id="googleReviewsRating">--</span>
+                        <span class="google-reviews-count" id="googleReviewsCount">Waiting for live data</span>
+                    </div>
+                    <div class="google-reviews-stars-chip">
+                        <span class="google-reviews-stars" id="googleReviewsStars" aria-label="Google rating stars">☆☆☆☆☆</span>
+                        <span class="google-reviews-stars-value" id="googleReviewsStarsValue">5.0</span>
+                    </div>
+                </div>
+
+                <div class="google-reviews-state" id="googleReviewsState" aria-live="polite">Loading Google reviews...</div>
+
+                <div class="google-reviews-nav" aria-label="Google reviews navigation">
+                    <button class="google-reviews-nav-btn" id="googleReviewsPrev" type="button" aria-label="Show previous reviews">
+                        <i class="fas fa-chevron-left" aria-hidden="true"></i>
+                    </button>
+                    <span class="google-reviews-nav-status" id="googleReviewsNavStatus">1 / 1</span>
+                    <button class="google-reviews-nav-btn" id="googleReviewsNext" type="button" aria-label="Show next reviews">
+                        <i class="fas fa-chevron-right" aria-hidden="true"></i>
+                    </button>
+                </div>
+
+                <div class="google-reviews-list" id="googleReviewsList"></div>
+
+                <div class="google-reviews-cta">
+                    <a class="google-reviews-link" id="googleReviewsProfileLink" href="https://www.google.com/maps" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-google"></i>
+                        <span>Open Google Business Profile</span>
+                    </a>
+                    <a class="google-reviews-write-btn" id="googleReviewsWriteLink" href="https://www.google.com/maps" target="_blank" rel="noopener noreferrer">
+                        <i class="fas fa-pen"></i>
+                        <span>Write a Review</span>
+                    </a>
+                    <a class="google-reviews-more-btn" id="googleReviewsMoreLink" href="https://www.google.com/maps" target="_blank" rel="noopener noreferrer" hidden>
+                        <i class="fas fa-external-link-alt"></i>
+                        <span>More Reviews</span>
+                    </a>
+                </div>
+            </div>
+        </section>
 
     <!-- ===== FAQ SECTION ===== -->
     <section class="section" id="faq">
@@ -6559,15 +6976,15 @@
     <section class="section" style="background: linear-gradient(135deg, var(--color-burgundy), #600000); color: white; text-align: center;">
         <h2 style="color: white; margin-bottom: 20px;">Ready to Transform Your Future?</h2>
         <p style="font-size: 1.2rem; margin-bottom: 40px; color: #ddd;">
-            Take the first step toward your dream career and global education journey today.
+            Take the first step towards your dream career and global education journey today.
         </p>
         <div class="cta-actions">
             <a href="https://wa.me/918850651192?text=Hi%2C%20I%20would%20like%20to%20book%20a%20consultation%20for%20career%20guidance" class="btn-primary" target="_blank">
                 <i class="fas fa-phone"></i> WhatsApp Me
             </a>
-            <button class="btn-secondary" id="openEnquiryFromEmail" type="button">
-                <i class="fas fa-envelope"></i> Send an Email
-            </button>
+            <button class="btn-secondary" id="openEnquiryFromEmail" type="button" style="color: white; border: 2px solid #FFFDD0;">
+                            <i class="fas fa-envelope"></i> Send an Email
+                        </button>
         </div>
     </section>
 
@@ -6608,10 +7025,9 @@
             <div class="footer-section">
                 <h4>Follow Us</h4>
                 <ul class="social-links">
-                    <li><a href="#" style="font-size: 1.5rem;"><i class="fab fa-facebook"></i></a></li>
-                    <li><a href="#" style="font-size: 1.5rem;"><i class="fab fa-instagram"></i></a></li>
-                    <li><a href="#" style="font-size: 1.5rem;"><i class="fab fa-linkedin"></i></a></li>
-                    <li><a href="#" style="font-size: 1.5rem;"><i class="fab fa-youtube"></i></a></li>
+                    <li><a href="https://www.facebook.com/share/1Dud7q4W5F/" style="font-size: 1.5rem;"><i class="fab fa-facebook"></i></a></li>
+                    <li><a href="https://www.instagram.com/edizone_careers?igsh=MXY0NzY2dHAzcHl0bw==" style="font-size: 1.5rem;"><i class="fab fa-instagram"></i></a></li>
+
                 </ul>
             </div>
         </div>
@@ -6623,7 +7039,7 @@
             <div class="trust-verification">
                 <i class="fas fa-shield-alt"></i> INACE Certified Assessment Framework
             </div>
-            <p style="margin-top: 20px; font-size: 0.8rem; color: #777;">
+            <p style="margin-top: 20px; font-size: 0.8rem; color: #fff1d5;">
                 <strong>Powered by DCore Systems LLP</strong> | LLPIN: ACT-9625 | PAN: AAZFD2232J
             </p>
         </div>
@@ -6770,6 +7186,9 @@
             const renderStudentBenefitSlide = (index) => {
                 studentBenefitsIndex = (index + studentBenefitsSlides.length) % studentBenefitsSlides.length;
                 studentBenefitsTrack.style.transform = `translateX(-${studentBenefitsIndex * 100}%)`;
+                studentBenefitsSlides.forEach((slide, slideIndex) => {
+                    slide.classList.toggle('is-active', slideIndex === studentBenefitsIndex);
+                });
                 studentBenefitsDots.forEach((dot, dotIndex) => {
                     dot.classList.toggle('is-active', dotIndex === studentBenefitsIndex);
                 });
@@ -7067,6 +7486,271 @@
             video.addEventListener('click', function() {
                 alert('Video testimonial would play here. Replace with actual video embed.');
             });
+        });
+
+        // ===== GOOGLE REVIEWS WIDGET =====
+        const googleReviewsConfig = {
+            endpoint: window.EDIZONE_GOOGLE_REVIEWS_ENDPOINT || '/api/google-reviews',
+            placeId: window.EDIZONE_GOOGLE_PLACE_ID || '',
+            placeUrl: window.EDIZONE_GOOGLE_PLACE_URL || 'https://maps.app.goo.gl/o5QxVRtrizTHoHUq5',
+            limit: Number(window.EDIZONE_GOOGLE_REVIEWS_LIMIT || 0),
+            useFallback: true
+        };
+
+        const googleReviewsState = document.getElementById('googleReviewsState');
+        const googleReviewsList = document.getElementById('googleReviewsList');
+        const googleReviewsRating = document.getElementById('googleReviewsRating');
+        const googleReviewsCount = document.getElementById('googleReviewsCount');
+        const googleReviewsStars = document.getElementById('googleReviewsStars');
+        const googleReviewsStarsValue = document.getElementById('googleReviewsStarsValue');
+        const googleReviewsProfileLink = document.getElementById('googleReviewsProfileLink');
+        const googleReviewsWriteLink = document.getElementById('googleReviewsWriteLink');
+        const googleReviewsMoreLink = document.getElementById('googleReviewsMoreLink');
+        const googleReviewsPrev = document.getElementById('googleReviewsPrev');
+        const googleReviewsNext = document.getElementById('googleReviewsNext');
+        const googleReviewsNavStatus = document.getElementById('googleReviewsNavStatus');
+
+        let googleReviewItems = [];
+        let googleReviewPage = 0;
+        const expandedGoogleReviewIndexes = new Set();
+
+        const fallbackGoogleReviewsData = {
+            rating: 4.9,
+            user_ratings_total: 124,
+            place_url: 'https://maps.app.goo.gl/o5QxVRtrizTHoHUq5',
+            write_review_url: '',
+            reviews: [
+                {
+                    author_name: 'Parent Review',
+                    rating: 5,
+                    relative_time_description: 'Recently',
+                    author_profile_photo: '',
+                    text: 'Excellent guidance for career clarity and study abroad planning. The process was structured and reassuring.'
+                },
+                {
+                    author_name: 'Student Review',
+                    rating: 5,
+                    relative_time_description: 'Recently',
+                    author_profile_photo: '',
+                    text: 'The counseling sessions helped me shortlist better universities and prepare confidently for applications.'
+                },
+                {
+                    author_name: 'Family Review',
+                    rating: 5,
+                    relative_time_description: 'Recently',
+                    author_profile_photo: '',
+                    text: 'Very supportive team, transparent communication, and practical advice throughout the journey.'
+                },
+                {
+                    author_name: 'Global Applicant',
+                    rating: 4,
+                    relative_time_description: 'Recently',
+                    author_profile_photo: '',
+                    text: 'Strong mentorship and clear timelines. Helped reduce uncertainty for both student and parents.'
+                }
+            ]
+        };
+
+        const buildStars = (rating, maxStars = 5) => {
+            const full = Math.max(0, Math.min(maxStars, Math.round(Number(rating) || 0)));
+            return `${'★'.repeat(full)}${'☆'.repeat(maxStars - full)}`;
+        };
+
+        const escapeHTML = (value) => {
+            return String(value ?? '').replace(/[&<>'"]/g, (char) => ({
+                '&': '&amp;',
+                '<': '&lt;',
+                '>': '&gt;',
+                "'": '&#39;',
+                '"': '&quot;'
+            }[char]));
+        };
+
+        const getGoogleReviewsPageSize = () => {
+            return window.matchMedia('(max-width: 768px)').matches ? 1 : 2;
+        };
+
+        const getWriteReviewUrl = (payload = null) => {
+            const payloadUrl = payload?.write_review_url;
+            if (payloadUrl) return payloadUrl;
+
+            const placeId = googleReviewsConfig.placeId?.trim();
+            if (placeId) {
+                return `https://search.google.com/local/writereview?placeid=${encodeURIComponent(placeId)}`;
+            }
+
+            return googleReviewsConfig.placeUrl || 'https://www.google.com/maps';
+        };
+
+        const renderGoogleReviewsPage = () => {
+            if (!googleReviewsList) return;
+
+            const pageSize = getGoogleReviewsPageSize();
+            const totalPages = Math.max(1, Math.ceil(googleReviewItems.length / pageSize));
+            googleReviewPage = Math.max(0, Math.min(googleReviewPage, totalPages - 1));
+
+            const start = googleReviewPage * pageSize;
+            const visible = googleReviewItems.slice(start, start + pageSize);
+
+            googleReviewsList.innerHTML = visible.map((review, visibleIndex) => {
+                const itemIndex = start + visibleIndex;
+                const authorPhoto = review.author_profile_photo || '';
+                const reviewText = String(review.text || '');
+                const showMoreBtn = reviewText.length > 240;
+                const isExpanded = expandedGoogleReviewIndexes.has(itemIndex);
+                const avatarMarkup = authorPhoto
+                    ? `<img class="google-review-avatar" src="${escapeHTML(authorPhoto)}" alt="${escapeHTML(review.author_name || 'Google user')} profile photo" loading="lazy" decoding="async">`
+                    : `<span class="google-review-avatar" aria-hidden="true"></span>`;
+
+                return `
+                    <article class="google-review-card">
+                        <div class="google-review-head">
+                            <span class="google-review-author-wrap">
+                                ${avatarMarkup}
+                                <span class="google-review-author">${escapeHTML(review.author_name || 'Google User')}</span>
+                            </span>
+                            <span class="google-review-time">${escapeHTML(review.relative_time_description || '')}</span>
+                        </div>
+                        <div class="google-review-stars" aria-label="${Number(review.rating || 0)} star rating">${buildStars(review.rating || 0)}</div>
+                        <p class="google-review-text${isExpanded ? '' : ' is-collapsed'}">${escapeHTML(reviewText)}</p>
+                        ${showMoreBtn ? `<button class="google-review-more" type="button" data-review-index="${itemIndex}">${isExpanded ? 'Less' : 'More'}</button>` : ''}
+                    </article>
+                `;
+            }).join('');
+
+            if (googleReviewsNavStatus) {
+                googleReviewsNavStatus.textContent = `${googleReviewPage + 1} / ${totalPages}`;
+            }
+            if (googleReviewsPrev) {
+                googleReviewsPrev.disabled = googleReviewPage <= 0 || totalPages <= 1;
+            }
+            if (googleReviewsNext) {
+                googleReviewsNext.disabled = googleReviewPage >= totalPages - 1 || totalPages <= 1;
+            }
+
+            googleReviewsList.querySelectorAll('.google-review-more').forEach((button) => {
+                button.addEventListener('click', () => {
+                    const idx = Number(button.getAttribute('data-review-index'));
+                    if (!Number.isFinite(idx)) return;
+                    if (expandedGoogleReviewIndexes.has(idx)) {
+                        expandedGoogleReviewIndexes.delete(idx);
+                    } else {
+                        expandedGoogleReviewIndexes.add(idx);
+                    }
+                    renderGoogleReviewsPage();
+                });
+            });
+        };
+
+        const renderGoogleReviews = (payload, sourceLabel = 'Live Google reviews loaded') => {
+            if (!googleReviewsList || !googleReviewsRating || !googleReviewsCount || !googleReviewsStars || !googleReviewsState) {
+                return;
+            }
+
+            const rating = Number(payload?.rating || 0);
+            const reviewCount = Number(payload?.user_ratings_total || 0);
+            const allReviews = Array.isArray(payload?.reviews) ? payload.reviews : [];
+            const reviews = googleReviewsConfig.limit > 0 ? allReviews.slice(0, googleReviewsConfig.limit) : allReviews;
+
+            googleReviewsRating.textContent = rating ? rating.toFixed(1) : '--';
+            googleReviewsCount.textContent = reviewCount ? `${reviewCount}+ Google reviews` : 'Google reviews';
+            googleReviewsStars.textContent = buildStars(rating);
+            if (googleReviewsStarsValue) {
+                googleReviewsStarsValue.textContent = rating ? rating.toFixed(1) : '5.0';
+            }
+            googleReviewsStars.setAttribute('aria-label', `Rating ${rating.toFixed(1)} out of 5`);
+
+            googleReviewsState.textContent = sourceLabel;
+
+            googleReviewItems = reviews;
+            googleReviewPage = 0;
+            expandedGoogleReviewIndexes.clear();
+            renderGoogleReviewsPage();
+
+            if (googleReviewsProfileLink && payload?.place_url) {
+                googleReviewsProfileLink.href = payload.place_url;
+            }
+
+            const profileUrl = payload?.place_url || googleReviewsConfig.placeUrl || 'https://www.google.com/maps';
+            if (googleReviewsMoreLink) {
+                googleReviewsMoreLink.href = profileUrl;
+                const shouldShowMore = reviewCount > reviews.length || reviews.length >= 4;
+                googleReviewsMoreLink.hidden = !shouldShowMore;
+            }
+
+            if (googleReviewsWriteLink) {
+                googleReviewsWriteLink.href = getWriteReviewUrl(payload);
+            }
+        };
+
+        const loadGoogleReviews = async () => {
+            if (!googleReviewsState) return;
+
+            const endpoint = googleReviewsConfig.endpoint.trim();
+
+            if (googleReviewsProfileLink && googleReviewsConfig.placeUrl) {
+                googleReviewsProfileLink.href = googleReviewsConfig.placeUrl;
+            }
+
+            if (googleReviewsMoreLink && googleReviewsConfig.placeUrl) {
+                googleReviewsMoreLink.href = googleReviewsConfig.placeUrl;
+            }
+
+            if (googleReviewsWriteLink) {
+                googleReviewsWriteLink.href = getWriteReviewUrl();
+            }
+
+            if (!endpoint) {
+                if (googleReviewsConfig.useFallback) {
+                    renderGoogleReviews(fallbackGoogleReviewsData, 'Preview mode: connect Google API endpoint to show live reviews from your selected map link');
+                } else {
+                    googleReviewsState.textContent = 'Google reviews endpoint not configured yet.';
+                }
+                return;
+            }
+
+            try {
+                const endpointUrl = new URL(endpoint, window.location.origin);
+                if (googleReviewsConfig.placeId) {
+                    endpointUrl.searchParams.set('placeId', googleReviewsConfig.placeId);
+                }
+                if (googleReviewsConfig.placeUrl) {
+                    endpointUrl.searchParams.set('placeUrl', googleReviewsConfig.placeUrl);
+                }
+                if (googleReviewsConfig.limit > 0) {
+                    endpointUrl.searchParams.set('limit', String(googleReviewsConfig.limit));
+                }
+
+                const response = await fetch(endpointUrl.toString(), { method: 'GET' });
+                if (!response.ok) {
+                    throw new Error(`HTTP ${response.status}`);
+                }
+
+                const payload = await response.json();
+                renderGoogleReviews(payload, 'Live Google reviews loaded');
+            } catch (error) {
+                if (googleReviewsConfig.useFallback) {
+                    renderGoogleReviews(fallbackGoogleReviewsData, 'Live feed unavailable. Showing preview data.');
+                    return;
+                }
+                googleReviewsState.textContent = 'Unable to load live Google reviews right now.';
+            }
+        };
+
+        loadGoogleReviews();
+
+        googleReviewsPrev?.addEventListener('click', () => {
+            googleReviewPage -= 1;
+            renderGoogleReviewsPage();
+        });
+
+        googleReviewsNext?.addEventListener('click', () => {
+            googleReviewPage += 1;
+            renderGoogleReviewsPage();
+        });
+
+        window.addEventListener('resize', () => {
+            renderGoogleReviewsPage();
         });
 
         // ===== FAQ ACCORDION FUNCTIONALITY =====

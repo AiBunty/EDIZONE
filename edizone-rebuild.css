@@ -124,6 +124,7 @@ img, iframe { max-width: 100%; height: auto; }
     box-shadow: var(--shadow);
 }
 .navbar-brand { display: inline-flex; align-items: center; gap: 10px; }
+.navbar-brand-logo { display: block; height: 52px; width: auto; max-width: min(280px, 62vw); object-fit: contain; }
 .logo-badge {
     width: 36px; height: 36px; border-radius: 12px; background: var(--primary); color: #fff;
     display: inline-flex; align-items: center; justify-content: center;

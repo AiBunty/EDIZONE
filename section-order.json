@@ -1,0 +1,17 @@
+{
+  "sections": [
+    "01-hero.html",
+    "03-offers.html",
+    "04-gpaths.html", 
+    "02-universities.html",
+    "06-timeline.html",
+    "07-support.html",
+    "05-services.html",
+    "08-directors.html",
+    "09-reviews.html",
+    "10-static-google-reviews.html",
+    "11-faq.html",
+    "12-cta.html",
+    "13-footer.html"
+  ]
+}

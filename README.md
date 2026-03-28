@@ -129,23 +129,69 @@ Replace video placeholders:
 <iframe width="100%" height="315" src="https://www.youtube.com/embed/VIDEO_ID" frameborder="0"></iframe>
 ```
 
-## Live Google Reviews (Local Testing)
+## Static Hosting Compatibility
 
-To test live Google reviews locally with your API key:
+This project is currently configured to run as a pure static site (no backend/API required), which is compatible with static-only hosting providers like serverbyt.in.
 
-1. Open `.env` and set:
-  - `GOOGLE_PLACES_API_KEY`
-  - `GOOGLE_PLACE_ID`
-2. Start local server:
+### Deploy on serverbyt.in
+
+1. Build latest page:
 
 ```bash
-node local-server.js
+node tools/build-index.js
 ```
 
-3. Open:
-  - `http://localhost:8080`
+2. Upload site files/folders from project root:
+  - `index.html`
+  - `styles/`
+  - `scripts/`
+  - `sections/` and `shell/` (optional for source management; not required for runtime)
 
-The page calls `/api/google-reviews` through the local proxy, so your key stays server-side.
+3. Ensure `index.html` is in the public web root on the host.
+
+No Node.js process, reverse proxy, or serverless endpoint is needed for the current setup.
+
+## Section Reshuffle Workflow
+
+`index.html` is now generated from separated section files.
+
+### Structure
+
+- `shell/head-open.html` - Doctype, head, preloader, navbar (top shell)
+- `sections/*.html` - One file per page section
+- `shell/fixed-bottom.html` - Mobile rail, modals, scripts (bottom shell)
+- `section-order.json` - Single source of truth for section order
+- `tools/build-index.js` - Generator script
+- `styles/main.css` - Shared/global styles
+- `styles/sections/<section-name>.css` - Optional per-section styles
+- `scripts/main.js` - Shared/global behavior
+- `scripts/sections/<section-name>.js` - Optional per-section behavior
+
+### Reorder Sections
+
+1. Open `section-order.json`
+2. Move section filenames up/down in the `sections` array
+3. Rebuild page:
+
+```bash
+node tools/build-index.js
+```
+
+This regenerates `index.html` in the new order.
+
+### Add Section-Specific CSS/JS
+
+1. Use the exact section basename from `section-order.json`.
+2. Create either or both files:
+  - `styles/sections/<basename>.css`
+  - `scripts/sections/<basename>.js`
+3. Run build:
+
+```bash
+node tools/build-index.js
+```
+
+The builder auto-injects matching section CSS in `<head>` and matching section JS before `scripts/main.js`.
 
 ---
 

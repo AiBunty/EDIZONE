@@ -1,0 +1,151 @@
+/* ===== VIDEO TESTIMONIAL CAROUSEL ===== */
+#reviews .review-carousel {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+#reviews .review-carousel-viewport {
+    overflow: hidden;
+}
+
+#reviews .review-carousel-track {
+    display: flex;
+    gap: 28px;
+    transition: transform 0.45s ease;
+    will-change: transform;
+}
+
+#reviews .review-carousel-slide {
+    flex: 0 0 calc((100% - 28px) / 2);
+    min-width: 0;
+}
+
+#reviews .review-carousel-controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
+    margin-top: 26px;
+}
+
+#reviews .review-carousel-btn {
+    width: 48px;
+    height: 48px;
+    border: 1px solid rgba(128, 0, 0, 0.16);
+    border-radius: 50%;
+    background: linear-gradient(145deg, rgba(255,255,255,0.94), rgba(247,237,224,0.88));
+    color: var(--primary);
+    box-shadow: 0 10px 24px rgba(61, 14, 18, 0.12);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+#reviews .review-carousel-btn:hover {
+    transform: translateY(-2px);
+    border-color: rgba(128, 0, 0, 0.28);
+    box-shadow: 0 14px 28px rgba(61, 14, 18, 0.16);
+}
+
+#reviews .review-carousel-btn:disabled {
+    opacity: 0.45;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: 0 8px 18px rgba(61, 14, 18, 0.08);
+}
+
+#reviews .review-carousel-dots {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+#reviews .review-carousel-dot {
+    width: 10px;
+    height: 10px;
+    border: 0;
+    border-radius: 999px;
+    background: rgba(128, 0, 0, 0.22);
+    cursor: pointer;
+    padding: 0;
+    transition: width 0.2s ease, background-color 0.2s ease;
+}
+
+#reviews .review-carousel-dot.is-active {
+    width: 28px;
+    background: var(--primary);
+}
+
+#reviews .iphone-review-card {
+    height: 100%;
+}
+
+#reviews .iphone-review-frame {
+    background: linear-gradient(160deg, #8f1b22 0%, #6f1018 52%, #53070d 100%);
+    box-shadow:
+        inset 0 1px 0 rgba(255, 216, 216, 0.2),
+        inset 0 -3px 10px rgba(54, 5, 9, 0.46),
+        0 26px 50px rgba(72, 8, 12, 0.28);
+}
+
+#reviews .iphone-side-button {
+    position: absolute;
+    z-index: 4;
+    width: 4px;
+    border-radius: 999px;
+    background: linear-gradient(180deg, #b4454d, #6e0f17);
+    box-shadow: 0 1px 3px rgba(15, 2, 4, 0.45);
+}
+
+#reviews .iphone-side-button.is-volume-top {
+    left: -3px;
+    top: 142px;
+    height: 46px;
+}
+
+#reviews .iphone-side-button.is-volume-bottom {
+    left: -3px;
+    top: 198px;
+    height: 46px;
+}
+
+#reviews .iphone-side-button.is-power {
+    right: -3px;
+    top: 172px;
+    height: 64px;
+}
+
+@media (max-width: 768px) {
+    #reviews .review-carousel-track {
+        gap: 18px;
+    }
+
+    #reviews .review-carousel-slide {
+        flex-basis: 100%;
+    }
+
+    #reviews .review-carousel-controls {
+        gap: 12px;
+        margin-top: 20px;
+    }
+
+    #reviews .review-carousel-btn {
+        width: 42px;
+        height: 42px;
+    }
+
+    #reviews .iphone-side-button.is-volume-top {
+        top: 132px;
+    }
+
+    #reviews .iphone-side-button.is-volume-bottom {
+        top: 186px;
+    }
+
+    #reviews .iphone-side-button.is-power {
+        top: 160px;
+    }
+}

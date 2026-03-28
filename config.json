@@ -85,11 +85,6 @@
         "description": "Team & company history"
       },
       {
-        "name": "Contact",
-        "filename": "contact.html",
-        "description": "Contact form & inquiry"
-      },
-      {
         "name": "Blog",
         "filename": "blog.html",
         "description": "Career tips & study abroad guides"

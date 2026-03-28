@@ -1,0 +1,80 @@
+    <!-- ===== MOBILE QUICK ACTION RAIL ===== -->
+    <aside class="mobile-quick-actions" id="mobileQuickActions" aria-label="Mobile quick actions">
+        <button class="mobile-quick-toggle" id="mobileQuickToggle" type="button" aria-label="Toggle quick actions" aria-expanded="true">
+            <i class="fas fa-arrow-right"></i>
+            <span class="toggle-hint" aria-hidden="true">&lt;&lt;</span>
+        </button>
+        <div class="mobile-quick-stack">
+            <button class="mobile-quick-btn quick-counselling" id="openCounsellingSide" type="button" aria-label="Open counselling form">
+                <i class="far fa-envelope"></i>
+                <span>Clarity</span>
+            </button>
+            <a class="mobile-quick-btn quick-whatsapp" href="https://wa.me/918850651192?text=Hi%20Edizone%20Team%2C%20I%20need%20study%20abroad%20guidance" target="_blank" aria-label="Chat on WhatsApp">
+                <i class="fab fa-whatsapp"></i>
+            </a>
+            <a class="mobile-quick-btn quick-call" href="tel:+918850651192" aria-label="Call now">
+                <i class="fas fa-phone"></i>
+            </a>
+        </div>
+    </aside>
+
+    <button class="back-to-top" id="backToTop" type="button" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- ===== ENQUIRY FORM MODAL ===== -->
+    <div class="modal-overlay" id="enquiryModal" role="dialog" aria-modal="true" aria-labelledby="enquiryModalTitle">
+        <div class="modal-box">
+            <div class="modal-header">
+                <h3 id="enquiryModalTitle"><i class="fas fa-paper-plane"></i> Apply Now — Enquiry Form</h3>
+                <button class="modal-close" id="closeEnquiryModal" aria-label="Close">&times;</button>
+            </div>
+            <div class="modal-body">
+                <iframe
+                    src="https://admin.aibunty.com/widget/form/69afd0266f597"
+                    style="width:100%;height:600px;border:none;border-radius:0 0 3px 3px"
+                    id="inline-69afd0266f597"
+                    data-form-name="Enquiry Form"
+                    data-layout-iframe-id="inline-69afd0266f597"
+                    data-form-id="69afd0266f597"
+                    data-height="600"
+                    title="Enquiry Form"
+                    loading="eager">
+                </iframe>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== FREE COUNSELLING MODAL ===== -->
+    <div class="modal-overlay" id="counsellingModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+        <div class="modal-box">
+            <div class="modal-header">
+                <h3 id="modalTitle"><i class="fas fa-calendar-check"></i> Book Your Free Counselling Session</h3>
+                <button class="modal-close" id="closeCounsellingModal" aria-label="Close">&times;</button>
+            </div>
+            <div class="modal-body">
+                <iframe id="counsellingCalendarFrame" src="https://admin.aibunty.com/u2/81526/edizone-careers-calendar-booking?isEmbeded=1" style="border:none;width:100%;height:600px" title="Free Counselling Calendar Booking" loading="eager"></iframe>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== HIDDEN EMBED PRELOADERS - Warmup cache on page load ===== -->
+    <div class="embed-preloader">
+        <iframe src="https://admin.aibunty.com/widget/form/69afd0266f597" loading="lazy" title="Preload Enquiry Form"></iframe>
+    </div>
+
+    <!-- OPTIONAL: Smooth Scroll & Interactive Elements -->
+    <!-- SECTION_SCRIPTS -->
+    <script src="scripts/main.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+

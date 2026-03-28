@@ -18,7 +18,6 @@ A **production-ready, responsive website** for Edizone Careers that includes:
 
 ```
 ✅ index.html           → Main landing page (8,000+ lines, fully responsive)
-✅ contact.html         → Contact form page with WhatsApp integration
 ✅ config.json          → Project configuration & structure
 ✅ README.md            → Full project documentation
 ✅ DEPLOYMENT.md        → Step-by-step deployment guide
@@ -42,7 +41,7 @@ Website should load instantly with all styles applied.
 ### Step 2: Deploy to Netlify (2 minutes)
 
 1. **Create account**: https://netlify.com (free)
-2. **Drag & drop** `index.html` and `contact.html` into Netlify
+2. **Drag & drop** `index.html` into Netlify
 3. **Done!** Your site is live with instant HTTPS ✨
 
 **Your site will be at**: `randomname.netlify.app`
@@ -151,10 +150,10 @@ Body:      Source Sans Pro (Clean, readable)
 **Critical - These appear throughout the site:**
 
 1. **Phone**: `+91 8850651192`
-   - Find & Replace in `index.html` + `contact.html`
+   - Find & Replace in `index.html`
 
 2. **Email**: `info@edizonecareers.com`
-   - Find & Replace in `index.html` + `contact.html`
+   - Find & Replace in `index.html`
 
 3. **WhatsApp Link**: `https://wa.me/918850651192`
    - Update with your WhatsApp number
@@ -231,8 +230,7 @@ The website is **fully responsive** and optimized for:
 
 ### **TODAY** (30 minutes)
 1. Open `index.html` and verify it displays correctly
-2. Open `contact.html` and test the contact form
-3. Update your contact information in both files
+2. Update your contact information in `index.html`
 
 ### **THIS WEEK** (1-2 hours)
 1. Create Netlify account
@@ -288,7 +286,6 @@ The website is **fully responsive** and optimized for:
 | Customization help | CUSTOMIZATION.md | Color, text, images, SEO |
 | Configuration | config.json | Structure & settings |
 | Main website | index.html | Original HTML/CSS |
-| Contact form | contact.html | Separate form page |
 
 ---
 

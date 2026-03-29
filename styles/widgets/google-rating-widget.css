@@ -1,0 +1,136 @@
+/* ===== REUSABLE GOOGLE RATING WIDGET ===== */
+.google-rating-widget-shell {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto 28px;
+}
+
+.google-rating-widget {
+    width: min(100%, 148px);
+    min-height: 85px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+    padding: 11px;
+    border-radius: 8px;
+    background: #ffffff;
+    box-shadow: -8px -4px 32px rgba(0, 0, 0, 0.08), 40px 28px 80px rgba(0, 0, 0, 0.08);
+}
+
+.google-rating-score {
+    flex: 1;
+}
+
+.google-rating-value {
+    margin: 0;
+    font-size: clamp(1.05rem, 3.1vw, 1.8rem);
+    line-height: 1;
+    font-weight: 800;
+    color: #4285f4;
+    letter-spacing: -0.02em;
+}
+
+.google-rating-stars {
+    margin-top: 4px;
+    display: inline-flex;
+    align-items: center;
+    gap: 2px;
+    font-size: 0.7rem;
+    line-height: 1;
+}
+
+.google-rating-star {
+    display: inline-block;
+}
+
+.google-rating-star.is-full {
+    color: #fbbc05;
+}
+
+.google-rating-star.is-half {
+    color: #9aa0a6;
+    background: linear-gradient(90deg, #fbbc05 50%, #9aa0a6 50%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.google-rating-note {
+    display: block;
+    margin-top: 4px;
+    color: #5f6368;
+    font-size: 0.5rem;
+    font-weight: 600;
+}
+
+.google-rating-meta {
+    width: 46px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 2px;
+}
+
+.google-rating-title {
+    margin: 0;
+    color: #5f6368;
+    font-size: 1.03rem;
+    line-height: 1;
+    font-weight: 700;
+}
+
+.google-rating-subtitle {
+    margin: 0;
+    color: #5f6368;
+    font-size: 0.37rem;
+    line-height: 1.2;
+    font-weight: 500;
+}
+
+.google-rating-logo {
+    width: 25px;
+    height: auto;
+    margin-top: 5px;
+    display: block;
+}
+
+@media (max-width: 768px) {
+    .google-rating-widget {
+        min-height: 78px;
+        padding: 9px;
+    }
+
+    .google-rating-stars {
+        font-size: 0.6rem;
+        gap: 2px;
+    }
+
+    .google-rating-title {
+        font-size: 0.75rem;
+    }
+
+    .google-rating-subtitle {
+        font-size: 0.34rem;
+    }
+
+    .google-rating-logo {
+        width: 22px;
+        margin-top: 4px;
+    }
+}
+
+@media (max-width: 520px) {
+    .google-rating-widget {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 9px;
+        min-height: 0;
+    }
+
+    .google-rating-meta {
+        width: auto;
+    }
+}

@@ -10,6 +10,7 @@
     }
 
     const slides = Array.from(track.querySelectorAll('.review-carousel-slide'));
+    const videoScreens = Array.from(track.querySelectorAll('.video-testimonial'));
     if (!slides.length) {
         return;
     }
@@ -22,6 +23,167 @@
     const getGap = () => {
         const styles = window.getComputedStyle(track);
         return Number.parseFloat(styles.columnGap || styles.gap || '0') || 0;
+    };
+
+    // Keyed by screen element: active HLS instances (playing)
+    const hlsInstances = new WeakMap();
+    // Keyed by screen element: pre-warmed HLS instances (manifest pre-loaded, not yet playing)
+    const preWarmedMap = new Map();
+
+    const canPlayNativeHls = () => {
+        const video = document.createElement('video');
+        return Boolean(
+            video.canPlayType('application/vnd.apple.mpegurl') ||
+            video.canPlayType('application/x-mpegURL')
+        );
+    };
+
+    const makeHlsConfig = () => ({
+        enableWorker: true,
+        lowLatencyMode: false,
+        startLevel: 0,           // Start at lowest quality for fastest first frame
+        startFragPrefetch: true, // Prefetch first fragment while manifest parses
+        maxBufferLength: 8,      // Buffer only 8s — reduces startup wait
+        maxMaxBufferLength: 20,
+    });
+
+    // ── Pre-warm: load manifest + first segment in background when section enters viewport
+    const preWarmVideo = (screen) => {
+        if (typeof window.Hls === 'undefined' || !window.Hls.isSupported()) return;
+        if (preWarmedMap.has(screen)) return;
+        const videoSrc = screen.dataset.videoSrc;
+        if (!videoSrc) return;
+
+        const dummy = document.createElement('video');
+        dummy.muted = true;
+        dummy.preload = 'auto';
+
+        const hls = new window.Hls(makeHlsConfig());
+        hls.loadSource(videoSrc);
+        hls.attachMedia(dummy);
+        preWarmedMap.set(screen, hls);
+    };
+
+    // Observe the carousel — pre-warm all videos when section enters viewport
+    if ('IntersectionObserver' in window) {
+        const sectionObserver = new IntersectionObserver((entries) => {
+            if (entries[0].isIntersecting) {
+                videoScreens.forEach(preWarmVideo);
+                sectionObserver.disconnect();
+            }
+        }, { rootMargin: '0px 0px -60px 0px', threshold: 0 });
+        sectionObserver.observe(carousel);
+    }
+
+    const stopPlayer = (screen) => {
+        const player = screen.querySelector('.video-testimonial-player');
+        const trigger = screen.querySelector('.youtube-short-trigger');
+        const hls = hlsInstances.get(screen);
+
+        if (hls) {
+            hls.destroy();
+            hlsInstances.delete(screen);
+        }
+
+        if (player) {
+            try {
+                player.pause();
+            } catch (error) {
+                // Ignore pause errors from partially attached players.
+            }
+            player.removeAttribute('src');
+            player.load();
+            player.remove();
+        }
+
+        screen.classList.remove('is-playing');
+
+        if (trigger) {
+            trigger.hidden = false;
+        }
+    };
+
+    const stopAllPlayers = (exceptScreen) => {
+        videoScreens.forEach((screen) => {
+            if (screen !== exceptScreen) {
+                stopPlayer(screen);
+            }
+        });
+    };
+
+    const playVideo = (screen) => {
+        const videoSrc = screen.dataset.videoSrc;
+        const videoTitle = screen.dataset.videoTitle || 'Video testimonial';
+        const trigger = screen.querySelector('.youtube-short-trigger');
+
+        if (!videoSrc || !trigger) {
+            return;
+        }
+
+        stopAllPlayers(screen);
+        stopPlayer(screen);
+
+        const player = document.createElement('video');
+        player.className = 'video-testimonial-player';
+        player.controls = true;
+        player.playsInline = true;
+        player.preload = 'auto';
+        player.setAttribute('playsinline', '');
+        player.setAttribute('webkit-playsinline', '');
+        player.setAttribute('controlsList', 'nodownload');
+        player.setAttribute('aria-label', `${videoTitle} video player`);
+
+        trigger.hidden = true;
+        screen.classList.add('is-playing');
+        screen.appendChild(player);
+
+        const tryPlay = () => {
+            const playPromise = player.play();
+            if (playPromise && typeof playPromise.catch === 'function') {
+                playPromise.catch(() => {});
+            }
+        };
+
+        if (typeof window.Hls !== 'undefined' && window.Hls.isSupported()) {
+            // Reuse pre-warmed instance if available — manifest already fetched
+            const preWarmedHls = preWarmedMap.get(screen);
+            let hls;
+
+            if (preWarmedHls) {
+                preWarmedMap.delete(screen);
+                hls = preWarmedHls;
+                // Detach from dummy and attach to visible player
+                hls.detachMedia();
+                hls.attachMedia(player);
+            } else {
+                hls = new window.Hls(makeHlsConfig());
+                hls.loadSource(videoSrc);
+                hls.attachMedia(player);
+            }
+
+            hlsInstances.set(screen, hls);
+
+            // MANIFEST_PARSED may have already fired during pre-warm.
+            // Levels being populated means manifest is ready.
+            if (hls.levels && hls.levels.length > 0) {
+                player.addEventListener('canplay', tryPlay, { once: true });
+            } else {
+                hls.once(window.Hls.Events.MANIFEST_PARSED, tryPlay);
+            }
+
+            return;
+        }
+
+        if (canPlayNativeHls()) {
+            player.src = videoSrc;
+            player.addEventListener('loadedmetadata', tryPlay, { once: true });
+            return;
+        }
+
+        screen.classList.remove('is-playing');
+        trigger.hidden = false;
+        player.remove();
+        window.open(videoSrc, '_blank', 'noopener');
     };
 
     const getMaxIndex = () => Math.max(0, slides.length - perView);
@@ -45,6 +207,7 @@
     const render = (index) => {
         const maxIndex = getMaxIndex();
         currentIndex = Math.min(Math.max(index, 0), maxIndex);
+        stopAllPlayers();
 
         const slideWidth = slides[0].getBoundingClientRect().width;
         const offset = currentIndex * (slideWidth + getGap());
@@ -73,6 +236,18 @@
 
     nextBtn.addEventListener('click', () => {
         render(currentIndex + 1);
+    });
+
+    videoScreens.forEach((screen) => {
+        const trigger = screen.querySelector('.youtube-short-trigger');
+
+        if (!trigger) {
+            return;
+        }
+
+        trigger.addEventListener('click', () => {
+            playVideo(screen);
+        });
     });
 
     if (typeof mobileQuery.addEventListener === 'function') {

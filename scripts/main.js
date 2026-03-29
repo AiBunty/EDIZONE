@@ -128,6 +128,7 @@ const pagePreloader = document.getElementById('pagePreloader');
         const navbar = document.querySelector('.navbar');
         const navToggle = document.querySelector('.nav-toggle');
         const navLinks = document.querySelector('.navbar-links');
+        const navDrawerBackdrop = document.getElementById('navDrawerBackdrop');
         const mobileQuickActions = document.getElementById('mobileQuickActions');
         const mobileQuickToggle = document.getElementById('mobileQuickToggle');
         const backToTop = document.getElementById('backToTop');
@@ -168,8 +169,21 @@ const pagePreloader = document.getElementById('pagePreloader');
         const counsellingModal = document.getElementById('counsellingModal');
         const openBtn = document.getElementById('openCounsellingModal');
         const closeBtn = document.getElementById('closeCounsellingModal');
+        const counsellingFrame = document.getElementById('counsellingCalendarFrame');
+
+        const ensureCounsellingFrameLoaded = () => {
+            if (!counsellingFrame) {
+                return;
+            }
+
+            const source = counsellingFrame.dataset.src;
+            if (source && counsellingFrame.src !== source) {
+                counsellingFrame.src = source;
+            }
+        };
 
         const openModal = () => {
+            ensureCounsellingFrameLoaded();
             counsellingModal.classList.add('is-open');
             setModalState(true);
         };
@@ -221,7 +235,7 @@ const pagePreloader = document.getElementById('pagePreloader');
         });
 
         document.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape') { closeModal(); closeEnquiry(); }
+            if (e.key === 'Escape') { closeModal(); closeEnquiry(); closeMobileNav(); }
         });
 
         const closeMobileNav = () => {
@@ -229,21 +243,13 @@ const pagePreloader = document.getElementById('pagePreloader');
             navLinks.classList.remove('is-open');
             navToggle.classList.remove('is-open');
             navToggle.setAttribute('aria-expanded', 'false');
+            navDrawerBackdrop?.classList.remove('is-visible');
+            if (openModalCount === 0) document.body.style.overflow = '';
         };
 
-        document.addEventListener('click', (event) => {
-            if (!navToggle || !navLinks || window.innerWidth > 900) return;
-            const target = event.target;
-            if (!(target instanceof Node)) return;
-            if (navLinks.contains(target) || navToggle.contains(target)) return;
+        navDrawerBackdrop?.addEventListener('click', () => {
             closeMobileNav();
         });
-
-        window.addEventListener('scroll', () => {
-            if (window.innerWidth <= 900) {
-                closeMobileNav();
-            }
-        }, { passive: true });
 
         const setupMobileDeckStack = () => {
             const isDeckMode = deckMediaQuery.matches;
@@ -283,6 +289,12 @@ const pagePreloader = document.getElementById('pagePreloader');
                 navLinks.classList.toggle('is-open', willOpen);
                 navToggle.classList.toggle('is-open', willOpen);
                 navToggle.setAttribute('aria-expanded', String(willOpen));
+                navDrawerBackdrop?.classList.toggle('is-visible', willOpen);
+                if (willOpen) {
+                    document.body.style.overflow = 'hidden';
+                } else if (openModalCount === 0) {
+                    document.body.style.overflow = '';
+                }
                 setupMobileDeckStack();
             });
 
@@ -291,6 +303,8 @@ const pagePreloader = document.getElementById('pagePreloader');
                     navLinks.classList.remove('is-open');
                     navToggle.classList.remove('is-open');
                     navToggle.setAttribute('aria-expanded', 'false');
+                    navDrawerBackdrop?.classList.remove('is-visible');
+                    if (openModalCount === 0) document.body.style.overflow = '';
                     mobileQuickActions?.classList.remove('is-collapsed');
                     mobileQuickToggle?.setAttribute('aria-expanded', 'true');
                 }
@@ -314,6 +328,26 @@ const pagePreloader = document.getElementById('pagePreloader');
                 closeMobileNav();
             });
         });
+
+        // ===== Active nav link highlighting =====
+        if ('IntersectionObserver' in window && navLinks) {
+            const sectionIds = ['directors', 'universities', 'offers', 'services', 'gpaths', 'timeline', 'support', 'reviews', 'google-reviews-static', 'faq', 'contact'];
+            const navLinkMap = new Map();
+            sectionIds.forEach(id => {
+                const sec = document.getElementById(id);
+                const link = navLinks.querySelector(`a[href="#${id}"]`);
+                if (sec && link) navLinkMap.set(sec, link);
+            });
+
+            const activeSectionObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    const link = navLinkMap.get(entry.target);
+                    if (link) link.classList.toggle('is-active', entry.isIntersecting);
+                });
+            }, { rootMargin: '-15% 0px -65% 0px', threshold: 0 });
+
+            navLinkMap.forEach((_, sec) => activeSectionObserver.observe(sec));
+        }
 
         // Intersection Observer for animations
         const observerOptions = {
@@ -341,13 +375,7 @@ const pagePreloader = document.getElementById('pagePreloader');
             if (enquiryFrame && enquiryFrame.src) {
                 console.log('✓ Enquiry form embed cached');
             }
-            
-            // Preload calendar booking
-            const counsellingFrame = document.getElementById('counsellingCalendarFrame');
-            if (counsellingFrame && counsellingFrame.src) {
-                console.log('✓ Calendar booking embed cached');
-            }
-            
+
             console.log('✓ Embeds preloaded for faster modal opening');
         };
 
@@ -365,13 +393,6 @@ const pagePreloader = document.getElementById('pagePreloader');
                 const frames = preloaderDiv.querySelectorAll('iframe');
                 console.log(`✓ Embed cache warmed up with ${frames.length} preloader frames`);
             }
-        });
-
-        // Video testimonial play functionality (placeholder)
-        document.querySelectorAll('.video-testimonial').forEach(video => {
-            video.addEventListener('click', function() {
-                alert('Video testimonial would play here. Replace with actual video embed.');
-            });
         });
 
         // ===== FAQ ACCORDION FUNCTIONALITY =====

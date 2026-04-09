@@ -8,6 +8,8 @@ const manifestPath = path.join(root, 'section-order.json');
 const sectionsDir = path.join(root, 'sections');
 const outPath = path.join(root, 'index.html');
 
+const cacheBust = `v=${Date.now()}`;
+
 function read(filePath) {
   return fs.readFileSync(filePath, 'utf8').replace(/\uFEFF/g, '');
 }
@@ -52,19 +54,20 @@ const sectionStyleTags = buildSectionAssetTags(
   manifest.sections,
   path.join('styles', 'sections'),
   'css',
-  (href) => `<link rel="stylesheet" href="${href}">`
+  (href) => `<link rel="stylesheet" href="${href}?${cacheBust}">`
 );
 
 const sectionScriptTags = buildSectionAssetTags(
   manifest.sections,
   path.join('scripts', 'sections'),
   'js',
-  (src) => `<script src="${src}"></script>`
+  (src) => `<script src="${src}?${cacheBust}"></script>`
 );
 
 const chunks = [];
 const head = read(headPath)
   .replace('<!-- SECTION_STYLES -->', sectionStyleTags)
+  .replace('href="styles/main.css"', `href="styles/main.css?${cacheBust}"`)
   .trimEnd();
 chunks.push(head);
 
@@ -76,10 +79,43 @@ for (const sectionFile of manifest.sections) {
 
 const bottom = read(bottomPath)
   .replace('<!-- SECTION_SCRIPTS -->', sectionScriptTags)
+  .replace('src="scripts/main.js"', `src="scripts/main.js?${cacheBust}"`)
   .trimStart();
 chunks.push(bottom);
 const output = chunks.join('\n\n') + '\n';
-fs.writeFileSync(outPath, output, 'utf8');
+
+// Cache-bust local asset hrefs/srcs in the HTML output
+const bustedOutput = output.replace(
+  /(href|src)="(assets\/[^"?]+)"/g,
+  (match, attr, assetPath) => `${attr}="${assetPath}?${cacheBust}"`
+);
+
+fs.writeFileSync(outPath, bustedOutput, 'utf8');
+
+// Cache-bust local asset URLs inside CSS files
+const cssDir = path.join(root, 'styles');
+const cssFiles = [path.join(cssDir, 'main.css')];
+const sectionCssDir = path.join(cssDir, 'sections');
+if (fs.existsSync(sectionCssDir)) {
+  fs.readdirSync(sectionCssDir)
+    .filter(f => f.endsWith('.css'))
+    .forEach(f => cssFiles.push(path.join(sectionCssDir, f)));
+}
+for (const cssFile of cssFiles) {
+  if (!fs.existsSync(cssFile)) continue;
+  let css = fs.readFileSync(cssFile, 'utf8');
+  const updated = css.replace(
+    /url\(["']?(\.\.\/assets\/[^"')?]+?)["']?\)/g,
+    (match, assetPath) => {
+      const clean = assetPath.split('?')[0];
+      return `url("${clean}?${cacheBust}")`;
+    }
+  );
+  if (updated !== css) {
+    fs.writeFileSync(cssFile, updated, 'utf8');
+  }
+}
+
 console.log(
   `Generated ${path.relative(root, outPath)} with ${manifest.sections.length} sections, ` +
   `${sectionStyleTags ? sectionStyleTags.split('\n').length : 0} section style file(s), and ` +

@@ -170,6 +170,19 @@ const pagePreloader = document.getElementById('pagePreloader');
         const openBtn = document.getElementById('openCounsellingModal');
         const closeBtn = document.getElementById('closeCounsellingModal');
         const counsellingFrame = document.getElementById('counsellingCalendarFrame');
+        const counsellingLoader = document.getElementById('counsellingLoader');
+
+        const hideLoader = (loader) => {
+            if (!loader) return;
+            loader.classList.add('is-hidden');
+        };
+
+        const showLoader = (loader) => {
+            if (!loader) return;
+            loader.classList.remove('is-hidden');
+        };
+
+        counsellingFrame?.addEventListener('load', () => hideLoader(counsellingLoader));
 
         const ensureCounsellingFrameLoaded = () => {
             if (!counsellingFrame) {
@@ -178,6 +191,7 @@ const pagePreloader = document.getElementById('pagePreloader');
 
             const source = counsellingFrame.dataset.src;
             if (source && counsellingFrame.src !== source) {
+                showLoader(counsellingLoader);
                 counsellingFrame.src = source;
             }
         };
@@ -217,6 +231,10 @@ const pagePreloader = document.getElementById('pagePreloader');
         const enquiryModal = document.getElementById('enquiryModal');
         const openEnquiryFromEmailBtn = document.getElementById('openEnquiryFromEmail');
         const closeEnquiryBtn = document.getElementById('closeEnquiryModal');
+        const enquiryLoader = document.getElementById('enquiryLoader');
+        const enquiryFrame = document.getElementById('inline-69afd0266f597');
+
+        enquiryFrame?.addEventListener('load', () => hideLoader(enquiryLoader));
 
         const openEnquiry = () => {
             enquiryModal.classList.add('is-open');

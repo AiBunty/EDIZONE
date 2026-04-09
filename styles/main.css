@@ -522,27 +522,27 @@
         }
 
         .photo-one {
-            background-image: url("../assets/director/Shahla Z.S..png");
+            background-image: url("../assets/director/Shahla Z.S..png?v=1775731399995");
         }
 
         .photo-two {
-            background-image: url("../assets/director/Junaid K..png");
+            background-image: url("../assets/director/Junaid K..png?v=1775731399995");
         }
 
         .photo-three {
-            background-image: url("../assets/external/backgrounds/photo-three.jpg");
+            background-image: url("../assets/external/backgrounds/photo-three.jpg?v=1775731329507");
         }
 
         .photo-four {
-            background-image: url("../assets/external/backgrounds/photo-four.jpg");
+            background-image: url("../assets/external/backgrounds/photo-four.jpg?v=1775731329507");
         }
 
         .photo-five {
-            background-image: url("../assets/external/backgrounds/photo-five.jpg");
+            background-image: url("../assets/external/backgrounds/photo-five.jpg?v=1775731329507");
         }
 
         .photo-six {
-            background-image: url("../assets/external/backgrounds/photo-six.jpg");
+            background-image: url("../assets/external/backgrounds/photo-six.jpg?v=1775731329507");
         }
 
         .testimonial-meta {
@@ -1024,7 +1024,7 @@
             background-color: #f7f1e8;
             background-image:
                 linear-gradient(150deg, rgba(32, 7, 10, 0.93), rgba(78, 14, 22, 0.78)),
-                url("../assets/external/backgrounds/bg-main.webp");
+                url("../assets/external/backgrounds/bg-main.webp?v=1775731329507");
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
@@ -1438,6 +1438,45 @@
             overflow-y: auto;
             padding: 0;
             background: #fff;
+            position: relative;
+        }
+
+        .modal-loader {
+            position: absolute;
+            inset: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 16px;
+            background: #fff;
+            z-index: 2;
+            transition: opacity 0.35s ease;
+        }
+
+        .modal-loader.is-hidden {
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        .modal-loader-spinner {
+            width: 40px;
+            height: 40px;
+            border: 3.5px solid rgba(128, 0, 0, 0.15);
+            border-top-color: #800000;
+            border-radius: 50%;
+            animation: modalSpin 0.72s linear infinite;
+        }
+
+        @keyframes modalSpin {
+            to { transform: rotate(360deg); }
+        }
+
+        .modal-loader-text {
+            font-size: 0.88rem;
+            font-weight: 600;
+            color: #800000;
+            letter-spacing: 0.02em;
         }
 
         @media (max-width: 600px) {
@@ -1573,7 +1612,7 @@
             border: 1px solid rgba(214, 178, 107, 0.28);
             background:
                 linear-gradient(170deg, rgba(98, 24, 28, 0.28), rgba(145, 82, 48, 0.2)),
-                url("../assets/external/backgrounds/bg-main.webp");
+                url("../assets/external/backgrounds/bg-main.webp?v=1775731329507");
             background-size: cover;
             background-position: center;
             overflow: hidden;
@@ -2702,15 +2741,15 @@
         }
 
         .brochure-hero-photo.career {
-            background-image: url("../assets/external/backgrounds/brochure-career.jpg");
+            background-image: url("../assets/external/backgrounds/brochure-career.jpg?v=1775731329507");
         }
 
         .brochure-hero-photo.abroad {
-            background-image: url("../assets/external/backgrounds/brochure-abroad.jpg");
+            background-image: url("../assets/external/backgrounds/brochure-abroad.jpg?v=1775731329507");
         }
 
         .brochure-hero-photo.parenting {
-            background-image: url("../assets/external/backgrounds/brochure-parenting.jpg");
+            background-image: url("../assets/external/backgrounds/brochure-parenting.jpg?v=1775731329507");
         }
 
         /* ===== HIDDEN EMBED PRELOADER ===== */
@@ -3803,49 +3842,49 @@
         .country-usa {
             background-image:
                 linear-gradient(135deg, rgba(128, 0, 0, 0.16), rgba(0, 0, 0, 0.5)),
-                url("../assets/external/backgrounds/country-usa.jpg");
+                url("../assets/external/backgrounds/country-usa.jpg?v=1775731329507");
         }
 
         .country-uk {
             background-image:
                 linear-gradient(135deg, rgba(128, 0, 0, 0.16), rgba(0, 0, 0, 0.54)),
-                url("../assets/external/backgrounds/country-uk.jpg");
+                url("../assets/external/backgrounds/country-uk.jpg?v=1775731329507");
         }
 
         .country-australia {
             background-image:
                 linear-gradient(135deg, rgba(128, 0, 0, 0.16), rgba(0, 0, 0, 0.5)),
-                url("../assets/external/backgrounds/country-australia.jpg");
+                url("../assets/external/backgrounds/country-australia.jpg?v=1775731329507");
         }
 
         .country-canada {
             background-image:
                 linear-gradient(135deg, rgba(128, 0, 0, 0.16), rgba(0, 0, 0, 0.55)),
-                url("../assets/external/backgrounds/country-canada.jpg");
+                url("../assets/external/backgrounds/country-canada.jpg?v=1775731329507");
         }
 
         .country-germany {
             background-image:
                 linear-gradient(135deg, rgba(36, 36, 36, 0.2), rgba(0, 0, 0, 0.55)),
-                url("../assets/external/backgrounds/country-germany.jpg");
+                url("../assets/external/backgrounds/country-germany.jpg?v=1775731329507");
         }
 
         .country-france {
             background-image:
                 linear-gradient(135deg, rgba(128, 0, 0, 0.16), rgba(0, 0, 0, 0.5)),
-                url("../assets/external/backgrounds/country-france.jpg");
+                url("../assets/external/backgrounds/country-france.jpg?v=1775731329507");
         }
 
         .country-singapore {
             background-image:
                 linear-gradient(135deg, rgba(128, 0, 0, 0.16), rgba(0, 0, 0, 0.5)),
-                url("../assets/external/backgrounds/country-singapore.jpg");
+                url("../assets/external/backgrounds/country-singapore.jpg?v=1775731329507");
         }
 
         .country-netherlands {
             background-image:
                 linear-gradient(135deg, rgba(128, 0, 0, 0.16), rgba(0, 0, 0, 0.5)),
-                url("../assets/external/backgrounds/country-netherlands.jpg");
+                url("../assets/external/backgrounds/country-netherlands.jpg?v=1775731329507");
         }
 
         @media (max-width: 1100px) {
@@ -4103,7 +4142,7 @@
                 radial-gradient(circle at 10% 10%, rgba(214, 178, 107, 0.22), transparent 42%),
                 radial-gradient(circle at 82% 16%, rgba(128, 0, 0, 0.09), transparent 44%),
                 linear-gradient(180deg, rgba(255, 255, 255, 0.96), rgba(247, 241, 232, 0.97)),
-                url("../assets/external/backgrounds/bg-main.webp");
+                url("../assets/external/backgrounds/bg-main.webp?v=1775731329507");
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
@@ -4502,7 +4541,7 @@
         .hero-image {
             background:
                 linear-gradient(170deg, rgba(128, 0, 0, 0.2), rgba(214, 178, 107, 0.18)),
-                url("../assets/external/backgrounds/bg-main.webp");
+                url("../assets/external/backgrounds/bg-main.webp?v=1775731329507");
             border-color: rgba(128, 0, 0, 0.22);
             box-shadow: 0 18px 42px rgba(92, 35, 22, 0.22);
         }

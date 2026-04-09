@@ -29,6 +29,7 @@
     const hlsInstances = new WeakMap();
     // Keyed by screen element: pre-warmed HLS instances (manifest pre-loaded, not yet playing)
     const preWarmedMap = new Map();
+    const preconnectedOrigins = new Set();
 
     const canPlayNativeHls = () => {
         const video = document.createElement('video');
@@ -69,6 +70,32 @@
         }
     };
 
+    const ensureHeadLink = (rel, href, crossOrigin) => {
+        const key = `${rel}:${href}`;
+        if (preconnectedOrigins.has(key)) {
+            return;
+        }
+
+        const link = document.createElement('link');
+        link.rel = rel;
+        link.href = href;
+        if (crossOrigin) {
+            link.crossOrigin = 'anonymous';
+        }
+        document.head.appendChild(link);
+        preconnectedOrigins.add(key);
+    };
+
+    const preconnectYouTube = () => {
+        ensureHeadLink('dns-prefetch', 'https://www.youtube.com');
+        ensureHeadLink('dns-prefetch', 'https://www.youtube-nocookie.com');
+        ensureHeadLink('dns-prefetch', 'https://i.ytimg.com');
+
+        ensureHeadLink('preconnect', 'https://www.youtube.com', true);
+        ensureHeadLink('preconnect', 'https://www.youtube-nocookie.com', true);
+        ensureHeadLink('preconnect', 'https://i.ytimg.com', true);
+    };
+
     const makeHlsConfig = () => ({
         enableWorker: true,
         lowLatencyMode: false,
@@ -101,11 +128,29 @@
         const sectionObserver = new IntersectionObserver((entries) => {
             if (entries[0].isIntersecting) {
                 videoScreens.forEach(preWarmVideo);
+                if (videoScreens.some((screen) => getYouTubeEmbedUrl(screen.dataset.videoSrc))) {
+                    preconnectYouTube();
+                }
                 sectionObserver.disconnect();
             }
         }, { rootMargin: '0px 0px -60px 0px', threshold: 0 });
         sectionObserver.observe(carousel);
     }
+
+    videoScreens.forEach((screen) => {
+        if (!getYouTubeEmbedUrl(screen.dataset.videoSrc)) {
+            return;
+        }
+
+        const trigger = screen.querySelector('.youtube-short-trigger');
+        if (!trigger) {
+            return;
+        }
+
+        trigger.addEventListener('pointerenter', preconnectYouTube, { once: true });
+        trigger.addEventListener('focus', preconnectYouTube, { once: true });
+        trigger.addEventListener('touchstart', preconnectYouTube, { once: true, passive: true });
+    });
 
     const stopPlayer = (screen) => {
         const player = screen.querySelector('.video-testimonial-player');
@@ -299,7 +344,8 @@
             return;
         }
 
-        trigger.addEventListener('click', () => {
+        trigger.addEventListener('click', (event) => {
+            event.preventDefault();
             playVideo(screen);
         });
     });

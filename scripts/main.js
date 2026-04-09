@@ -449,74 +449,41 @@ const pagePreloader = document.getElementById('pagePreloader');
         // ===== UNIVERSITY COUNTRY CAROUSEL =====
         const enableExternalUniversityLogos = false;
 
-        const universityLogoMap = {
-            HARV: 'https://logo.clearbit.com/harvard.edu',
-            MIT: 'https://logo.clearbit.com/mit.edu',
-            SU: 'https://logo.clearbit.com/stanford.edu',
-            YU: 'https://logo.clearbit.com/yale.edu',
-            OX: 'https://logo.clearbit.com/ox.ac.uk',
-            CAM: 'https://logo.clearbit.com/cam.ac.uk',
-            ICL: 'https://logo.clearbit.com/imperial.ac.uk',
-            LSE: 'https://logo.clearbit.com/lse.ac.uk',
-            UM: 'https://logo.clearbit.com/unimelb.edu.au',
-            ANU: 'https://logo.clearbit.com/anu.edu.au',
-            UNSW: 'https://logo.clearbit.com/unsw.edu.au',
-            MON: 'https://logo.clearbit.com/monash.edu',
-            UOFT: 'https://logo.clearbit.com/utoronto.ca',
-            UBC: 'https://logo.clearbit.com/ubc.ca',
-            MG: 'https://logo.clearbit.com/mcgill.ca',
-            MAC: 'https://logo.clearbit.com/mcmaster.ca',
-            TUM: 'https://logo.clearbit.com/tum.de',
-            HD: 'https://logo.clearbit.com/uni-heidelberg.de',
-            HB: 'https://logo.clearbit.com/hu-berlin.de',
-            BONN: 'https://logo.clearbit.com/uni-bonn.de',
-            PS: 'https://logo.clearbit.com/universite-paris-saclay.fr',
-            SOR: 'https://logo.clearbit.com/sorbonne-universite.fr',
-            PSL: 'https://logo.clearbit.com/psl.eu',
-            HEC: 'https://logo.clearbit.com/hec.edu',
-            NUS: 'https://logo.clearbit.com/nus.edu.sg',
-            NTU: 'https://logo.clearbit.com/ntu.edu.sg',
-            SMU: 'https://logo.clearbit.com/smu.edu.sg',
-            SUSS: 'https://logo.clearbit.com/suss.edu.sg',
-            UVA: 'https://logo.clearbit.com/uva.nl',
-            UU: 'https://logo.clearbit.com/uu.nl',
-            EUR: 'https://logo.clearbit.com/eur.nl',
-            RUG: 'https://logo.clearbit.com/rug.nl'
-        };
+        const universityLogoMap = {};
 
         const universityDemoImageMap = {
-            HARV: 'https://picsum.photos/seed/harvard-campus/720/420',
-            MIT: 'https://picsum.photos/seed/mit-campus/720/420',
-            SU: 'https://picsum.photos/seed/stanford-campus/720/420',
-            YU: 'https://picsum.photos/seed/yale-campus/720/420',
-            OX: 'https://picsum.photos/seed/oxford-campus/720/420',
-            CAM: 'https://picsum.photos/seed/cambridge-campus/720/420',
-            ICL: 'https://picsum.photos/seed/imperial-campus/720/420',
-            LSE: 'https://picsum.photos/seed/lse-campus/720/420',
-            UM: 'https://picsum.photos/seed/unimelb-campus/720/420',
-            ANU: 'https://picsum.photos/seed/anu-campus/720/420',
-            UNSW: 'https://picsum.photos/seed/unsw-campus/720/420',
-            MON: 'https://picsum.photos/seed/monash-campus/720/420',
-            UOFT: 'https://picsum.photos/seed/uoft-campus/720/420',
-            UBC: 'https://picsum.photos/seed/ubc-campus/720/420',
-            MG: 'https://picsum.photos/seed/mcgill-campus/720/420',
-            MAC: 'https://picsum.photos/seed/mcmaster-campus/720/420',
-            TUM: 'https://picsum.photos/seed/tum-campus/720/420',
-            HD: 'https://picsum.photos/seed/heidelberg-campus/720/420',
-            HB: 'https://picsum.photos/seed/humboldt-campus/720/420',
-            BONN: 'https://picsum.photos/seed/bonn-campus/720/420',
-            PS: 'https://picsum.photos/seed/paris-saclay-campus/720/420',
-            SOR: 'https://picsum.photos/seed/sorbonne-campus/720/420',
-            PSL: 'https://picsum.photos/seed/psl-campus/720/420',
-            HEC: 'https://picsum.photos/seed/hec-campus/720/420',
-            NUS: 'https://picsum.photos/seed/nus-campus/720/420',
-            NTU: 'https://picsum.photos/seed/ntu-campus/720/420',
-            SMU: 'https://picsum.photos/seed/smu-campus/720/420',
-            SUSS: 'https://picsum.photos/seed/suss-campus/720/420',
-            UVA: 'https://picsum.photos/seed/uva-campus/720/420',
-            UU: 'https://picsum.photos/seed/utrecht-campus/720/420',
-            EUR: 'https://picsum.photos/seed/erasmus-campus/720/420',
-            RUG: 'https://picsum.photos/seed/groningen-campus/720/420'
+            HARV: 'assets/universities/demo/harv-campus.jpg',
+            MIT: 'assets/universities/demo/mit-campus.jpg',
+            SU: 'assets/universities/demo/su-campus.jpg',
+            YU: 'assets/universities/demo/yu-campus.jpg',
+            OX: 'assets/universities/demo/ox-campus.jpg',
+            CAM: 'assets/universities/demo/cam-campus.jpg',
+            ICL: 'assets/universities/demo/icl-campus.jpg',
+            LSE: 'assets/universities/demo/lse-campus.jpg',
+            UM: 'assets/universities/demo/um-campus.jpg',
+            ANU: 'assets/universities/demo/anu-campus.jpg',
+            UNSW: 'assets/universities/demo/unsw-campus.jpg',
+            MON: 'assets/universities/demo/mon-campus.jpg',
+            UOFT: 'assets/universities/demo/uoft-campus.jpg',
+            UBC: 'assets/universities/demo/ubc-campus.jpg',
+            MG: 'assets/universities/demo/mg-campus.jpg',
+            MAC: 'assets/universities/demo/mac-campus.jpg',
+            TUM: 'assets/universities/demo/tum-campus.jpg',
+            HD: 'assets/universities/demo/hd-campus.jpg',
+            HB: 'assets/universities/demo/hb-campus.jpg',
+            BONN: 'assets/universities/demo/bonn-campus.jpg',
+            PS: 'assets/universities/demo/ps-campus.jpg',
+            SOR: 'assets/universities/demo/sor-campus.jpg',
+            PSL: 'assets/universities/demo/psl-campus.jpg',
+            HEC: 'assets/universities/demo/hec-campus.jpg',
+            NUS: 'assets/universities/demo/nus-campus.jpg',
+            NTU: 'assets/universities/demo/ntu-campus.jpg',
+            SMU: 'assets/universities/demo/smu-campus.jpg',
+            SUSS: 'assets/universities/demo/suss-campus.jpg',
+            UVA: 'assets/universities/demo/uva-campus.jpg',
+            UU: 'assets/universities/demo/uu-campus.jpg',
+            EUR: 'assets/universities/demo/eur-campus.jpg',
+            RUG: 'assets/universities/demo/rug-campus.jpg'
         };
 
         const applyUniversityLogos = () => {
@@ -560,8 +527,7 @@ const pagePreloader = document.getElementById('pagePreloader');
                 const chip = head?.querySelector('.uni-logo-chip');
                 const titleEl = card.querySelector('h4');
                 const key = ((chip?.getAttribute('title') || chip?.textContent || '').trim().toUpperCase());
-                const fallbackSeed = ((titleEl?.textContent || 'university').toLowerCase().replace(/[^a-z0-9]+/g, '-'));
-                const src = universityDemoImageMap[key] || `https://picsum.photos/seed/${fallbackSeed}/720/420`;
+                const src = universityDemoImageMap[key] || 'assets/universities/demo/default-campus.jpg';
 
                 const media = document.createElement('div');
                 media.className = 'country-university-media';

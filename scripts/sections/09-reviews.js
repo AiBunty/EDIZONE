@@ -38,6 +38,37 @@
         );
     };
 
+    const getYouTubeEmbedUrl = (rawUrl) => {
+        if (!rawUrl) {
+            return null;
+        }
+
+        try {
+            const url = new URL(rawUrl, window.location.href);
+            const host = url.hostname.replace(/^www\./, '');
+            const pathSegments = url.pathname.split('/').filter(Boolean);
+            let videoId = '';
+
+            if (host === 'youtu.be') {
+                videoId = pathSegments[0] || '';
+            } else if (host.endsWith('youtube.com')) {
+                if (pathSegments[0] === 'shorts' || pathSegments[0] === 'embed') {
+                    videoId = pathSegments[1] || '';
+                } else if (pathSegments[0] === 'watch') {
+                    videoId = url.searchParams.get('v') || '';
+                }
+            }
+
+            if (!/^[\w-]{11}$/.test(videoId)) {
+                return null;
+            }
+
+            return `https://www.youtube-nocookie.com/embed/${videoId}?autoplay=1&playsinline=1&rel=0`;
+        } catch (error) {
+            return null;
+        }
+    };
+
     const makeHlsConfig = () => ({
         enableWorker: true,
         lowLatencyMode: false,
@@ -53,6 +84,7 @@
         if (preWarmedMap.has(screen)) return;
         const videoSrc = screen.dataset.videoSrc;
         if (!videoSrc) return;
+        if (getYouTubeEmbedUrl(videoSrc)) return;
 
         const dummy = document.createElement('video');
         dummy.muted = true;
@@ -77,6 +109,7 @@
 
     const stopPlayer = (screen) => {
         const player = screen.querySelector('.video-testimonial-player');
+        const embed = screen.querySelector('.video-testimonial-embed');
         const trigger = screen.querySelector('.youtube-short-trigger');
         const hls = hlsInstances.get(screen);
 
@@ -94,6 +127,10 @@
             player.removeAttribute('src');
             player.load();
             player.remove();
+        }
+
+        if (embed) {
+            embed.remove();
         }
 
         screen.classList.remove('is-playing');
@@ -122,6 +159,23 @@
 
         stopAllPlayers(screen);
         stopPlayer(screen);
+
+        const youtubeEmbedSrc = getYouTubeEmbedUrl(videoSrc);
+        if (youtubeEmbedSrc) {
+            const embed = document.createElement('iframe');
+            embed.className = 'video-testimonial-embed';
+            embed.src = youtubeEmbedSrc;
+            embed.title = `${videoTitle} video player`;
+            embed.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';
+            embed.referrerPolicy = 'strict-origin-when-cross-origin';
+            embed.loading = 'eager';
+            embed.setAttribute('allowfullscreen', '');
+
+            trigger.hidden = true;
+            screen.classList.add('is-playing');
+            screen.appendChild(embed);
+            return;
+        }
 
         const player = document.createElement('video');
         player.className = 'video-testimonial-player';

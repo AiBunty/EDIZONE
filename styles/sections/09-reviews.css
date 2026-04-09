@@ -108,7 +108,8 @@
     z-index: 1;
 }
 
-#reviews .video-testimonial-player {
+#reviews .video-testimonial-player,
+#reviews .video-testimonial-embed {
     position: relative;
     z-index: 2;
     width: 100%;

@@ -524,27 +524,27 @@
         }
 
         .photo-one {
-            background-image: url("https://unsplash.com/photos/3S0Ucv4BDCk/download?force=true&w=1600");
+            background-image: url("../assets/external/backgrounds/photo-one.jpg");
         }
 
         .photo-two {
-            background-image: url("https://images.unsplash.com/photo-1495995424756-6a5a3f9e7543?q=80&w=1752&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+            background-image: url("../assets/external/backgrounds/photo-two.jpg");
         }
 
         .photo-three {
-            background-image: url("https://images.unsplash.com/photo-1603288231069-1007b5d651e9?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+            background-image: url("../assets/external/backgrounds/photo-three.jpg");
         }
 
         .photo-four {
-            background-image: url("https://images.unsplash.com/photo-1517048676732-d65bc937f952?q=80&w=1740&auto=format&fit=crop");
+            background-image: url("../assets/external/backgrounds/photo-four.jpg");
         }
 
         .photo-five {
-            background-image: url("https://images.unsplash.com/photo-1521791136064-7986c2920216?q=80&w=1740&auto=format&fit=crop");
+            background-image: url("../assets/external/backgrounds/photo-five.jpg");
         }
 
         .photo-six {
-            background-image: url("https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1740&auto=format&fit=crop");
+            background-image: url("../assets/external/backgrounds/photo-six.jpg");
         }
 
         .testimonial-meta {
@@ -1026,7 +1026,7 @@
             background-color: #f7f1e8;
             background-image:
                 linear-gradient(150deg, rgba(32, 7, 10, 0.93), rgba(78, 14, 22, 0.78)),
-                url("https://storagev2.files-vault.com/uploads/blacklabel-765/sub-account-81526/BG%201.webp");
+                url("../assets/external/backgrounds/bg-main.webp");
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
@@ -1575,7 +1575,7 @@
             border: 1px solid rgba(214, 178, 107, 0.28);
             background:
                 linear-gradient(170deg, rgba(98, 24, 28, 0.28), rgba(145, 82, 48, 0.2)),
-                url("https://storagev2.files-vault.com/uploads/blacklabel-765/sub-account-81526/BG%201.webp");
+                url("../assets/external/backgrounds/bg-main.webp");
             background-size: cover;
             background-position: center;
             overflow: hidden;
@@ -2704,15 +2704,15 @@
         }
 
         .brochure-hero-photo.career {
-            background-image: url("https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=1740&auto=format&fit=crop");
+            background-image: url("../assets/external/backgrounds/brochure-career.jpg");
         }
 
         .brochure-hero-photo.abroad {
-            background-image: url("https://images.unsplash.com/photo-1581362072978-14998d01fdaa?q=80&w=768&auto=format&fit=crop");
+            background-image: url("../assets/external/backgrounds/brochure-abroad.jpg");
         }
 
         .brochure-hero-photo.parenting {
-            background-image: url("https://images.unsplash.com/photo-1579389083046-e3df9c2b3325?q=80&w=774&auto=format&fit=crop");
+            background-image: url("../assets/external/backgrounds/brochure-parenting.jpg");
         }
 
         /* ===== HIDDEN EMBED PRELOADER ===== */
@@ -3804,49 +3804,49 @@
         .country-usa {
             background-image:
                 linear-gradient(135deg, rgba(128, 0, 0, 0.16), rgba(0, 0, 0, 0.5)),
-                url("https://images.unsplash.com/photo-1498243691581-b145c3f54a5a?q=80&w=1740&auto=format&fit=crop");
+                url("../assets/external/backgrounds/country-usa.jpg");
         }
 
         .country-uk {
             background-image:
                 linear-gradient(135deg, rgba(128, 0, 0, 0.16), rgba(0, 0, 0, 0.54)),
-                url("https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?q=80&w=1740&auto=format&fit=crop");
+                url("../assets/external/backgrounds/country-uk.jpg");
         }
 
         .country-australia {
             background-image:
                 linear-gradient(135deg, rgba(128, 0, 0, 0.16), rgba(0, 0, 0, 0.5)),
-                url("https://images.unsplash.com/photo-1523482580672-f109ba8cb9be?q=80&w=1740&auto=format&fit=crop");
+                url("../assets/external/backgrounds/country-australia.jpg");
         }
 
         .country-canada {
             background-image:
                 linear-gradient(135deg, rgba(128, 0, 0, 0.16), rgba(0, 0, 0, 0.55)),
-                url("https://images.unsplash.com/photo-1503614472-8c93d56e92ce?q=80&w=1740&auto=format&fit=crop");
+                url("../assets/external/backgrounds/country-canada.jpg");
         }
 
         .country-germany {
             background-image:
                 linear-gradient(135deg, rgba(36, 36, 36, 0.2), rgba(0, 0, 0, 0.55)),
-                url("https://images.unsplash.com/photo-1472396961693-142e6e269027?q=80&w=1740&auto=format&fit=crop");
+                url("../assets/external/backgrounds/country-germany.jpg");
         }
 
         .country-france {
             background-image:
                 linear-gradient(135deg, rgba(128, 0, 0, 0.16), rgba(0, 0, 0, 0.5)),
-                url("https://images.unsplash.com/photo-1502602898657-3e91760cbb34?q=80&w=1740&auto=format&fit=crop");
+                url("../assets/external/backgrounds/country-france.jpg");
         }
 
         .country-singapore {
             background-image:
                 linear-gradient(135deg, rgba(128, 0, 0, 0.16), rgba(0, 0, 0, 0.5)),
-                url("https://images.unsplash.com/photo-1525625293386-3f8f99389edd?q=80&w=1740&auto=format&fit=crop");
+                url("../assets/external/backgrounds/country-singapore.jpg");
         }
 
         .country-netherlands {
             background-image:
                 linear-gradient(135deg, rgba(128, 0, 0, 0.16), rgba(0, 0, 0, 0.5)),
-                url("https://images.unsplash.com/photo-1512470876302-972faa2aa9a4?q=80&w=1740&auto=format&fit=crop");
+                url("../assets/external/backgrounds/country-netherlands.jpg");
         }
 
         @media (max-width: 1100px) {
@@ -4104,7 +4104,7 @@
                 radial-gradient(circle at 10% 10%, rgba(214, 178, 107, 0.22), transparent 42%),
                 radial-gradient(circle at 82% 16%, rgba(128, 0, 0, 0.09), transparent 44%),
                 linear-gradient(180deg, rgba(255, 255, 255, 0.96), rgba(247, 241, 232, 0.97)),
-                url("https://storagev2.files-vault.com/uploads/blacklabel-765/sub-account-81526/BG%201.webp");
+                url("../assets/external/backgrounds/bg-main.webp");
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
@@ -4503,7 +4503,7 @@
         .hero-image {
             background:
                 linear-gradient(170deg, rgba(128, 0, 0, 0.2), rgba(214, 178, 107, 0.18)),
-                url("https://storagev2.files-vault.com/uploads/blacklabel-765/sub-account-81526/BG%201.webp");
+                url("../assets/external/backgrounds/bg-main.webp");
             border-color: rgba(128, 0, 0, 0.22);
             box-shadow: 0 18px 42px rgba(92, 35, 22, 0.22);
         }

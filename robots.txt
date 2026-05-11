@@ -1,4 +1,26 @@
+# Allow search engines and social media crawlers
 User-agent: *
 Allow: /
 
-Sitemap: http://edizonecareers.com/sitemap.xml
+# Explicitly allow Facebook crawler
+User-agent: facebookexternalhit
+Allow: /
+
+# Explicitly allow other major crawlers
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+Disallow: /admin/
+Disallow: /*.pdf$
+
+Sitemap: https://www.edizonecareers.com/sitemap.xml
+Sitemap: https://edizonecareers.com/sitemap.xml
